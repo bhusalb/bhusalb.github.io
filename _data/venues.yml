@@ -1,9 +1,7 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
+"CCS":
+  url: https://www.sigsac.org/
   color: "#00369f"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"NOMS":
+  url: https://noms2024.ieee-noms.org/
 
-"Vision":
-  color: "#009f36"

@@ -1,12 +1,9 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - bhusalb
+
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - bhusalb/DiPAut
+  - bhusalb/gate.io
+  - bhusalb/nicehash-api
+  - bhusalb/gorkhapatra-parser
