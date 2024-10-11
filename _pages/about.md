@@ -20,11 +20,11 @@ social: true # includes social icons at the bottom of the page
 ---
 
 
-I am a Ph.D. student at the University of Missouri - Columbia, under the supervision of Prof. Rohit Chadha. I am broadly interested in **formal methods**, **privacy**, and **security**. Specifically, I am focused on the verification of differential privacy involving Gaussian mechanisms, as well as the verification of privacy labels for iOS apps.
+I am a Ph.D. student at the University of Missouri - Columbia, under the supervision of Prof. Rohit Chadha. I am broadly interested in **formal methods**, **privacy**, and **security**. Specifically, I am focused on the verification of differential privacy involving Gaussian mechanisms, as well as on privacy-preserving techniques for large language models.
 
 I have earned my master's degree in Computer Science with a focus on Cybersecurity and a minor in Statistics from the University of Missouri - Columbia.
 
-In my free time, I enjoy hiking, camping, and immersing myself in nature. Feel free to reach out at bhusalb@mail.missouri.com. I’m happy to chat and connect!
+In my free time, I enjoy hiking, camping, and immersing myself in nature. Feel free to reach out at bhusalb@missouri.com. I’m happy to chat and connect!
 
 
 
