@@ -6,7 +6,7 @@ title: Bishnu Bhusal # the website title (if blank, full name will be used inste
 first_name: Bishnu
 middle_name: 
 last_name: Bhusal
-email: bhusalb@mail.missouri.edu
+email: bhusalb@missouri.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
  Bishnu Bhusal's personal website.
 footer_text: >
@@ -106,7 +106,7 @@ youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 zotero_username: # your zotero username
 
 contact_note: >
-  You can reach me best through email (bhusalb@mail.missouri.edu) or LinkedIn.
+  You can reach me best through email (bhusalb@missouri.edu) or LinkedIn.
 
 
 # -----------------------------------------------------------------------------
