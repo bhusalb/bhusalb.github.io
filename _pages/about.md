@@ -20,7 +20,7 @@ social: true # includes social icons at the bottom of the page
 ---
 
 
-I am a Ph.D. student at the University of Missouri - Columbia, under the supervision of Prof. Rohit Chadha. I am broadly interested in **formal methods**, **privacy**, and **security**. Specifically, I am focused on the building differentially private quantum machine learning models as well as on privacy-preserving techniques for large language models.
+I am a Ph.D. candidate at the University of Missouri - Columbia, under the supervision of Prof. Rohit Chadha. I am broadly interested in **formal methods**, **privacy**, and **security**. Specifically, I am focused on the building differentially private quantum machine learning models as well as on privacy-preserving techniques for large language models.
 
 I have earned my master's degree in Computer Science with a focus on Cybersecurity and a minor in Statistics from the University of Missouri - Columbia.
 
