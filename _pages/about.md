@@ -20,7 +20,7 @@ social: true # includes social icons at the bottom of the page
 ---
 
 
-I am a Ph.D. candidate at the University of Missouri - Columbia, under the supervision of Prof. Rohit Chadha. I am broadly interested in **formal methods**, **privacy**, and **security**. My research is all about making systems trustworthy: I work to ensure that privacy guarantees are verified, so that users and developers alike can rely on algorithms without blind trust. With publications in CCS, AAAI, OOPSLA, and GameSec (Best Paper), I aim to push the boundaries of what’s possible while keeping privacy at the core.
+I am a Ph.D. candidate at the University of Missouri - Columbia, under the supervision of Prof. Rohit Chadha. I am broadly interested in **formal methods**, **privacy**, and **security**. My research is all about making systems trustworthy: I work to ensure that privacy guarantees are verified, so that users and developers alike can rely on algorithms without blind trust. I aim to push the boundaries of what’s possible while keeping privacy at the core.
 
 I have earned my master's degree in Computer Science with a focus on Cybersecurity and a minor in Statistics from the University of Missouri - Columbia.
 
