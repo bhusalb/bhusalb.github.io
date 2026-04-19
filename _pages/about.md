@@ -26,7 +26,7 @@ My work spans **differential privacy**, **LLM safety**, and **formal verificatio
 
 Before academia, I spent seven years as a software engineer, scaling systems to billions of daily requests and building platforms used by millions. That grounding still shapes how I think: I care about ideas that actually work, not just ideas that look good on paper.
 
-**I am actively on the job market** and open to research scientist, applied scientist, and faculty positions. If you work on privacy, trustworthy AI, or formal methods, I would love to connect.
+**I am actively on the job market** and looking for applied scientist, privacy engineer, and faculty roles. If you work on privacy, trustworthy AI, or formal methods, I would love to connect.
 
 Outside the lab, I chase trails, camp under open skies, and try hard to find places without Wi-Fi. Feel free to reach me at [bhusalb@missouri.edu](mailto:bhusalb@missouri.edu). I am always happy to chat, collaborate, or just exchange ideas.
 
