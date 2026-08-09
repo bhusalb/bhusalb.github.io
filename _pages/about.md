@@ -20,7 +20,7 @@ social: true # includes social icons at the bottom of the page
 ---
 
 
-I am a Ph.D. candidate in Computer Science at the University of Missouri, advised by [Prof. Rohit Chadha](https://chadhar.mufaculty.umsystem.edu/), graduating July 2026. My research asks a deceptively hard question: can we *prove*, not just hope, that an algorithm preserves privacy? I build automated verifiers and decision procedures that answer this with mathematical rigor.
+I am a Ph.D. candidate in Computer Science at the University of Missouri, advised by [Prof. Rohit Chadha](https://chadhar.mufaculty.umsystem.edu/), graduating Dec 2026. My research asks a deceptively hard question: can we *prove*, not just hope, that an algorithm preserves privacy? I build automated verifiers and decision procedures that answer this with mathematical rigor.
 
 My work spans **differential privacy**, **LLM safety**, and **formal verification**. I have been fortunate to explore these problems across some wonderful places: [Los Alamos National Laboratory](https://www.lanl.gov/), [SRI International](https://www.sri.com/), and [Amazon Web Services](https://aws.amazon.com/). Along the way, my work has appeared at **AAAI**, **ACM CCS**, and **OOPSLA**, and earned a **Best Paper Award at GameSec 2024**.
 
