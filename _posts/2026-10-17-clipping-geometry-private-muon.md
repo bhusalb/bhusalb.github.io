@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why gradient clipping changes Muon's geometry: a two-dimensional example"
-date: 2026-10-22 09:00:00 -0600
+date: 2026-10-17 09:00:00 -0600
 display_order: 1
 author: Bishnu Bhusal
 description: "A runnable Python example shows how unequal per-example clipping rotates a matrix's polar factor, motivating the DP-Muon-IM preprint."
