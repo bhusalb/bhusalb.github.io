@@ -106,9 +106,8 @@ youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 zotero_username: # your zotero username
 
 # Used for schema.org Person structured data on the homepage
-job_title: Computer Science Researcher
+job_title: Ph.D. Candidate in Computer Science
 affiliation: University of Missouri
-alumni_of: University of Missouri
 knows_about: [Differential Privacy, Formal Verification, Privacy-Preserving Machine Learning, Large Language Models, Program Verification, Security and Privacy]
 
 contact_note: >
