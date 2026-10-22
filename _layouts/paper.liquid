@@ -1,0 +1,57 @@
+---
+layout: default
+---
+{% assign paper = page.paper %}
+<div class="post publications">
+  <header class="post-header">
+    <h1 class="post-title">{{ paper.title }}</h1>
+    <p class="post-description">
+      {% for author in paper.authors %}
+        {%- if author contains site.last_name and author contains site.first_name -%}
+          <em>{{ author }}</em>
+        {%- else -%}
+          {{ author }}
+        {%- endif -%}
+        {%- unless forloop.last %}, {% endunless -%}
+      {% endfor %}
+    </p>
+    <p class="periodical">
+      {% if paper.venue %}<em>{{ paper.venue }}</em>, {% endif %}{{ paper.year }}
+    </p>
+  </header>
+
+  <article>
+    <div class="links">
+      {% if paper.award_name %}
+        <a class="award btn btn-sm z-depth-0" role="button">{{ paper.award_name }}</a>
+      {% endif %}
+      {% if paper.pdf %}
+        <a href="{{ paper.pdf }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
+      {% endif %}
+      {% if paper.doi %}
+        <a href="https://doi.org/{{ paper.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
+      {% endif %}
+      {% if paper.arxiv %}
+        <a href="https://arxiv.org/abs/{{ paper.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
+      {% endif %}
+      {% if paper.html %}
+        <a href="{{ paper.html }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
+      {% endif %}
+      {% if paper.code %}
+        <a href="{{ paper.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
+      {% endif %}
+    </div>
+
+    {% if paper.abstract %}
+      <h2>Abstract</h2>
+      <p>{{ paper.abstract }}</p>
+    {% endif %}
+
+    <h2>Cite</h2>
+    {% highlight bibtex %}
+{{ paper.bibtex }}
+    {% endhighlight %}
+
+    <p><a href="{{ '/publications/' | relative_url }}">&larr; All publications</a></p>
+  </article>
+</div>

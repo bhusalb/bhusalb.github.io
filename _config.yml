@@ -7,16 +7,16 @@ first_name: Bishnu
 middle_name: 
 last_name: Bhusal
 email: bhusalb@missouri.edu
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
- Bishnu Bhusal's personal website.
+description: >- # the ">" symbol means to ignore newlines until "footer_text:"
+ Bishnu Bhusal is a computer science researcher working on differential privacy, formal verification, and privacy-preserving machine learning and LLMs. Publications at ACM CCS, AAAI, and OOPSLA.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-keywords: bishnu bhusal, bishnu, bhusal, bhusalb, researcher, formal methods, machine learning, privacy,  academic-website # add your own keywords or leave empty
+keywords: Bishnu Bhusal, differential privacy, formal verification, privacy verification, LLM privacy, private in-context learning, DP optimization, Muon, decision procedures, program verification, security and privacy, machine learning # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: bishnubhusal.com.np # the base hostname & protocol for your site
-baseurl: / # the subpath of your site, e.g. /blog/. Leave blank for root
+url: https://bishnubhusal.com.np # the base hostname & protocol for your site
+baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: true # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 
@@ -57,9 +57,9 @@ max_width: 800px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
+serve_schema_org: true # Include Schema.org in the HTML head
+og_image: https://bishnubhusal.com.np/assets/img/cbhusalb.jpg # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Social integration
@@ -83,7 +83,7 @@ lattes_id: # your ID on Lattes (Brazilian Lattes CV)
 linkedin_username: bhusalb # your LinkedIn user name
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
 medium_username: # your Medium username
-orcid_id: # your ORCID ID
+orcid_id: 0000-0001-7522-5878 # your ORCID ID
 osf_id: # your OSF ID
 pinterest_id: # your pinterest id
 publons_id: # your ID on Publons
@@ -91,7 +91,7 @@ quora_username: # your Quora username
 research_gate_profile: # your profile on ResearchGate
 scholar_userid: Dkp-woMAAAAJ # your Google Scholar ID
 scopus_id: # your profile on Scopus
-semanticscholar_id: # your Semantic Scholar ID
+semanticscholar_id: 2231871095 # your Semantic Scholar ID
 spotify_id: # your spotify id
 stackoverflow_id: # your stackoverflow id
 telegram_username: # your Telegram user name
@@ -104,6 +104,12 @@ work_url: # work page URL
 x_username: # your X handle
 youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 zotero_username: # your zotero username
+
+# Used for schema.org Person structured data on the homepage
+job_title: Computer Science Researcher
+affiliation: University of Missouri
+alumni_of: University of Missouri
+knows_about: [Differential Privacy, Formal Verification, Privacy-Preserving Machine Learning, Large Language Models, Program Verification, Security and Privacy]
 
 contact_note: >
   You can reach me best through email (bhusalb@missouri.edu) or LinkedIn.
@@ -254,6 +260,19 @@ defaults:
       path: "assets"
     values:
       sitemap: false
+  # Keep the al-folio sample content out of the sitemap so search engines focus on research pages
+  - scope:
+      type: "posts"
+    values:
+      sitemap: false
+  - scope:
+      type: "news"
+    values:
+      sitemap: false
+  - scope:
+      type: "projects"
+    values:
+      sitemap: false
 
 sass:
   style: compressed
@@ -272,7 +291,7 @@ jekyll-minifier:
 # -----------------------------------------------------------------------------
 
 jekyll-archives:
-  enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+  enabled: [] # enables year, tag and category archives (remove if you need to disable one of them).
   layouts:
     year: archive-year
     tag: archive-tag

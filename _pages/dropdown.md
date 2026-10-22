@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: page
 title: submenus
 nav: false

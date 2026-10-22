@@ -54,7 +54,7 @@
 {% if site.serve_og_meta %}
   <!-- OpenGraph -->
   <meta property="og:site_name" content="{{ title }}">
-  <meta property="og:type" content="{% if is_blog_post %}article{% else %}website{% endif %}">
+  <meta property="og:type" content="{% if is_blog_post or page.paper %}article{% else %}website{% endif %}">
   <meta property="og:title" content="{% if page.title %}{{ title }} | {{ page.title }}{% else %}{{ title }}{% endif %}">
   <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
@@ -220,6 +220,24 @@
     {% assign sameaslinks = sameaslinks | split: '' %}
   {% endif %}
 
+  {% if page.url == '/' %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "{{ author_name }}",
+        "url": "{{ site.url }}{{ site.baseurl }}/",
+        {% if site.job_title %}"jobTitle": {{ site.job_title | jsonify }},{% endif %}
+        {% if site.affiliation %}"affiliation": {"@type": "Organization", "name": {{ site.affiliation | jsonify }}},{% endif %}
+        {% if site.alumni_of %}"alumniOf": {"@type": "CollegeOrUniversity", "name": {{ site.alumni_of | jsonify }}},{% endif %}
+        {% if site.knows_about %}"knowsAbout": {{ site.knows_about | jsonify }},{% endif %}
+        {% if site.og_image %}"image": {{ site.og_image | jsonify }},{% endif %}
+        "email": "mailto:{{ site.email }}",
+        "sameAs": {{ sameaslinks }}
+      }
+    </script>
+  {% endif %}
+
   <script type="application/ld+json">
     {
         "author":
@@ -238,4 +256,8 @@
         "@context": "https://schema.org"
     }
   </script>
+{% endif %}
+
+{% if page.paper %}
+  {% include paper_meta.liquid %}
 {% endif %}

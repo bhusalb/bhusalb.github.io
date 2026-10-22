@@ -3,164 +3,311 @@
 
 @string{aps = {American Physical Society,}}
 
-
-@article{adhikari2023vtonit,
-      title={VTON-IT: Virtual Try-On using Image Translation}, 
-      author={Santosh Adhikari and Bishnu Bhusal and Prashant Ghimire and Anil Shrestha},
-      year={2023},
-      eprint={2310.04558},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@article{bhusal2026dpmuon,
+  abbr = {arXiv},
+  title = {Inner Momentum for Differentially Private Muon},
+  author = {Bhusal, Bishnu and Vu, Minh and Southworth, Ben and Zollicoffer, Geigh and Chadha, Rohit and Bhattarai, Manish},
+  journal = {arXiv preprint arXiv:2610.02738},
+  year = {2026},
+  month = oct,
+  eprint = {2610.02738},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.LG},
+  url = {https://arxiv.org/abs/2610.02738},
+  arxiv = {2610.02738},
+  abstract = {Differentially private training clips each per-example gradient before adding noise. This clipping is radial for each example, yet unequal clipping factors can distort the relative singular-vector geometry of their average. Muon is particularly exposed to this effect, since its update is an approximate polar factor UV^T that depends only on the singular vectors that clipping can shift. To curb this degradation, we propose averaging each sampled example's Muon gradient over the current model and a short history of recent models before clipping. The clipped batch matrix then separates into a common rescaling and a covariance residual R between sampled gradients and clipping values, bounding the clipping-induced distortion directly. We further show that a finite Newton-Schulz iteration preserves the polar factor of its input under these spectral conditions, confirming that our correction survives orthogonalization. In private GPT-2 fine-tuning on E2E and DART at epsilon in {1, 2, 4, 8}, DP-Muon-IM improves BLEU and ROUGE-L over DP-Muon in every seed-matched comparison, and non-private diagnostics show 2-4\% lower pre-noise polar error.},
+  bibtex_show = {true},
+  selected = {true}
 }
 
-
-@article{neupane2024formal,
-      title={Formal Verification for Blockchain-based Insurance Claims Processing}, 
-      author={Roshan Lal Neupane and Ernest Bonnah and Bishnu Bhusal and Kiran Neupane and Khaza Anuarul Hoque and Prasad Calyam},
-      year={2024},
-      eprint={2402.13169},
-      archivePrefix={arXiv},
-      primaryClass={cs.CR}
+@article{pokharel2026ptm,
+  abbr = {bioRxiv},
+  title = {Learning Shared Residue Backgrounds and Modification-Specific Offsets for PTM Site Prediction},
+  author = {Pokharel, Suresh and Bhusal, Bishnu},
+  journal = {bioRxiv},
+  year = {2026},
+  month = aug,
+  doi = {10.64898/2026.08.05.743079},
+  url = {https://doi.org/10.64898/2026.08.05.743079},
+  abstract = {Post-translational modifications (PTMs) are chemical changes added to proteins after translation. These changes affect protein function and regulation, and their disruption is linked to disease-associated mechanisms. Because experimentally validating all possible modification sites is impractical, many computational predictors have been developed for PTM site prediction. In this work, we study whether a shared model can represent common residue-background patterns while learning modification-specific background-to-positive offsets. We propose an anchor-guided rectified flow matching framework for multi-type PTM site prediction from protein language model embeddings. For each PTM-residue pair, the model builds residue-background anchors from PTM-compatible unannotated residues and positive anchors from experimentally annotated modified residues, and uses a rectified flow module to estimate a modification-conditioned background-to-positive offset. We evaluate the framework on a dbPTM-derived benchmark covering six commonly studied PTMs.},
+  bibtex_show = {true}
 }
 
-
-@inproceedings{10.1145/3576915.3623170,
-author = {Chadha, Rohit and Sistla, A. Prasad and Viswanathan, Mahesh and Bhusal, Bishnu},
-title = {Deciding Differential Privacy of Online Algorithms with Multiple Variables},
-year = {2023},
-isbn = {9798400700507},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3576915.3623170},
-doi = {10.1145/3576915.3623170},
-abstract = {We consider the problem of checking the differential privacy of online randomized algorithms that process a stream of inputs and produce outputs corresponding to each input. This paper generalizes an automaton model called DiP automata [10] to describe such algorithms by allowing multiple real-valued storage variables. A DiP automaton is a parametric automaton whose behavior depends on the privacy budget ∈. An automaton A will be said to be differentially private if, for some D, the automaton is D∈-differentially private for all values of ∈ > 0. We identify a precise characterization of the class of all differentially private DiP automata. We show that the problem of determining if a given DiP automaton belongs to this class is PSPACE-complete. Our PSPACE algorithm also computes a value for D when the given automaton is differentially private. The algorithm has been implemented, and experiments demonstrating its effectiveness are presented.},
-booktitle = {Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security},
-pages = {1761–1775},
-numpages = {15},
-keywords = {automata, decision procedure, differential privacy, verification},
-location = {<conf-loc>, <city>Copenhagen</city>, <country>Denmark</country>, </conf-loc>},
-series = {CCS '23}
+@inproceedings{kshetri2026uavchain,
+  abbr = {EDGE},
+  title = {UAVchain: Blockchain Technology Applications for Unmanned Aerial Vehicles},
+  author = {Kshetri, Naresh and Rahman, Mir Mehedi and Pokharel, Bishwo Prakash and Eashrak, Nafiz and Bhusal, Bishnu and Badhon, Md Bahauddin},
+  booktitle = {2026 IEEE International Conference on Edge Computing and Communications (EDGE)},
+  pages = {98--104},
+  year = {2026},
+  month = jul,
+  publisher = {IEEE},
+  doi = {10.1109/EDGE72783.2026.00021},
+  url = {https://doi.org/10.1109/EDGE72783.2026.00021},
+  bibtex_show = {true}
 }
 
-
-@InProceedings{10.1007/978-3-031-74835-6_8,
-author="Neupane, Roshan Lal
-and Bhusal, Bishnu
-and Neupane, Kiran
-and Regmi, Preyea
-and Dinh, Tam
-and Marrero, Lilliana
-and Saghaian N. E., Sayed M.
-and Nadendla, Venkata Sriram Siddhardh
-and Calyam, Prasad",
-editor="Sinha, Arunesh
-and Fu, Jie
-and Zhu, Quanyan
-and Zhang, Tao",
-title="On Countering Ransomware Attacks Using Strategic Deception",
-booktitle="Decision and Game Theory for Security",
-year="2024",
-publisher="Springer Nature Switzerland",
-address="Cham",
-pages="149--176",
-abstract="Ransomware attacks continue to be a major concern for critical systems that are vital for society e.g., healthcare, finance, and transportation. Traditional cyber defense mechanisms fail to pose dynamic measures to stop ransomware attacks from progressing through various stages in the attack process. To this end, intelligent cyber deception strategies can be effective when they leverage information about attacker strategies and deploy deceptive assets to increase the cost or complexity of a successful exploit or discourage continued attacker efforts. In this paper, we present a novel game theoretic approach that uses deception-based defense strategies at each of the ransomware attack stages for optimization of the decision-making to outsmart attacker advances. Specifically, we propose a multistage ransomware game model that deploys a combination of deception assets i.e., honeytokens, honeypots, honeyfiles, and network honeypots in subgames. Using closed-form backward induction, we evaluated Subgame-Perfect Nash Equilibrium (SPNE). We perform a numerical analysis using real-world data and statistics pertaining to the impact of ransomware attacks in the healthcare sector. Our healthcare case study evaluation results show that the use of deception technologies is favorable to the defender. This work elucidates the profound implications of strategic deception in cybersecurity, demonstrating its capacity to complicate successful exploits and consequently bolster the defense of key societal infrastructures.",
-isbn="978-3-031-74835-6",
-pdf="gamesec.pdf"
+@inproceedings{bhusal2026aaai,
+  abbr = {AAAI},
+  title = {Privacy Preserving In-Context-Learning Framework for Large Language Models},
+  author = {Bhusal, Bishnu and Acharya, Manoj and Kaur, Ramneet and Samplawski, Colin and Roy, Anirban and Cobb, Adam D. and Chadha, Rohit and Jha, Susmit},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume = {40},
+  number = {42},
+  pages = {35303--35312},
+  year = {2026},
+  month = mar,
+  doi = {10.1609/aaai.v40i42.40838},
+  url = {https://doi.org/10.1609/aaai.v40i42.40838},
+  eprint = {2509.13625},
+  archivePrefix = {arXiv},
+  arxiv = {2509.13625},
+  code = {https://github.com/bhusalb/privacy-preserving-icl},
+  pdf = {aaai26.pdf},
+  abstract = {Large language models (LLMs) have significantly transformed natural language understanding and generation, but they raise privacy concerns due to potential exposure of sensitive information. Studies have highlighted the risk of information leakage, where adversaries can extract sensitive information embedded in the prompts. In this work, we introduce a novel private prediction framework for generating high-quality synthetic text with strong privacy guarantees. Our approach leverages the Differential Privacy (DP) framework to ensure worst-case theoretical bounds on information leakage without requiring any fine-tuning of the underlying models. The proposed method performs inference on private records and aggregates the resulting per-token output distributions. This enables the generation of longer and coherent synthetic text while maintaining privacy guarantees. Additionally, we propose a simple blending operation that combines private and public inference to further enhance utility. Empirical evaluations demonstrate that our approach outperforms previous state-of-the-art methods on in-context-learning (ICL) tasks, making it a promising direction for privacy-preserving text generation while maintaining high utility.},
+  bibtex_show = {true},
+  selected = {true}
 }
 
-@article{10.1145/3720446,
-author = {Rivera, Cody and Bhusal, Bishnu and Chadha, Rohit and Sistla, A. Prasad and Viswanathan, Mahesh},
-title = {Checking δ-Satisfiability of Reals with Integrals},
-year = {2025},
-issue_date = {April 2025},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-volume = {9},
-number = {OOPSLA1},
-url = {https://doi.org/10.1145/3720446},
-doi = {10.1145/3720446},
-abstract = {Many synthesis and verification problems can be reduced to determining the truth of formulas over the real numbers. These formulas often involve constraints with integrals in them. To this end, we extend the framework of δ-decision procedures with techniques for handling integrals of user-specified real functions. We implement this decision procedure in the tool ∫dReal, which is built on top of dReal. We evaluate ∫dReal on a suite of problems that include formulas verifying the fairness of algorithms and the privacy and the utility of privacy mechanisms and formulas that synthesize parameters for the desired utility of privacy mechanisms. The performance of the tool in these experiments demonstrates the effectiveness of ∫dReal.},
-journal = {Proc. ACM Program. Lang.},
-month = apr,
-articleno = {105},
-numpages = {26},
-keywords = {integrals, synthesis, theory of reals, verification, δ-satisfiability}
+@article{kshetri2025uavchainsurvey,
+  abbr = {TechRxiv},
+  title = {UAVchain: A Survey of Blockchain Technology Applications for Unmanned Aerial Vehicles: Safety, Security, Directions, and Challenges},
+  author = {Kshetri, Naresh and Rahman, Mir Mehedi and Eashrak, Nafiz and Pokharel, Bishwo Prakash and Bhusal, Bishnu and Badhon, Md Bahauddin and Jhaveri, Rutvij and Ahmed, Mohiuddin},
+  journal = {TechRxiv},
+  year = {2025},
+  month = dec,
+  doi = {10.36227/techrxiv.176469369.98290190/v1},
+  url = {https://doi.org/10.36227/techrxiv.176469369.98290190/v1},
+  abstract = {From civil infrastructure inspection and precision agriculture to security surveillance and real-time monitoring, the public utilization of unmanned aerial vehicles (UAVs) has grown exponentially. A strong foundation for cyber defense, data security, information security, and network security can be established through blockchain technology, leveraging its intrinsic features such as privacy, consensus mechanisms, immutability, and decentralization. This paper presents a comprehensive study of the future directions and key research challenges of UAVs with respect to blockchain technology, including implications for national defense and cyber warfare. Various cybersecurity tools, stochastic models, cyber frameworks, and war theories are analyzed, and key guidelines are provided integrating blockchain features for UAV applications.},
+  bibtex_show = {true}
 }
 
-@InProceedings{10.1007/978-3-031-61932-8_7,
-author="Bhusal, Bishnu and Ma, Yuanye and Chadha, Rohit",
-title="Privacy Nutrition Labels: Promise, Practice, and Paradoxes in Communicating Privacy",
-booktitle="HCI International 2025 Posters",
-year="2025",
-publisher="Springer Nature Switzerland",
-pdf="hcii.pdf"
+@inproceedings{bhusal2025ccs,
+  abbr = {CCS},
+  title = {Approximate Algorithms for Verifying Differential Privacy with Gaussian Distributions},
+  author = {Bhusal, Bishnu and Chadha, Rohit and Sistla, A. Prasad and Viswanathan, Mahesh},
+  booktitle = {Proceedings of the 2025 ACM SIGSAC Conference on Computer and Communications Security},
+  series = {CCS '25},
+  pages = {1439--1453},
+  year = {2025},
+  month = oct,
+  publisher = {Association for Computing Machinery},
+  doi = {10.1145/3719027.3765043},
+  url = {https://doi.org/10.1145/3719027.3765043},
+  eprint = {2509.08804},
+  archivePrefix = {arXiv},
+  arxiv = {2509.08804},
+  code = {https://github.com/bhusalb/approximate-dp},
+  pdf = {ccs25.pdf},
+  keywords = {Differential Privacy, Verification, Gaussian Distribution, Tail Bounds, Approximation Algorithms},
+  abstract = {The verification of differential privacy algorithms that employ Gaussian distributions is little understood. This paper tackles the challenge of verifying such programs by introducing a novel approach to approximating probability distributions of loop-free programs that sample from both discrete and continuous distributions with computable probability density functions, including Gaussian and Laplace. We establish that verifying (epsilon, delta)-differential privacy for these programs is almost decidable, meaning the problem is decidable for all values of delta except those in a finite set. Our verification algorithm is based on computing probabilities to any desired precision by combining integral approximations, and tail probability bounds. The proposed methods are implemented in the tool, DipApprox, using the FLINT library for high-precision integral computations, and incorporate optimizations to enhance scalability. We validate DipApprox on fundamental privacy-preserving algorithms, such as Gaussian variants of the Sparse Vector Technique and Noisy Max, demonstrating its effectiveness in both confirming privacy guarantees and detecting violations.},
+  bibtex_show = {true},
+  selected = {true}
 }
 
-
-@inproceedings{ccs25,
-author = {Bhusal, Bishnu and Chadha, Rohit and Sistla, A. Prasad and Viswanathan, Mahesh},
-title = {Approximate Algorithms for Verifying Differential Privacy with Gaussian Distributions},
-year = {2025},
-month = oct,
-booktitle = {Proceedings of the 2025 ACM SIGSAC Conference on Computer and Communications Security},
-keywords = {Differential Privacy, Verification, Gaussian Distribution, Tail Bounds, Approximation Algorithms},
-series = {CCS '25},
-pdf="ccs25.pdf"
+@article{rivera2025oopsla,
+  abbr = {OOPSLA},
+  title = {Checking δ-Satisfiability of Reals with Integrals},
+  author = {Rivera, Cody and Bhusal, Bishnu and Chadha, Rohit and Sistla, A. Prasad and Viswanathan, Mahesh},
+  journal = {Proc. ACM Program. Lang.},
+  volume = {9},
+  number = {OOPSLA1},
+  articleno = {105},
+  pages = {704--729},
+  year = {2025},
+  month = apr,
+  publisher = {Association for Computing Machinery},
+  doi = {10.1145/3720446},
+  url = {https://doi.org/10.1145/3720446},
+  keywords = {integrals, synthesis, theory of reals, verification, δ-satisfiability},
+  abstract = {Many synthesis and verification problems can be reduced to determining the truth of formulas over the real numbers. These formulas often involve constraints with integrals in them. To this end, we extend the framework of δ-decision procedures with techniques for handling integrals of user-specified real functions. We implement this decision procedure in the tool ∫dReal, which is built on top of dReal. We evaluate ∫dReal on a suite of problems that include formulas verifying the fairness of algorithms and the privacy and the utility of privacy mechanisms and formulas that synthesize parameters for the desired utility of privacy mechanisms. The performance of the tool in these experiments demonstrates the effectiveness of ∫dReal.},
+  bibtex_show = {true},
+  selected = {true}
 }
 
-@incollection{osama2024blockDADS,
-  title = {{blockDADS: Blockchain Technology for Data Analytics and Data Security - Applications and Solutions}},
-  author = {Osama, Omar Faruq and Bhusal, Bishnu and Kshetri, Naresh and Pokharel, Bishwo Prakash},
-  booktitle = {Blockchain Technology for Cyber Defense, Cyber Security, and Countermeasures: Techniques, Solutions, and Applications},
-  publisher = {CRC Press, Routledge Taylor \& Francis Group},
-  year = {2024}
+@inproceedings{bhusal2025hcii,
+  abbr = {HCII},
+  title = {Privacy Nutrition Labels: Promise, Practice, and Paradoxes in Communicating Privacy},
+  author = {Bhusal, Bishnu and Ma, Yuanye and Chadha, Rohit},
+  booktitle = {HCI International 2025 Posters},
+  series = {Communications in Computer and Information Science},
+  pages = {18--28},
+  year = {2025},
+  publisher = {Springer Nature Switzerland},
+  doi = {10.1007/978-3-031-94159-7_3},
+  url = {https://doi.org/10.1007/978-3-031-94159-7_3},
+  code = {https://github.com/bhusalb/privacy-label-review-paper},
+  pdf = {hcii.pdf},
+  bibtex_show = {true}
 }
-
-@INCOLLECTION{Rahman2025-ex,
-  title     = "Cyber {AI} Trends",
-  booktitle = "Advances in Social Networking and Online Communities",
-  author    = "Rahman, Mir Mehedi and Hossain, Sazzad and Bhusal, Bishnu and
-               Kshetri, Naresh",
-  abstract  = "Generative Artificial Intelligence (AI) is opening new paths in
-               the detection and prevention of cyberbullying. As we know, AI is
-               shaping and improving the future of cyber, industry, automation,
-               manufacturing, healthcare etc. with challenges of privacy
-               concerns, job losses issues, and increased rules. This chapter
-               explores future trends in AI-driven tools designed to reduce
-               online bullying including various cybercrime across social media
-               platforms, messaging apps, and other digital platforms. Ethical
-               concerns like security and privacy, fairness, and avoiding bias
-               are also discussed, aiming to ensure that AI tools are used
-               responsibly and transparently. By combining technical
-               advancements with an understanding of social impact, this
-               chapter presents a vision for AI systems that create safer, more
-               supportive online spaces. The chapter highlights the potential
-               of generative AI to shape digital environments that are
-               inclusive, resilient, and protective, fostering healthier
-               interactions for everyone involved with the future scope of the
-               study.",
-  publisher = "IGI Global",
-  pages     = "279--298",
-  month     =  feb,
-  year      =  2025,
-  pdf       = "chapter10.pdf"
-}
-
-
-
-@inproceedings{aaai,
-  title={Privacy Preserving In-Context-Learning Framework for Large Language Models},
-  author={Bhusal, Bishnu and Acharya, Manoj and Kaur, Ramneet and Samplawski, Colin and Roy, Anirban and Cobb, Adam D and Chadha, Rohit and Jha, Susmit},
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  volume={40},
-  year={2026},
-    pdf="aaai26.pdf"
-}
-
 
 @inproceedings{chapagain2025realphish,
-  title={RealPhish: An Algorithm for Real-Time Email Phishing Detection},
-  author={Chapagain, Devendra and Bhusal, Bishnu and Kshetri, Naresh and Subedi, Pradip},
-booktitle={Proceedings of the 26th Annual Conference on Information Technology Education},
-  year={2025}
+  abbr = {SIGITE},
+  title = {RealPhish: An Algorithm for Real-Time Email Phishing Detection},
+  author = {Chapagain, Devendra and Bhusal, Bishnu and Kshetri, Naresh and Subedi, Pradip},
+  booktitle = {Proceedings of the 26th Annual Conference on Information Technology Education},
+  year = {2025},
+  url = {https://doi.org/10.20944/preprints202511.0218.v1},
+  html = {https://doi.org/10.20944/preprints202511.0218.v1},
+  abstract = {In this era of technology, phishing emails remain a critical cybersecurity threat, exploiting human vulnerabilities to compromise sensitive data and systems. Traditional detection methods, such as blacklists and static heuristics, often fail to keep pace with the evolving sophistication of phishing tactics. We propose RealPhish, a real-time phishing detection algorithm combining machine learning, Natural Language Processing (NLP), and rule-based heuristics to identify malicious emails with high precision. RealPhish analyzes both static email features and simulated user interaction data to enhance detection accuracy. Using a publicly available phishing email dataset and synthetically generated behavioral data, the algorithm achieves a detection accuracy of 95\%, with a precision of 96\% and recall of 89\%, outperforming baseline models. The system also includes a rule-based override layer for known threats and provides interpretable outputs for transparency.},
+  bibtex_show = {true}
+}
+
+@article{mishra2025anomaly,
+  abbr = {arXiv},
+  title = {An Efficient Anomaly Detection Framework for Wireless Sensor Networks Using Markov Process},
+  author = {Mishra, Rahul and Jha, Sudhanshu Kumar and Osama, Omar Faruq and Bhusal, Bishnu and Sudhakaran, Sneha and Kshetri, Naresh},
+  journal = {arXiv preprint arXiv:2511.00481},
+  year = {2025},
+  month = nov,
+  eprint = {2511.00481},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CR},
+  url = {https://arxiv.org/abs/2511.00481},
+  arxiv = {2511.00481},
+  abstract = {Wireless Sensor Networks form the backbone of modern cyber physical systems used in applications such as environmental monitoring, healthcare monitoring, industrial automation, and smart infrastructure. In this paper a lightweight and interpretable anomaly detection framework based on a first order Markov chain model is proposed. The method discretizes continuous sensor readings into finite states and models the temporal dynamics of sensor transitions through a transition probability matrix. Anomalies are detected when observed transitions occur with probabilities below a computed threshold, allowing for real time detection without labeled data or intensive computation. The framework is validated on the Intel Berkeley Research Lab dataset, and comparative analysis with Z score, Hidden Markov Model, and autoencoder based methods shows a balanced trade-off between accuracy, interpretability, and computational efficiency.},
+  bibtex_show = {true}
+}
+
+@article{mishra2025nodewsnsec,
+  abbr = {IJACSA},
+  title = {nodeWSNsec: A Hybrid Metaheuristic Approach for Reliable Security and Node Deployment in Wireless Sensor Networks},
+  author = {Mishra, Rahul and Jha, Sudhanshu Kumar and Kshetri, Naresh and Bhusal, Bishnu and Rahman, Mir Mehedi and Rana, Md Masud and Eli, Aimina Ali and Islam, Khaled Aminul and Pokharel, Bishwo Prakash},
+  journal = {International Journal of Advanced Computer Science and Applications},
+  volume = {16},
+  number = {8},
+  year = {2025},
+  doi = {10.14569/IJACSA.2025.0160814},
+  url = {https://doi.org/10.14569/IJACSA.2025.0160814},
+  eprint = {2508.16619},
+  archivePrefix = {arXiv},
+  arxiv = {2508.16619},
+  abstract = {Efficient and reliable node deployment in Wireless Sensor Networks is crucial for optimizing coverage of the area, connectivity among nodes, and energy efficiency. This paper proposes a hybrid metaheuristic approach combining a Genetic Algorithm (GA) and Particle Swarm Optimization (PSO) to address the challenges of energy efficient and reliable node deployment. Simulation results demonstrate that GA-PSO requires 15\% to 25\% fewer sensor nodes and maintains 95\% or more area coverage while maintaining connectivity in comparison to standalone GA or PSO. The proposed algorithm also dominates the Competitive Multi Objective Marine Predators Algorithm (CMOMPA) for long sensing and communication ranges in terms of coverage, connectivity, and deployment time.},
+  bibtex_show = {true}
+}
+
+@incollection{rahman2025cyberai,
+  abbr = {Chapter},
+  title = {Cyber AI Trends: Future Trends in AI for Cyberbullying Prevention},
+  author = {Rahman, Mir Mehedi and Hossain, Sazzad and Bhusal, Bishnu and Kshetri, Naresh},
+  booktitle = {Combating Cyberbullying With Generative AI},
+  series = {Advances in Social Networking and Online Communities},
+  publisher = {IGI Global},
+  pages = {279--298},
+  year = {2025},
+  month = feb,
+  doi = {10.4018/979-8-3373-0543-1.ch010},
+  url = {https://doi.org/10.4018/979-8-3373-0543-1.ch010},
+  pdf = {chapter10.pdf},
+  abstract = {Generative Artificial Intelligence (AI) is opening new paths in the detection and prevention of cyberbullying. As we know, AI is shaping and improving the future of cyber, industry, automation, manufacturing, healthcare etc. with challenges of privacy concerns, job losses issues, and increased rules. This chapter explores future trends in AI-driven tools designed to reduce online bullying including various cybercrime across social media platforms, messaging apps, and other digital platforms. Ethical concerns like security and privacy, fairness, and avoiding bias are also discussed, aiming to ensure that AI tools are used responsibly and transparently. By combining technical advancements with an understanding of social impact, this chapter presents a vision for AI systems that create safer, more supportive online spaces.},
+  bibtex_show = {true}
+}
+
+@incollection{osama2024blockdads,
+  abbr = {Chapter},
+  title = {{blockDADS: Blockchain Technology for Data Analytics and Data Security - Applications and Solutions}},
+  author = {Osama, Omar Faruq and Bhusal, Bishnu and Kshetri, Naresh and Pokharel, Bishwo Prakash},
+  booktitle = {Blockchain Technology for Cyber Defense, Cybersecurity, and Countermeasures: Techniques, Solutions, and Applications},
+  publisher = {CRC Press},
+  pages = {222--234},
+  year = {2024},
+  month = dec,
+  doi = {10.1201/9781003449515-14},
+  url = {https://doi.org/10.1201/9781003449515-14},
+  bibtex_show = {true}
+}
+
+@inproceedings{neupane2024gamesec,
+  abbr = {GameSec},
+  title = {On Countering Ransomware Attacks Using Strategic Deception},
+  author = {Neupane, Roshan Lal and Bhusal, Bishnu and Neupane, Kiran and Regmi, Preyea and Dinh, Tam and Marrero, Lilliana and Saghaian N. E., Sayed M. and Nadendla, Venkata Sriram Siddhardh and Calyam, Prasad},
+  editor = {Sinha, Arunesh and Fu, Jie and Zhu, Quanyan and Zhang, Tao},
+  booktitle = {Decision and Game Theory for Security (GameSec 2024)},
+  series = {Lecture Notes in Computer Science},
+  publisher = {Springer Nature Switzerland},
+  address = {Cham},
+  pages = {149--176},
+  year = {2024},
+  month = oct,
+  isbn = {978-3-031-74835-6},
+  doi = {10.1007/978-3-031-74835-6_8},
+  url = {https://doi.org/10.1007/978-3-031-74835-6_8},
+  code = {https://github.com/bhusalb/gt-ransomware-simulation},
+  pdf = {gamesec.pdf},
+  award = {Best Paper Award at GameSec 2024.},
+  award_name = {Best Paper Award},
+  abstract = {Ransomware attacks continue to be a major concern for critical systems that are vital for society e.g., healthcare, finance, and transportation. Traditional cyber defense mechanisms fail to pose dynamic measures to stop ransomware attacks from progressing through various stages in the attack process. To this end, intelligent cyber deception strategies can be effective when they leverage information about attacker strategies and deploy deceptive assets to increase the cost or complexity of a successful exploit or discourage continued attacker efforts. In this paper, we present a novel game theoretic approach that uses deception-based defense strategies at each of the ransomware attack stages for optimization of the decision-making to outsmart attacker advances. Specifically, we propose a multistage ransomware game model that deploys a combination of deception assets i.e., honeytokens, honeypots, honeyfiles, and network honeypots in subgames. Using closed-form backward induction, we evaluated Subgame-Perfect Nash Equilibrium (SPNE). We perform a numerical analysis using real-world data and statistics pertaining to the impact of ransomware attacks in the healthcare sector. Our healthcare case study evaluation results show that the use of deception technologies is favorable to the defender. This work elucidates the profound implications of strategic deception in cybersecurity, demonstrating its capacity to complicate successful exploits and consequently bolster the defense of key societal infrastructures.},
+  bibtex_show = {true},
+  selected = {true}
+}
+
+@inproceedings{neupane2024noms,
+  abbr = {NOMS},
+  title = {Formal Verification for Blockchain-based Insurance Claims Processing},
+  author = {Neupane, Roshan Lal and Bonnah, Ernest and Bhusal, Bishnu and Neupane, Kiran and Hoque, Khaza Anuarul and Calyam, Prasad},
+  booktitle = {NOMS 2024 - 2024 IEEE Network Operations and Management Symposium},
+  pages = {1--5},
+  year = {2024},
+  month = may,
+  publisher = {IEEE},
+  doi = {10.1109/NOMS59830.2024.10575641},
+  url = {https://doi.org/10.1109/NOMS59830.2024.10575641},
+  eprint = {2402.13169},
+  archivePrefix = {arXiv},
+  arxiv = {2402.13169},
+  abstract = {Insurance claims processing involves multi-domain entities and multi-source data, along with a number of human-agent interactions. Use of Blockchain technology-based platform can significantly improve scalability and response time for processing of claims which are otherwise manually-intensive and time-consuming. However, the chaincodes involved within the processes that issue claims, approve or deny them as required, need to be formally verified to ensure secure and reliable processing of transactions in Blockchain. In this paper, we use a formal modeling approach to verify various processes and their underlying chaincodes relating to different stages in insurance claims processing viz., issuance, approval, denial, and flagging for fraud investigation by using linear temporal logic (LTL). We simulate the formalism on the chaincodes and analyze the breach of chaincodes via model checking.},
+  bibtex_show = {true}
+}
+
+@inproceedings{chadha2023ccs,
+  abbr = {CCS},
+  title = {Deciding Differential Privacy of Online Algorithms with Multiple Variables},
+  author = {Chadha, Rohit and Sistla, A. Prasad and Viswanathan, Mahesh and Bhusal, Bishnu},
+  booktitle = {Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security},
+  series = {CCS '23},
+  pages = {1761--1775},
+  year = {2023},
+  month = nov,
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  isbn = {9798400700507},
+  doi = {10.1145/3576915.3623170},
+  url = {https://doi.org/10.1145/3576915.3623170},
+  eprint = {2309.06615},
+  archivePrefix = {arXiv},
+  arxiv = {2309.06615},
+  code = {https://github.com/bhusalb/DiPAut},
+  keywords = {automata, decision procedure, differential privacy, verification},
+  abstract = {We consider the problem of checking the differential privacy of online randomized algorithms that process a stream of inputs and produce outputs corresponding to each input. This paper generalizes an automaton model called DiP automata to describe such algorithms by allowing multiple real-valued storage variables. A DiP automaton is a parametric automaton whose behavior depends on the privacy budget ε. An automaton A will be said to be differentially private if, for some D, the automaton is Dε-differentially private for all values of ε > 0. We identify a precise characterization of the class of all differentially private DiP automata. We show that the problem of determining if a given DiP automaton belongs to this class is PSPACE-complete. Our PSPACE algorithm also computes a value for D when the given automaton is differentially private. The algorithm has been implemented, and experiments demonstrating its effectiveness are presented.},
+  bibtex_show = {true},
+  selected = {true}
+}
+
+@misc{bhusal2023dipaut,
+  abbr = {Software},
+  title = {DiPAut: A Tool for Checking Differential Privacy of Online Randomized Algorithms},
+  author = {Bhusal, Bishnu and Chadha, Rohit and Sistla, A. Prasad and Viswanathan, Mahesh},
+  howpublished = {Zenodo},
+  year = {2023},
+  month = sep,
+  doi = {10.5281/zenodo.8332275},
+  url = {https://doi.org/10.5281/zenodo.8332275},
+  code = {https://github.com/bhusalb/DiPAut},
+  bibtex_show = {true}
+}
+
+@article{adhikari2023vtonit,
+  abbr = {arXiv},
+  title = {VTON-IT: Virtual Try-On using Image Translation},
+  author = {Adhikari, Santosh and Bhusal, Bishnu and Ghimire, Prashant and Shrestha, Anil},
+  journal = {arXiv preprint arXiv:2310.04558},
+  year = {2023},
+  month = oct,
+  eprint = {2310.04558},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CV},
+  url = {https://arxiv.org/abs/2310.04558},
+  arxiv = {2310.04558},
+  abstract = {Virtual Try-On (trying clothes virtually) is a promising application of the Generative Adversarial Network (GAN). However, it is an arduous task to transfer the desired clothing item onto the corresponding regions of a human body because of varying body size, pose, and occlusions like hair and overlapped clothes. In this paper, we try to produce photo-realistic translated images through semantic segmentation and a generative adversarial architecture-based image translation network. We present a novel image-based Virtual Try-On application VTON-IT that takes an RGB image, segments desired body part, and overlays target cloth over the segmented body region. Most state-of-the-art GAN-based Virtual Try-On applications produce unaligned pixelated synthesis images on real-life test images. However, our approach generates high-resolution natural images with detailed textures on such variant images.},
+  bibtex_show = {true}
 }

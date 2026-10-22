@@ -5,3 +5,20 @@
 "NOMS":
   url: https://noms2024.ieee-noms.org/
 
+
+"AAAI":
+  url: https://aaai.org/conference/aaai/
+  color: "#1f4e79"
+
+"OOPSLA":
+  url: https://2025.splashcon.org/track/OOPSLA
+  color: "#7a1f5c"
+
+"GameSec":
+  url: https://www.gamesec-conf.org/
+  color: "#2e7d32"
+
+"HCII":
+  url: https://2025.hci.international/
+  color: "#6a4c93"
+
