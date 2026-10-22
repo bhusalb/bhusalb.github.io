@@ -70,7 +70,7 @@ $$
 
 The program satisfies $$(\varepsilon_{\mathrm{prv}},\delta)$$-differential privacy when this gap is at most $$\delta$$ for every required ordered adjacent pair. With symmetric adjacency, both directions matter.
 
-Why sum only positive terms? The output event that maximizes the privacy violation includes exactly the outputs with positive contributions. This replaces checking every subset of the finite output space with a sum over individual outputs. Lemma 2 in the paper establishes the equivalence; the [earlier verification tutorial]({{ '/blog/2026/verifying-differential-privacy/' | relative_url }}) works through a small exact example.
+Why sum only positive terms? The output event that maximizes the privacy violation includes exactly the outputs with positive contributions. This replaces checking every subset of the finite output space with a sum over individual outputs. Lemma 2 in the paper establishes the equivalence.
 
 DipApprox computes lower and upper bounds on this gap. For each pair, an upper bound at or below $$\delta$$ proves the inequality; a lower bound above $$\delta$$ proves a violation. An interval crossing the boundary is inconclusive at the current precision. Equivalently, the largest gap over all required pairs must be at most $$\delta$$; the figure illustrates bounds on that maximum.
 

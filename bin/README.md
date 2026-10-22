@@ -1,6 +1,6 @@
 # Research website maintenance
 
-`generate-social-cards.cjs` contains the editable HTML, CSS, and SVG source for the four 1200 × 630 tutorial sharing images in `assets/img/research/`. The images are committed so normal Jekyll builds do not need Node or a browser.
+`generate-social-cards.cjs` contains the editable HTML, CSS, and SVG source for the 1200 × 630 tutorial sharing images in `assets/img/research/`. The images are committed so normal Jekyll builds do not need Node or a browser.
 
 To regenerate them with Node 20 or newer, install Playwright outside the repository and run the script with an installed Chrome executable:
 

@@ -19,7 +19,6 @@ Run the build and the integration checks:
 bundle install
 JEKYLL_ENV=production bundle exec jekyll build --lsi
 bundle exec ruby bin/validate_research_site.rb
-python3 assets/code/finite_output_privacy.py
 python3 assets/code/clipping_polar_geometry.py
 npm ci
 npx prettier _config.yml _pages _posts _includes/metadata.liquid _includes/head.liquid --check

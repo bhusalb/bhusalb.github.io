@@ -25,21 +25,6 @@ const cards = [
     </svg>`,
   },
   {
-    slug: "verifying-dp",
-    topic: "FORMAL VERIFICATION",
-    title: "Verifying<br>differential privacy",
-    subtitle: "A worked example and<br>three routes to automation",
-    graphic: `<svg viewBox="0 0 330 330" aria-label="Three proof paths converge on a privacy condition">
-      <g fill="none" stroke="#355968" stroke-width="1"><circle cx="165" cy="165" r="127"/><circle cx="165" cy="165" r="93"/></g>
-      <g fill="none" stroke="#77d9c7" stroke-width="2.5"><path d="M165 48v63M55 228l65-37M275 228l-65-37"/></g>
-      <g fill="#173c49" stroke="#77d9c7" stroke-width="2"><circle cx="165" cy="38" r="17"/><circle cx="54" cy="229" r="17"/><circle cx="276" cy="229" r="17"/></g>
-      <g fill="#77d9c7"><circle cx="165" cy="38" r="5"/><circle cx="54" cy="229" r="5"/><circle cx="276" cy="229" r="5"/></g>
-      <path d="M165 103l61 61-61 61-61-61z" fill="#77d9c7"/>
-      <text x="165" y="183" text-anchor="middle" font-size="57" fill="#092733" font-family="Georgia,serif">ε</text>
-      <g fill="#d9e8ec" font-size="16" font-family="Arial,sans-serif" text-anchor="middle"><text x="165" y="17">DECISION PROCEDURES</text><text x="75" y="275">APPROXIMATION</text><text x="264" y="275">INTEGRALS</text></g>
-    </svg>`,
-  },
-  {
     slug: "private-muon",
     topic: "PRIVATE OPTIMIZATION",
     title: "Why gradient clipping<br>changes Muon’s geometry",
