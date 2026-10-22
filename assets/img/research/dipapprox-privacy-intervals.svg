@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg role="img" aria-labelledby="dipapprox-privacy-intervals-title dipapprox-privacy-intervals-desc" xmlns:xlink="http://www.w3.org/1999/xlink" width="640pt" height="500pt" viewBox="0 0 640 500" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title id="dipapprox-privacy-intervals-title">Privacy decisions from rigorous intervals</title>
+ <desc id="dipapprox-privacy-intervals-desc">An illustrative decision chart, not experimental results. At delta equal to 0.10, bounds of 0.04 to 0.08 on the maximum privacy gap certify DP, bounds of 0.12 to 0.16 establish Not_DP, and bounds of 0.08 to 0.13 leave the answer Unknown. DP requires upper bounds for all relevant adjacent input pairs; a privacy violation requires a witness with a lower bound above delta.</desc>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>bin/generate-dipapprox-figures.py</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 500
+L 640 500
+L 640 0
+L 0 0
+z
+" style="fill: #fcfdfd"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 147.2 375
+L 588.8 375
+L 588.8 140
+L 147.2 140
+z
+" style="fill: #fcfdfd"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 147.2 375
+L 147.2 140
+" clip-path="url(#pa66d666edc)" style="fill: none; stroke: #dce5e9; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2"/>
+     <g id="text_1">
+      <text style="fill: #506377; font: 18px 'DejaVu Sans'; text-anchor: middle" x="147.2" y="400.677188" transform="rotate(-0 147.2 400.677188)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 257.6 375
+L 257.6 140
+" clip-path="url(#pa66d666edc)" style="fill: none; stroke: #dce5e9; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_2">
+      <text style="fill: #506377; font: 18px 'DejaVu Sans'; text-anchor: middle" x="257.6" y="400.677188" transform="rotate(-0 257.6 400.677188)">.05</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 368 375
+L 368 140
+" clip-path="url(#pa66d666edc)" style="fill: none; stroke: #dce5e9; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_3">
+      <text style="fill: #506377; font: 18px 'DejaVu Sans'; text-anchor: middle" x="368" y="400.677188" transform="rotate(-0 368 400.677188)">.10</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 478.4 375
+L 478.4 140
+" clip-path="url(#pa66d666edc)" style="fill: none; stroke: #dce5e9; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_4">
+      <text style="fill: #506377; font: 18px 'DejaVu Sans'; text-anchor: middle" x="478.4" y="400.677188" transform="rotate(-0 478.4 400.677188)">.15</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 588.8 375
+L 588.8 140
+" clip-path="url(#pa66d666edc)" style="fill: none; stroke: #dce5e9; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_5">
+      <text style="fill: #506377; font: 18px 'DejaVu Sans'; text-anchor: middle" x="588.8" y="400.677188" transform="rotate(-0 588.8 400.677188)">.20</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_11"/>
+     <g id="text_6">
+      <text style="fill: #506377; font: 18px 'DejaVu Sans'; text-anchor: end" x="135.2" y="205.588594" transform="rotate(-0 135.2 205.588594)">DP</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_12"/>
+     <g id="text_7">
+      <text style="fill: #506377; font: 18px 'DejaVu Sans'; text-anchor: end" x="135.2" y="274.455928" transform="rotate(-0 135.2 274.455928)">Not_DP</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_13"/>
+     <g id="text_8">
+      <text style="fill: #506377; font: 18px 'DejaVu Sans'; text-anchor: end" x="135.2" y="343.823888" transform="rotate(-0 135.2 343.823888)">Unknown</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_14">
+    <path d="M 368 375
+L 368 140
+" clip-path="url(#pa66d666edc)" style="fill: none; stroke-dasharray: 8,8; stroke-dashoffset: 0; stroke: #17334a; stroke-width: 2"/>
+   </g>
+   <g id="line2d_15">
+    <path d="M 235.52 198.75
+L 323.84 198.75
+" clip-path="url(#pa66d666edc)" style="fill: none; stroke: #087f7b; stroke-width: 8"/>
+   </g>
+   <g id="line2d_16">
+    <path d="M 235.52 206.352941
+L 235.52 191.147059
+" clip-path="url(#pa66d666edc)" style="fill: none; stroke: #087f7b; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_17">
+    <path d="M 323.84 206.352941
+L 323.84 191.147059
+" clip-path="url(#pa66d666edc)" style="fill: none; stroke: #087f7b; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_18">
+    <path d="M 412.16 267.867647
+L 500.48 267.867647
+" clip-path="url(#pa66d666edc)" style="fill: none; stroke: #b5463b; stroke-width: 8"/>
+   </g>
+   <g id="line2d_19">
+    <path d="M 412.16 275.470588
+L 412.16 260.264706
+" clip-path="url(#pa66d666edc)" style="fill: none; stroke: #b5463b; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_20">
+    <path d="M 500.48 275.470588
+L 500.48 260.264706
+" clip-path="url(#pa66d666edc)" style="fill: none; stroke: #b5463b; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_21">
+    <path d="M 323.84 336.985294
+L 434.24 336.985294
+" clip-path="url(#pa66d666edc)" style="fill: none; stroke: #a85b00; stroke-width: 8"/>
+   </g>
+   <g id="line2d_22">
+    <path d="M 323.84 344.588235
+L 323.84 329.382353
+" clip-path="url(#pa66d666edc)" style="fill: none; stroke: #a85b00; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_23">
+    <path d="M 434.24 344.588235
+L 434.24 329.382353
+" clip-path="url(#pa66d666edc)" style="fill: none; stroke: #a85b00; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 147.2 375
+L 588.8 375
+" style="fill: none; stroke: #dce5e9; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_9">
+    <g id="patch_4">
+     <path d="M 319.469844 163.838465
+L 416.530156 163.838465
+L 416.530156 137.470028
+L 319.469844 137.470028
+z
+" style="fill: #fcfdfd"/>
+    </g>
+    <text style="fill: #17334a; font: 700 19px 'DejaVu Sans'; text-anchor: middle" x="368" y="155.897059" transform="rotate(-0 368 155.897059)">δ = 0.10</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #087f7b; font: 18px 'DejaVu Sans'; text-anchor: middle" x="279.68" y="182.852941" transform="rotate(-0 279.68 182.852941)">[0.04, 0.08]</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #b5463b; font: 18px 'DejaVu Sans'; text-anchor: middle" x="456.32" y="251.970588" transform="rotate(-0 456.32 251.970588)">[0.12, 0.16]</text>
+   </g>
+   <g id="text_12">
+    <text style="fill: #a85b00; font: 18px 'DejaVu Sans'; text-anchor: middle" x="379.04" y="321.088235" transform="rotate(-0 379.04 321.088235)">[0.08, 0.13]</text>
+   </g>
+  </g>
+  <g id="text_13">
+   <text style="fill: #17334a; font: 700 25px 'DejaVu Sans'; text-anchor: start" x="41.6" y="48.996094" transform="rotate(-0 41.6 48.996094)">One threshold, three possible answers</text>
+  </g>
+  <g id="text_14">
+   <text style="fill: #506377; font: 18px 'DejaVu Sans'; text-anchor: start" x="41.6" y="81.177188" transform="rotate(-0 41.6 81.177188)">Illustrative intervals — not measured paper results</text>
+  </g>
+  <g id="text_15">
+   <text style="fill: #17334a; font: 19px 'DejaVu Sans'; text-anchor: middle" x="368" y="440" transform="rotate(-0 368 440)">Bounds on the maximum privacy gap</text>
+  </g>
+  <g id="text_16">
+   <text style="fill: #17334a; font: 18px 'DejaVu Sans'; text-anchor: middle" x="320" y="472.5" transform="rotate(-0 320 472.5)">Below: certified  •  Above: violated  •  Crossing: unknown</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pa66d666edc">
+   <rect x="147.2" y="140" width="441.6" height="235"/>
+  </clipPath>
+ </defs>
+</svg>

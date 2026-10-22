@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="820" viewBox="0 0 640 820" role="img" aria-labelledby="dipapprox-verification-pipeline-title dipapprox-verification-pipeline-desc">
+  <title id="dipapprox-verification-pipeline-title">From a randomized program to a sound privacy verdict</title>
+  <desc id="dipapprox-verification-pipeline-desc">A program with finite input and output domains defines execution paths. Path probabilities are handled with bounded-domain integrals and explicit tail bounds. These produce probability intervals, then privacy-gap bounds, and finally DP, Not_DP, or Unknown. DP requires all relevant adjacent input pairs to be certified; Not_DP requires a violating witness.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#506377"/></marker>
+  </defs>
+  <rect width="640" height="820" rx="0" fill="#fcfdfd"/>
+  <g font-family="DejaVu Sans, Arial, sans-serif" fill="#17334a">
+  <text x="40" y="51" font-size="25" font-weight="700">How DipApprox reaches a verdict</text>
+  <text x="40" y="83" font-size="18" fill="#506377">A high-level view of sound approximate verification</text>
+<rect x="40" y="119" width="255" height="70" rx="12" fill="#e8eef4" stroke="#17334a" stroke-width="1.5"/>
+<text x="167.5" y="161" font-size="21" text-anchor="middle">Randomized program</text>
+<rect x="345" y="119" width="255" height="70" rx="12" fill="#e8eef4" stroke="#17334a" stroke-width="1.5"/>
+<text x="472.5" y="147" font-size="21" text-anchor="middle">Finite input and</text>
+<text x="472.5" y="175" font-size="21" text-anchor="middle">output domains</text>
+<text x="320" y="163" text-anchor="middle" font-size="28">+</text>
+<path d="M167 189 V211 H320 V234" fill="none" stroke="#506377" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M472 189 V211 H320" fill="none" stroke="#506377" stroke-width="2"/>
+<rect x="110" y="237" width="420" height="60" rx="12" fill="#d6efea" stroke="#087f7b" stroke-width="1.5"/>
+<text x="320" y="274" font-size="21" text-anchor="middle">Execution paths</text>
+<path d="M320 297 V319 H177 V343" fill="none" stroke="#506377" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M320 319 H463 V343" fill="none" stroke="#506377" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="40" y="346" width="275" height="83" rx="12" fill="#d6efea" stroke="#087f7b" stroke-width="1.5"/>
+<text x="177.5" y="380.5" font-size="21" text-anchor="middle">Integrals on a</text>
+<text x="177.5" y="408.5" font-size="21" text-anchor="middle">bounded domain</text>
+<rect x="345" y="346" width="255" height="83" rx="12" fill="#fff0d8" stroke="#a85b00" stroke-width="1.5"/>
+<text x="472.5" y="380.5" font-size="21" text-anchor="middle">Explicit bounds</text>
+<text x="472.5" y="408.5" font-size="21" text-anchor="middle">on the tails</text>
+<path d="M177 429 V451 H320 V475" fill="none" stroke="#506377" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M472 429 V451 H320" fill="none" stroke="#506377" stroke-width="2"/>
+<rect x="110" y="478" width="420" height="60" rx="12" fill="#d6efea" stroke="#087f7b" stroke-width="1.5"/>
+<text x="320" y="515" font-size="21" text-anchor="middle">Probability intervals</text>
+<path d="M320 538 V581" fill="none" stroke="#506377" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="110" y="584" width="420" height="60" rx="12" fill="#d6efea" stroke="#087f7b" stroke-width="1.5"/>
+<text x="320" y="621" font-size="21" text-anchor="middle">Privacy-gap bounds</text>
+<path d="M320 644 V666 H125 V690" fill="none" stroke="#506377" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M320 666 V690" fill="none" stroke="#506377" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M320 666 H515 V690" fill="none" stroke="#506377" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="40" y="693" width="170" height="68" rx="12" fill="#d6efea" stroke="#087f7b" stroke-width="1.5"/>
+<text x="125" y="720" font-size="20" text-anchor="middle">DP</text>
+<text x="125" y="748" font-size="20" text-anchor="middle">certified</text>
+<rect x="235" y="693" width="170" height="68" rx="12" fill="#fbe9e5" stroke="#b5463b" stroke-width="1.5"/>
+<text x="320" y="720" font-size="20" text-anchor="middle">Not_DP</text>
+<text x="320" y="748" font-size="20" text-anchor="middle">witness found</text>
+<rect x="430" y="693" width="170" height="68" rx="12" fill="#fff0d8" stroke="#a85b00" stroke-width="1.5"/>
+<text x="515" y="720" font-size="20" text-anchor="middle">Unknown</text>
+<text x="515" y="748" font-size="20" text-anchor="middle">unresolved</text>
+<text x="320" y="797" text-anchor="middle" font-size="18" fill="#506377">Continuous random draws; finite input and output domains.</text>
+</g></svg>
