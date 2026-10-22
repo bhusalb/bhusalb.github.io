@@ -2,6 +2,7 @@
 layout: post
 title: "Privacy-preserving in-context learning: synthetic demonstrations and privacy budgets"
 date: 2026-10-22 09:00:00 -0600
+display_order: 2
 author: Bishnu Bhusal
 description: "How clipped logits, public context, and private token sampling can produce reusable ICL demonstrations, with careful accounting for privacy boundaries."
 tags: [differential-privacy, language-models, in-context-learning]

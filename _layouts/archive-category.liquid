@@ -10,7 +10,8 @@ layout: default
   <article class="archive">
     <div class="table-responsive">
       <table class="table table-sm table-borderless">
-        {% for post in page.posts %}
+        {% assign ordered_posts = page.posts | sort: 'display_order' %}
+        {% for post in ordered_posts %}
           <tr>
             <th scope="row">{{ post.date | date: '%b %d, %Y' }}</th>
             <td>

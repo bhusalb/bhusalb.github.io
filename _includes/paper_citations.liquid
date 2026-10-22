@@ -1,0 +1,22 @@
+{% if page.related_papers.size > 0 %}
+  <section class="paper-citations" aria-labelledby="paper-citations-heading">
+    <h2 id="paper-citations-heading">
+      {% if page.related_papers.size == 1 %}Cite this paper{% else %}Cite these papers{% endif %}
+    </h2>
+    {% for paper_key in page.related_papers %}
+      {% assign citation_paper = site.data.publications | where: 'key', paper_key | first %}
+      {% if citation_paper %}
+        <div class="paper-citation">
+          <p>
+            <a href="{{ citation_paper.url }}">{{ citation_paper.title | escape }}</a>
+            {% if citation_paper.publication_status == 'preprint' %} · Preprint{% endif %}
+            <br>
+            <a href="{{ citation_paper.bibtex_url }}" download="{{ citation_paper.key }}.bib">Download BibTeX</a>
+            · <a href="{{ citation_paper.ris_url }}" download="{{ citation_paper.key }}.ris">Download RIS</a>
+          </p>
+          <pre data-copy-label="Copy BibTeX"><code class="language-bibtex">{{ citation_paper.bibtex | escape }}</code></pre>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </section>
+{% endif %}

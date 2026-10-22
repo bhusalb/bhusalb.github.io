@@ -6,7 +6,7 @@ The site connects papers, tutorials, software, and citation downloads. All subst
 
 - `_bibliography/papers.bib`: titles, author order, venues, dates, identifiers, abstracts, PDFs, and code links. Preserve the published title and author list. Identify preprints by their actual repository and update the record when a published version appears.
 - `_data/research.yml`: topic groupings and concise explanations of contributions and relevance. Keep claims within the paper's stated assumptions and evaluation.
-- `_posts/`: original research tutorials. Include `description`, `author`, `date`, `related_papers` (bibliography keys), and `sitemap: true` in front matter. Link to the original paper and distinguish teaching examples from experimental results.
+- `_posts/`: original research tutorials. Include `description`, `author`, `date`, `related_papers` (bibliography keys), and `sitemap: true` in front matter. `display_order` controls the order in tutorial listings, with lower values first. The post layout generates copyable BibTeX blocks from `related_papers`. Link to the original paper and distinguish teaching examples from experimental results.
 - `_examples/posts/`: archived al-folio examples, excluded from the published site and feed.
 
 The generator preserves `/publications/<key>/` URLs and creates `/publications.json`, `/publications.bib`, and per-paper `cite.bib` / `cite.ris` files. `/llms.txt` lists research pages and tutorials; `/llms-full.txt` adds the complete abstracts, summaries, and citation information. These outputs are generated from the bibliography instead of being maintained separately.

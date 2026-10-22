@@ -13,7 +13,8 @@ Research explanations and worked examples, with links to the original papers and
 [Subscribe via RSS](/feed.xml) · [Explore the research guide](/research/)
 
 <ul class="post-list">
-{% for post in site.posts %}
+{% assign ordered_posts = site.posts | sort: "display_order" %}
+{% for post in ordered_posts %}
   <li>
     <h2><a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
     <p>{{ post.description }}</p>

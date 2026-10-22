@@ -954,9 +954,31 @@ progress::-moz-progress-bar {
 
   &:active .copy,
   &:focus .copy,
+  &:focus-within .copy,
   &:hover .copy {
     color: var(--global-hover-color);
     opacity: 1;
+  }
+
+  .copy-status:not(:empty) {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 0.875rem;
+  }
+}
+
+.paper-citation {
+  pre {
+    padding: 3.4rem 1rem 1rem;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+
+  .copy {
+    opacity: 1;
+    min-height: 44px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--global-divider-color);
   }
 }
 
