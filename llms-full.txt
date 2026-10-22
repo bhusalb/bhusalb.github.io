@@ -180,7 +180,6 @@ Read this when a privacy mechanism uses Gaussian noise or requires reasoning abo
 The verification of differential privacy algorithms that employ Gaussian distributions is little understood. This paper tackles the challenge of verifying such programs by introducing a novel approach to approximating probability distributions of loop-free programs that sample from both discrete and continuous distributions with computable probability density functions, including Gaussian and Laplace. We establish that verifying (epsilon, delta)-differential privacy for these programs is almost decidable, meaning the problem is decidable for all values of delta except those in a finite set. Our verification algorithm is based on computing probabilities to any desired precision by combining integral approximations, and tail probability bounds. The proposed methods are implemented in the tool, DipApprox, using the FLINT library for high-precision integral computations, and incorporate optimizations to enhance scalability. We validate DipApprox on fundamental privacy-preserving algorithms, such as Gaussian variants of the Sparse Vector Technique and Noisy Max, demonstrating its effectiveness in both confirming privacy guarantees and detecting violations.
 
 Related tutorial: [DipApprox: verifying differential privacy with Gaussian noise](https://bishnubhusal.com.np/blog/2026/dipapprox-gaussian-differential-privacy/)
-Related tutorial: [Verifying differential privacy: a worked example and three routes to automation](https://bishnubhusal.com.np/blog/2026/verifying-differential-privacy/)
 
 ## Checking δ-Satisfiability of Reals with Integrals
 
@@ -209,7 +208,6 @@ Read this when a verification or synthesis task reduces to real-valued constrain
 
 Many synthesis and verification problems can be reduced to determining the truth of formulas over the real numbers. These formulas often involve constraints with integrals in them. To this end, we extend the framework of δ-decision procedures with techniques for handling integrals of user-specified real functions. We implement this decision procedure in the tool ∫dReal, which is built on top of dReal. We evaluate ∫dReal on a suite of problems that include formulas verifying the fairness of algorithms and the privacy and the utility of privacy mechanisms and formulas that synthesize parameters for the desired utility of privacy mechanisms. The performance of the tool in these experiments demonstrates the effectiveness of ∫dReal.
 
-Related tutorial: [Verifying differential privacy: a worked example and three routes to automation](https://bishnubhusal.com.np/blog/2026/verifying-differential-privacy/)
 
 ## Cyber AI Trends: Future Trends in AI for Cyberbullying Prevention
 
@@ -406,7 +404,6 @@ Read this when studying automated privacy verification for algorithms that proce
 
 We consider the problem of checking the differential privacy of online randomized algorithms that process a stream of inputs and produce outputs corresponding to each input. This paper generalizes an automaton model called DiP automata to describe such algorithms by allowing multiple real-valued storage variables. A DiP automaton is a parametric automaton whose behavior depends on the privacy budget ε. An automaton A will be said to be differentially private if, for some D, the automaton is Dε-differentially private for all values of ε > 0. We identify a precise characterization of the class of all differentially private DiP automata. We show that the problem of determining if a given DiP automaton belongs to this class is PSPACE-complete. Our PSPACE algorithm also computes a value for D when the given automaton is differentially private. The algorithm has been implemented, and experiments demonstrating its effectiveness are presented.
 
-Related tutorial: [Verifying differential privacy: a worked example and three routes to automation](https://bishnubhusal.com.np/blog/2026/verifying-differential-privacy/)
 
 ## VTON-IT: Virtual Try-On using Image Translation
 
