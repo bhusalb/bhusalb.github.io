@@ -1,0 +1,20 @@
+TY  - UNPB
+ID  - bhusal2026dpmuon
+TI  - Inner Momentum for Differentially Private Muon
+AU  - Bhusal, Bishnu
+AU  - Vu, Minh
+AU  - Southworth, Ben
+AU  - Zollicoffer, Geigh
+AU  - Chadha, Rohit
+AU  - Bhattarai, Manish
+PY  - 2026
+DA  - 2026/10
+T2  - arXiv preprint arXiv:2610.02738
+UR  - https://arxiv.org/abs/2610.02738
+AB  - Differentially private training clips each per-example gradient before adding noise. This clipping is radial for each example, yet unequal clipping factors can distort the relative singular-vector geometry of their average. Muon is particularly exposed to this effect, since its update is an approximate polar factor UV^T that depends only on the singular vectors that clipping can shift. To curb this degradation, we propose averaging each sampled example’s Muon gradient over the current model and a short history of recent models before clipping. The clipped batch matrix then separates into a common rescaling and a covariance residual R between sampled gradients and clipping values, bounding the clipping-induced distortion directly. We further show that a finite Newton-Schulz iteration preserves the polar factor of its input under these spectral conditions, confirming that our correction survives orthogonalization. In private GPT-2 fine-tuning on E2E and DART at epsilon in 1, 2, 4, 8, DP-Muon-IM improves BLEU and ROUGE-L over DP-Muon in every seed-matched comparison, and non-private diagnostics show 2-4% lower pre-noise polar error.
+KW  - Differential privacy
+KW  - Private optimization
+KW  - Muon
+KW  - Gradient clipping
+KW  - Language-model fine-tuning
+ER  - 

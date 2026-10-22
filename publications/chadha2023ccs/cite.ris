@@ -1,0 +1,23 @@
+TY  - CONF
+ID  - chadha2023ccs
+TI  - Deciding Differential Privacy of Online Algorithms with Multiple Variables
+AU  - Chadha, Rohit
+AU  - Sistla, A. Prasad
+AU  - Viswanathan, Mahesh
+AU  - Bhusal, Bishnu
+PY  - 2023
+DA  - 2023/11
+T2  - Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security
+SP  - 1761
+EP  - 1775
+PB  - Association for Computing Machinery
+SN  - 9798400700507
+DO  - 10.1145/3576915.3623170
+UR  - https://doi.org/10.1145/3576915.3623170
+AB  - We consider the problem of checking the differential privacy of online randomized algorithms that process a stream of inputs and produce outputs corresponding to each input. This paper generalizes an automaton model called DiP automata to describe such algorithms by allowing multiple real-valued storage variables. A DiP automaton is a parametric automaton whose behavior depends on the privacy budget ε. An automaton A will be said to be differentially private if, for some D, the automaton is Dε-differentially private for all values of ε > 0. We identify a precise characterization of the class of all differentially private DiP automata. We show that the problem of determining if a given DiP automaton belongs to this class is PSPACE-complete. Our PSPACE algorithm also computes a value for D when the given automaton is differentially private. The algorithm has been implemented, and experiments demonstrating its effectiveness are presented.
+KW  - Differential privacy
+KW  - Formal verification
+KW  - Online algorithms
+KW  - DiP automata
+KW  - Decision procedures
+ER  - 

@@ -1,0 +1,17 @@
+TY  - COMP
+ID  - bhusal2023dipaut
+TI  - DiPAut: A Tool for Checking Differential Privacy of Online Randomized Algorithms
+AU  - Bhusal, Bishnu
+AU  - Chadha, Rohit
+AU  - Sistla, A. Prasad
+AU  - Viswanathan, Mahesh
+PY  - 2023
+DA  - 2023/09
+T2  - Zenodo
+DO  - 10.5281/zenodo.8332275
+UR  - https://doi.org/10.5281/zenodo.8332275
+KW  - Differential privacy
+KW  - Formal verification
+KW  - Online algorithms
+KW  - Research software
+ER  - 

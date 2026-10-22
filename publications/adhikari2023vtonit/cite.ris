@@ -1,0 +1,13 @@
+TY  - UNPB
+ID  - adhikari2023vtonit
+TI  - VTON-IT: Virtual Try-On using Image Translation
+AU  - Adhikari, Santosh
+AU  - Bhusal, Bishnu
+AU  - Ghimire, Prashant
+AU  - Shrestha, Anil
+PY  - 2023
+DA  - 2023/10
+T2  - arXiv preprint arXiv:2310.04558
+UR  - https://arxiv.org/abs/2310.04558
+AB  - Virtual Try-On (trying clothes virtually) is a promising application of the Generative Adversarial Network (GAN). However, it is an arduous task to transfer the desired clothing item onto the corresponding regions of a human body because of varying body size, pose, and occlusions like hair and overlapped clothes. In this paper, we try to produce photo-realistic translated images through semantic segmentation and a generative adversarial architecture-based image translation network. We present a novel image-based Virtual Try-On application VTON-IT that takes an RGB image, segments desired body part, and overlays target cloth over the segmented body region. Most state-of-the-art GAN-based Virtual Try-On applications produce unaligned pixelated synthesis images on real-life test images. However, our approach generates high-resolution natural images with detailed textures on such variant images.
+ER  - 

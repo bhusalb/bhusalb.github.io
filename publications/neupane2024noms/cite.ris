@@ -1,0 +1,23 @@
+TY  - CONF
+ID  - neupane2024noms
+TI  - Formal Verification for Blockchain-based Insurance Claims Processing
+AU  - Neupane, Roshan Lal
+AU  - Bonnah, Ernest
+AU  - Bhusal, Bishnu
+AU  - Neupane, Kiran
+AU  - Hoque, Khaza Anuarul
+AU  - Calyam, Prasad
+PY  - 2024
+DA  - 2024/05
+T2  - NOMS 2024 - 2024 IEEE Network Operations and Management Symposium
+SP  - 1
+EP  - 5
+PB  - IEEE
+DO  - 10.1109/NOMS59830.2024.10575641
+UR  - https://doi.org/10.1109/NOMS59830.2024.10575641
+AB  - Insurance claims processing involves multi-domain entities and multi-source data, along with a number of human-agent interactions. Use of Blockchain technology-based platform can significantly improve scalability and response time for processing of claims which are otherwise manually-intensive and time-consuming. However, the chaincodes involved within the processes that issue claims, approve or deny them as required, need to be formally verified to ensure secure and reliable processing of transactions in Blockchain. In this paper, we use a formal modeling approach to verify various processes and their underlying chaincodes relating to different stages in insurance claims processing viz., issuance, approval, denial, and flagging for fraud investigation by using linear temporal logic (LTL). We simulate the formalism on the chaincodes and analyze the breach of chaincodes via model checking.
+KW  - Formal verification
+KW  - Blockchain
+KW  - Model checking
+KW  - Insurance claims
+ER  - 

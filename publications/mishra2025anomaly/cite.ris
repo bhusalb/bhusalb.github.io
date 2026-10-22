@@ -1,0 +1,15 @@
+TY  - UNPB
+ID  - mishra2025anomaly
+TI  - An Efficient Anomaly Detection Framework for Wireless Sensor Networks Using Markov Process
+AU  - Mishra, Rahul
+AU  - Jha, Sudhanshu Kumar
+AU  - Osama, Omar Faruq
+AU  - Bhusal, Bishnu
+AU  - Sudhakaran, Sneha
+AU  - Kshetri, Naresh
+PY  - 2025
+DA  - 2025/11
+T2  - arXiv preprint arXiv:2511.00481
+UR  - https://arxiv.org/abs/2511.00481
+AB  - Wireless Sensor Networks form the backbone of modern cyber physical systems used in applications such as environmental monitoring, healthcare monitoring, industrial automation, and smart infrastructure. In this paper a lightweight and interpretable anomaly detection framework based on a first order Markov chain model is proposed. The method discretizes continuous sensor readings into finite states and models the temporal dynamics of sensor transitions through a transition probability matrix. Anomalies are detected when observed transitions occur with probabilities below a computed threshold, allowing for real time detection without labeled data or intensive computation. The framework is validated on the Intel Berkeley Research Lab dataset, and comparative analysis with Z score, Hidden Markov Model, and autoencoder based methods shows a balanced trade-off between accuracy, interpretability, and computational efficiency.
+ER  - 

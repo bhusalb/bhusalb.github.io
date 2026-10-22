@@ -2,30 +2,42 @@
 
 > Bishnu Bhusal is a computer science researcher working on differential privacy, formal verification, and privacy-preserving machine learning and LLMs. Publications at ACM CCS, AAAI, and OOPSLA.
 
-- Homepage: https://bishnubhusal.com.np/
-- Google Scholar: https://scholar.google.com/citations?user=Dkp-woMAAAAJ
-- ORCID: https://orcid.org/0000-0001-7522-5878
-- Semantic Scholar: https://www.semanticscholar.org/author/2231871095
-- GitHub: https://github.com/bhusalb
+## Research and writing
 
-## Publications
+- [Research topics](https://bishnubhusal.com.np/research/): Reading paths through differential privacy, language models, formal verification, and security.
+- [All publications](https://bishnubhusal.com.np/publications/): Publication records, full author lists, abstracts, papers, code, and citations.
+- [Research tutorials](https://bishnubhusal.com.np/blog/): Technical explanations with links to the original research.
 
-- [Inner Momentum for Differentially Private Muon](https://bishnubhusal.com.np/publications/bhusal2026dpmuon/): Bishnu Bhusal, Minh Vu, Ben Southworth, Geigh Zollicoffer, Rohit Chadha, Manish Bhattarai. arXiv preprint arXiv:2610.02738, 2026. arXiv: 2610.02738.
-- [Learning Shared Residue Backgrounds and Modification-Specific Offsets for PTM Site Prediction](https://bishnubhusal.com.np/publications/pokharel2026ptm/): Suresh Pokharel, Bishnu Bhusal. bioRxiv, 2026. DOI: 10.64898/2026.08.05.743079.
-- [UAVchain: Blockchain Technology Applications for Unmanned Aerial Vehicles](https://bishnubhusal.com.np/publications/kshetri2026uavchain/): Naresh Kshetri, Mir Mehedi Rahman, Bishwo Prakash Pokharel, Nafiz Eashrak, Bishnu Bhusal, Md Bahauddin Badhon. 2026 IEEE International Conference on Edge Computing and Communications (EDGE), 2026. DOI: 10.1109/EDGE72783.2026.00021.
-- [Privacy Preserving In-Context-Learning Framework for Large Language Models](https://bishnubhusal.com.np/publications/bhusal2026aaai/): Bishnu Bhusal, Manoj Acharya, Ramneet Kaur, Colin Samplawski, Anirban Roy, Adam D. Cobb, Rohit Chadha, Susmit Jha. Proceedings of the AAAI Conference on Artificial Intelligence, 2026. DOI: 10.1609/aaai.v40i42.40838. arXiv: 2509.13625.
-- [UAVchain: A Survey of Blockchain Technology Applications for Unmanned Aerial Vehicles: Safety, Security, Directions, and Challenges](https://bishnubhusal.com.np/publications/kshetri2025uavchainsurvey/): Naresh Kshetri, Mir Mehedi Rahman, Nafiz Eashrak, Bishwo Prakash Pokharel, Bishnu Bhusal, Md Bahauddin Badhon, Rutvij Jhaveri, Mohiuddin Ahmed. TechRxiv, 2025. DOI: 10.36227/techrxiv.176469369.98290190/v1.
-- [Approximate Algorithms for Verifying Differential Privacy with Gaussian Distributions](https://bishnubhusal.com.np/publications/bhusal2025ccs/): Bishnu Bhusal, Rohit Chadha, A. Prasad Sistla, Mahesh Viswanathan. Proceedings of the 2025 ACM SIGSAC Conference on Computer and Communications Security, 2025. DOI: 10.1145/3719027.3765043. arXiv: 2509.08804.
-- [Checking δ-Satisfiability of Reals with Integrals](https://bishnubhusal.com.np/publications/rivera2025oopsla/): Cody Rivera, Bishnu Bhusal, Rohit Chadha, A. Prasad Sistla, Mahesh Viswanathan. Proc. ACM Program. Lang., 2025. DOI: 10.1145/3720446.
-- [Privacy Nutrition Labels: Promise, Practice, and Paradoxes in Communicating Privacy](https://bishnubhusal.com.np/publications/bhusal2025hcii/): Bishnu Bhusal, Yuanye Ma, Rohit Chadha. HCI International 2025 Posters, 2025. DOI: 10.1007/978-3-031-94159-7_3.
-- [RealPhish: An Algorithm for Real-Time Email Phishing Detection](https://bishnubhusal.com.np/publications/chapagain2025realphish/): Devendra Chapagain, Bishnu Bhusal, Naresh Kshetri, Pradip Subedi. Proceedings of the 26th Annual Conference on Information Technology Education, 2025.
-- [An Efficient Anomaly Detection Framework for Wireless Sensor Networks Using Markov Process](https://bishnubhusal.com.np/publications/mishra2025anomaly/): Rahul Mishra, Sudhanshu Kumar Jha, Omar Faruq Osama, Bishnu Bhusal, Sneha Sudhakaran, Naresh Kshetri. arXiv preprint arXiv:2511.00481, 2025. arXiv: 2511.00481.
-- [nodeWSNsec: A Hybrid Metaheuristic Approach for Reliable Security and Node Deployment in Wireless Sensor Networks](https://bishnubhusal.com.np/publications/mishra2025nodewsnsec/): Rahul Mishra, Sudhanshu Kumar Jha, Naresh Kshetri, Bishnu Bhusal, Mir Mehedi Rahman, Md Masud Rana, Aimina Ali Eli, Khaled Aminul Islam, Bishwo Prakash Pokharel. International Journal of Advanced Computer Science and Applications, 2025. DOI: 10.14569/IJACSA.2025.0160814. arXiv: 2508.16619.
-- [Cyber AI Trends: Future Trends in AI for Cyberbullying Prevention](https://bishnubhusal.com.np/publications/rahman2025cyberai/): Mir Mehedi Rahman, Sazzad Hossain, Bishnu Bhusal, Naresh Kshetri. Combating Cyberbullying With Generative AI, 2025. DOI: 10.4018/979-8-3373-0543-1.ch010.
-- [blockDADS: Blockchain Technology for Data Analytics and Data Security - Applications and Solutions](https://bishnubhusal.com.np/publications/osama2024blockdads/): Omar Faruq Osama, Bishnu Bhusal, Naresh Kshetri, Bishwo Prakash Pokharel. Blockchain Technology for Cyber Defense, Cybersecurity, and Countermeasures: Techniques, Solutions, and Applications, 2024. DOI: 10.1201/9781003449515-14.
-- [On Countering Ransomware Attacks Using Strategic Deception](https://bishnubhusal.com.np/publications/neupane2024gamesec/): Roshan Lal Neupane, Bishnu Bhusal, Kiran Neupane, Preyea Regmi, Tam Dinh, Lilliana Marrero, Sayed M. Saghaian N. E., Venkata Sriram Siddhardh Nadendla, Prasad Calyam. Decision and Game Theory for Security (GameSec 2024), 2024. DOI: 10.1007/978-3-031-74835-6_8.
-- [Formal Verification for Blockchain-based Insurance Claims Processing](https://bishnubhusal.com.np/publications/neupane2024noms/): Roshan Lal Neupane, Ernest Bonnah, Bishnu Bhusal, Kiran Neupane, Khaza Anuarul Hoque, Prasad Calyam. NOMS 2024 - 2024 IEEE Network Operations and Management Symposium, 2024. DOI: 10.1109/NOMS59830.2024.10575641. arXiv: 2402.13169.
-- [Deciding Differential Privacy of Online Algorithms with Multiple Variables](https://bishnubhusal.com.np/publications/chadha2023ccs/): Rohit Chadha, A. Prasad Sistla, Mahesh Viswanathan, Bishnu Bhusal. Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security, 2023. DOI: 10.1145/3576915.3623170. arXiv: 2309.06615.
-- [DiPAut: A Tool for Checking Differential Privacy of Online Randomized Algorithms](https://bishnubhusal.com.np/publications/bhusal2023dipaut/): Bishnu Bhusal, Rohit Chadha, A. Prasad Sistla, Mahesh Viswanathan. Zenodo, 2023. DOI: 10.5281/zenodo.8332275.
-- [VTON-IT: Virtual Try-On using Image Translation](https://bishnubhusal.com.np/publications/adhikari2023vtonit/): Santosh Adhikari, Bishnu Bhusal, Prashant Ghimire, Anil Shrestha. arXiv preprint arXiv:2310.04558, 2023. arXiv: 2310.04558.
+## Differential privacy and formal verification
 
+- [Deciding Differential Privacy of Online Algorithms with Multiple Variables](https://bishnubhusal.com.np/publications/chadha2023ccs/): Conference paper, 2023. Extends DiP automata to online randomized algorithms with multiple real-valued storage variables. The paper characterizes when an automaton is Dε-differentially private for some D and every ε > 0, proves that deciding this property is PSPACE-complete, and implements an algorithm that also computes a suitable D.
+- [Approximate Algorithms for Verifying Differential Privacy with Gaussian Distributions](https://bishnubhusal.com.np/publications/bhusal2025ccs/): Conference paper, 2025. Introduces DipApprox for verifying differential privacy of loop-free probabilistic programs that use Gaussian and other discrete or continuous distributions. It combines numerical integration and tail bounds to approximate probabilities to arbitrary precision, with an almost-decidability result for (ε, δ)-privacy: all but a finite set of δ values are decidable under the paper's assumptions.
+- [Checking δ-Satisfiability of Reals with Integrals](https://bishnubhusal.com.np/publications/rivera2025oopsla/): Journal article, 2025. Extends δ-decision procedures over the reals to constraints containing integrals of user-specified functions. The ∫dReal implementation builds on dReal and is evaluated on fairness, privacy, utility, and parameter-synthesis problems.
+- [DiPAut: A Tool for Checking Differential Privacy of Online Randomized Algorithms](https://bishnubhusal.com.np/publications/bhusal2023dipaut/): Software release, 2023. Provides the DiPAut software artifact for checking differential privacy of online randomized algorithms, with a versioned Zenodo record and a public implementation repository.
+
+## Privacy-preserving language models
+
+- [Privacy Preserving In-Context-Learning Framework for Large Language Models](https://bishnubhusal.com.np/publications/bhusal2026aaai/): Conference paper, 2026. Presents a differentially private prediction framework that generates synthetic text by aggregating clipped per-token logits from inference over private records, without fine-tuning the underlying language model. A blending operation combines private and public inference to improve utility in the evaluated in-context-learning tasks.
+- [Inner Momentum for Differentially Private Muon](https://bishnubhusal.com.np/publications/bhusal2026dpmuon/): Preprint, 2026. Studies how unequal per-example clipping factors can distort the singular-vector geometry used by Muon. The proposed inner-momentum method averages each sampled example's gradients across the current and recent models before clipping. The preprint gives a distortion analysis and reports improved BLEU and ROUGE-L over DP-Muon in seed-matched private GPT-2 fine-tuning on E2E and DART at ε ∈ {1, 2, 4, 8}.
+
+## Security and privacy in practice
+
+- [On Countering Ransomware Attacks Using Strategic Deception](https://bishnubhusal.com.np/publications/neupane2024gamesec/): Conference paper, 2024. Models ransomware defense as a multistage game with honeytokens, honeypots, honeyfiles, and network honeypots. The paper uses backward induction to analyze subgame-perfect Nash equilibria and evaluates the defender's choices through a numerical healthcare case study informed by real-world data and statistics.
+- [Privacy Nutrition Labels: Promise, Practice, and Paradoxes in Communicating Privacy](https://bishnubhusal.com.np/publications/bhusal2025hcii/): Conference paper, 2025. Reviews privacy nutrition label research from 2009 to 2024 using qualitative coding of 78 papers. The study maps the communities, goals, and methods represented in the literature, identifies gaps, and provides a dataset with qualitative codes for further analysis.
+- [Formal Verification for Blockchain-based Insurance Claims Processing](https://bishnubhusal.com.np/publications/neupane2024noms/): Conference paper, 2024. Models blockchain-based insurance claims processing and checks the underlying chaincodes using linear temporal logic and model checking. The modeled stages include issuing claims, approving or denying them, and flagging claims for fraud investigation.
+
+## Publication data
+
+- [Full research text](https://bishnubhusal.com.np/llms-full.txt): Complete available abstracts, author attribution, summaries, and source links.
+- [Publication catalog (JSON)](https://bishnubhusal.com.np/publications.json): Structured records generated from the site bibliography.
+- [Complete bibliography (BibTeX)](https://bishnubhusal.com.np/publications.bib): Downloadable citations; individual paper pages also offer BibTeX and RIS.
+- [Sitemap](https://bishnubhusal.com.np/sitemap.xml): Public page index.
+- [RSS feed](https://bishnubhusal.com.np/feed.xml): Research tutorials and blog updates.
+
+## Researcher identity
+
+- [Homepage](https://bishnubhusal.com.np/): Bishnu Bhusal.
+- [ORCID](https://orcid.org/0000-0001-7522-5878): Persistent researcher identifier.
+- [Google Scholar](https://scholar.google.com/citations?user=Dkp-woMAAAAJ): Scholarly profile.
+- [Semantic Scholar](https://www.semanticscholar.org/author/2231871095): Scholarly profile.
+- [GitHub](https://github.com/bhusalb): Research software and resources.

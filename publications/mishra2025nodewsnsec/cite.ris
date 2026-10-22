@@ -1,0 +1,21 @@
+TY  - JOUR
+ID  - mishra2025nodewsnsec
+TI  - nodeWSNsec: A Hybrid Metaheuristic Approach for Reliable Security and Node Deployment in Wireless Sensor Networks
+AU  - Mishra, Rahul
+AU  - Jha, Sudhanshu Kumar
+AU  - Kshetri, Naresh
+AU  - Bhusal, Bishnu
+AU  - Rahman, Mir Mehedi
+AU  - Rana, Md Masud
+AU  - Eli, Aimina Ali
+AU  - Islam, Khaled Aminul
+AU  - Pokharel, Bishwo Prakash
+PY  - 2025
+DA  - 2025
+T2  - International Journal of Advanced Computer Science and Applications
+VL  - 16
+IS  - 8
+DO  - 10.14569/IJACSA.2025.0160814
+UR  - https://doi.org/10.14569/IJACSA.2025.0160814
+AB  - Efficient and reliable node deployment in Wireless Sensor Networks is crucial for optimizing coverage of the area, connectivity among nodes, and energy efficiency. This paper proposes a hybrid metaheuristic approach combining a Genetic Algorithm (GA) and Particle Swarm Optimization (PSO) to address the challenges of energy efficient and reliable node deployment. Simulation results demonstrate that GA-PSO requires 15% to 25% fewer sensor nodes and maintains 95% or more area coverage while maintaining connectivity in comparison to standalone GA or PSO. The proposed algorithm also dominates the Competitive Multi Objective Marine Predators Algorithm (CMOMPA) for long sensing and communication ranges in terms of coverage, connectivity, and deployment time.
+ER  - 

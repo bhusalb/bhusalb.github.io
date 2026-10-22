@@ -1,0 +1,12 @@
+TY  - UNPB
+ID  - pokharel2026ptm
+TI  - Learning Shared Residue Backgrounds and Modification-Specific Offsets for PTM Site Prediction
+AU  - Pokharel, Suresh
+AU  - Bhusal, Bishnu
+PY  - 2026
+DA  - 2026/08
+T2  - bioRxiv
+DO  - 10.64898/2026.08.05.743079
+UR  - https://doi.org/10.64898/2026.08.05.743079
+AB  - Post-translational modifications (PTMs) are chemical changes added to proteins after translation. These changes affect protein function and regulation, and their disruption is linked to disease-associated mechanisms. Because experimentally validating all possible modification sites is impractical, many computational predictors have been developed for PTM site prediction. In this work, we study whether a shared model can represent common residue-background patterns while learning modification-specific background-to-positive offsets. We propose an anchor-guided rectified flow matching framework for multi-type PTM site prediction from protein language model embeddings. For each PTM-residue pair, the model builds residue-background anchors from PTM-compatible unannotated residues and positive anchors from experimentally annotated modified residues, and uses a rectified flow module to estimate a modification-conditioned background-to-positive offset. We evaluate the framework on a dbPTM-derived benchmark covering six commonly studied PTMs.
+ER  - 
