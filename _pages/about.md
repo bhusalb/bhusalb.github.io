@@ -24,6 +24,12 @@ I am a Ph.D. candidate in Computer Science at the University of Missouri, advise
 
 My work spans **differential privacy**, **LLM safety**, and **formal verification**. I have been fortunate to explore these problems across some wonderful places: [Los Alamos National Laboratory](https://www.lanl.gov/), [SRI International](https://www.sri.com/), and [Amazon Web Services](https://aws.amazon.com/). Along the way, my work has appeared at **AAAI**, **ACM CCS**, and **OOPSLA**, and earned a **Best Paper Award at GameSec 2024**.
 
+My current research directions:
+
+- **Verifying differential privacy.** Decision procedures that prove or refute differential privacy of randomized programs, including online algorithms ([CCS '23](/publications/chadha2023ccs/)) and programs that sample from Gaussian distributions ([CCS '25](/publications/bhusal2025ccs/)), and δ-decision procedures for real arithmetic with integrals ([OOPSLA '25](/publications/rivera2025oopsla/)).
+- **Privacy for large language models.** Differentially private in-context learning that generates synthetic text without fine-tuning ([AAAI '26](/publications/bhusal2026aaai/)), and private training with the Muon optimizer ([arXiv '26](/publications/bhusal2026dpmuon/)).
+- **Security and usable privacy.** Game-theoretic cyber deception against ransomware ([GameSec '24, Best Paper](/publications/neupane2024gamesec/)) and how privacy nutrition labels communicate data practices ([HCII '25](/publications/bhusal2025hcii/)).
+
 Before academia, I spent five years as a software engineer, scaling systems to billions of daily requests and building platforms used by millions. That grounding still shapes how I think: I care about ideas that actually work, not just ideas that look good on paper.
 
 <!-- **I am actively on the job market** and looking for applied scientist, privacy engineer, and faculty roles. If you work on privacy, trustworthy AI, or formal methods, I would love to connect. -->

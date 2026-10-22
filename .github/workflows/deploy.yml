@@ -91,3 +91,12 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
+      - name: Notify search engines via IndexNow 📣
+        if: github.event_name != 'pull_request'
+        continue-on-error: true
+        run: |
+          sleep 60
+          urls=$(grep -o '<loc>[^<]*' _site/sitemap.xml | sed 's/<loc>//' | jq -R . | jq -s -c .)
+          curl -s -o /dev/null -w "IndexNow HTTP %{http_code}\n" -X POST https://api.indexnow.org/indexnow \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{\"host\":\"bishnubhusal.com.np\",\"key\":\"a27e481cd1178fd5b2d10b42d0b641cf\",\"keyLocation\":\"https://bishnubhusal.com.np/a27e481cd1178fd5b2d10b42d0b641cf.txt\",\"urlList\":$urls}"

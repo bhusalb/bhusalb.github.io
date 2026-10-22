@@ -1,0 +1,21 @@
+---
+permalink: /llms.txt
+layout: none
+sitemap: false
+---
+# {{ site.first_name }} {{ site.last_name }}
+
+> {{ site.description }}
+
+- Homepage: {{ site.url }}/
+- Google Scholar: https://scholar.google.com/citations?user={{ site.scholar_userid }}
+- ORCID: https://orcid.org/{{ site.orcid_id }}
+- Semantic Scholar: https://www.semanticscholar.org/author/{{ site.semanticscholar_id }}
+- GitHub: https://github.com/{{ site.github_username }}
+
+## Publications
+
+{% assign papers = site.pages | where_exp: "p", "p.paper" -%}
+{% for p in papers -%}
+- [{{ p.paper.title }}]({{ site.url }}{{ p.url }}): {{ p.paper.authors | join: ", " }}. {% if p.paper.venue %}{{ p.paper.venue }}, {% endif %}{{ p.paper.year }}.{% if p.paper.doi %} DOI: {{ p.paper.doi }}.{% endif %}{% if p.paper.arxiv %} arXiv: {{ p.paper.arxiv }}.{% endif %}
+{% endfor %}
