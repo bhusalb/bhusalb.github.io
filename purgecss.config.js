@@ -3,6 +3,6 @@ module.exports = {
   css: ["_site/assets/css/*.css"],
   output: "_site/assets/css/",
   skippedContentGlobs: ["_site/assets/**/*.html"],
-  // MathJax inserts these elements in the browser, after the build.
-  safelist: { greedy: [/mjx-container/] },
+  // MathJax and medium-zoom insert these elements in the browser, after the build.
+  safelist: { greedy: [/mjx-container/, /medium-zoom/] },
 };

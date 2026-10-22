@@ -57,14 +57,38 @@ const cards = [
       <g font-family="Arial,sans-serif" font-size="17"><text x="195" y="51" fill="#d9e8ec">BEFORE</text><text x="205" y="213" fill="#77d9c7">AFTER</text></g>
     </svg>`,
   },
+  {
+    slug: "dipapprox-ccs25",
+    topic: "ACM CCS 2025 · DIFFERENTIAL PRIVACY",
+    title: "DipApprox: verifying<br>differential privacy<br>with Gaussian noise",
+    subtitle: "Inside our ACM CCS 2025 paper",
+    titleSize: "50px",
+    graphic: `<svg viewBox="0 0 330 330" aria-label="Schematic Gaussian density with a shaded integral and certified lower and upper bounds">
+      <defs><clipPath id="integral-region"><rect x="104" y="35" width="122" height="165"/></clipPath></defs>
+      <text x="165" y="20" text-anchor="middle" font-size="16" fill="#d9e8ec" font-family="Arial,sans-serif" letter-spacing="1">GAUSSIAN NOISE</text>
+      <path d="M28 195C70 194 90 183 110 135C132 75 145 49 165 49C185 49 198 75 220 135C240 183 260 194 302 195V200H28Z" fill="#77d9c7" opacity=".24" clip-path="url(#integral-region)"/>
+      <path d="M28 200H302" stroke="#89a7b2" stroke-width="2"/>
+      <path d="M104 200V147M226 200V147" stroke="#89a7b2" stroke-width="1.5" stroke-dasharray="4 5"/>
+      <path d="M28 195C70 194 90 183 110 135C132 75 145 49 165 49C185 49 198 75 220 135C240 183 260 194 302 195" fill="none" stroke="#77d9c7" stroke-width="4" stroke-linecap="round"/>
+      <g fill="#c0d2d9" font-size="19" font-family="Georgia,serif" font-style="italic" text-anchor="middle"><text x="104" y="224">a</text><text x="226" y="224">b</text></g>
+      <text x="165" y="269" text-anchor="middle" fill="#77d9c7" font-size="28" font-family="Georgia,serif">L ≤ integral ≤ U</text>
+      <text x="165" y="295" text-anchor="middle" fill="#d9e8ec" font-size="14" font-family="Arial,sans-serif" letter-spacing=".6">CERTIFIED INTEGRAL BOUNDS</text>
+      <text x="165" y="324" text-anchor="middle" fill="#89a7b2" font-size="11" font-family="Arial,sans-serif" letter-spacing="1.4">SCHEMATIC</text>
+    </svg>`,
+  },
 ];
 (async () => {
+  const requestedSlug = process.argv[2];
+  const selectedCards = requestedSlug ? cards.filter((card) => card.slug === requestedSlug) : cards;
+  if (!selectedCards.length) {
+    throw new Error(`Unknown card: ${requestedSlug}. Choose from ${cards.map((card) => card.slug).join(", ")}.`);
+  }
   const browser = await chromium.launch({
     headless: true,
     ...(process.env.CHROME_EXECUTABLE ? { executablePath: process.env.CHROME_EXECUTABLE } : {}),
   });
   const page = await browser.newPage({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: 1 });
-  for (const card of cards) {
+  for (const card of selectedCards) {
     const html = `<!DOCTYPE html><html lang="en"><meta charset="UTF-8"><title>${card.slug} social card</title><style>
       *{box-sizing:border-box}body{margin:0;width:1200px;height:630px;overflow:hidden;background:#092733;color:#f3f7f8;font-family:Arial,Helvetica,sans-serif}.accent{position:absolute;top:0;left:0;width:1200px;height:7px;background:#77d9c7}.label{position:absolute;top:55px;left:64px;display:flex;align-items:center;gap:17px;font-size:16px;letter-spacing:2.3px;font-weight:600;color:#77d9c7}.label i{display:block;width:10px;height:10px;border-radius:50%;background:#77d9c7}.title{position:absolute;left:64px;top:142px;width:810px;margin:0;font-size:${
         card.titleSize || "60px"
