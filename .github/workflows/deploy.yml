@@ -13,6 +13,10 @@ on:
       - "**/*.md"
       - "**.yml"
       - "**.bib"
+      - "**.txt"
+      - "**.scss"
+      - "bin/validate_research_site.rb"
+      - "Gemfile"
       - "_plugins/**"
       - "!.github/workflows/axe.yml"
       - "!.github/workflows/broken-links.yml"
@@ -39,6 +43,10 @@ on:
       - "**/*.md"
       - "**.yml"
       - "**.bib"
+      - "**.txt"
+      - "**.scss"
+      - "bin/validate_research_site.rb"
+      - "Gemfile"
       - "_plugins/**"
       - "!.github/workflows/axe.yml"
       - "!.github/workflows/broken-links.yml"
@@ -86,6 +94,8 @@ jobs:
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
+      - name: Validate research discovery and citation exports
+        run: bundle exec ruby bin/validate_research_site.rb
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4

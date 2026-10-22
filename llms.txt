@@ -1,21 +1,34 @@
 ---
 permalink: /llms.txt
-layout: none
+layout: null
 sitemap: false
 ---
 # {{ site.first_name }} {{ site.last_name }}
 
 > {{ site.description }}
 
-- Homepage: {{ site.url }}/
-- Google Scholar: https://scholar.google.com/citations?user={{ site.scholar_userid }}
-- ORCID: https://orcid.org/{{ site.orcid_id }}
-- Semantic Scholar: https://www.semanticscholar.org/author/{{ site.semanticscholar_id }}
-- GitHub: https://github.com/{{ site.github_username }}
+## Research and writing
 
-## Publications
+- [Research topics]({{ '/research/' | absolute_url }}): Reading paths through differential privacy, language models, formal verification, and security.
+- [All publications]({{ '/publications/' | absolute_url }}): Publication records, full author lists, abstracts, papers, code, and citations.
+- [Research tutorials]({{ '/blog/' | absolute_url }}): Technical explanations with links to the original research.
+{% for topic in site.data.research.topics %}
+## {{ topic.title }}
 
-{% assign papers = site.pages | where_exp: "p", "p.paper" -%}
-{% for p in papers -%}
-- [{{ p.paper.title }}]({{ site.url }}{{ p.url }}): {{ p.paper.authors | join: ", " }}. {% if p.paper.venue %}{{ p.paper.venue }}, {% endif %}{{ p.paper.year }}.{% if p.paper.doi %} DOI: {{ p.paper.doi }}.{% endif %}{% if p.paper.arxiv %} arXiv: {{ p.paper.arxiv }}.{% endif %}
-{% endfor %}
+{% for key in topic.papers %}{% assign paper = site.data.publications | where: 'key', key | first %}{% if paper %}- [{{ paper.title }}]({{ paper.url }}): {{ paper.type_label }}, {{ paper.year }}.{% if paper.summary %} {{ paper.summary }}{% endif %}
+{% endif %}{% endfor %}{% endfor %}
+## Publication data
+
+- [Full research text]({{ '/llms-full.txt' | absolute_url }}): Complete available abstracts, author attribution, summaries, and source links.
+- [Publication catalog (JSON)]({{ '/publications.json' | absolute_url }}): Structured records generated from the site bibliography.
+- [Complete bibliography (BibTeX)]({{ '/publications.bib' | absolute_url }}): Downloadable citations; individual paper pages also offer BibTeX and RIS.
+- [Sitemap]({{ '/sitemap.xml' | absolute_url }}): Public page index.
+- [RSS feed]({{ '/feed.xml' | absolute_url }}): Research tutorials and blog updates.
+
+## Researcher identity
+
+- [Homepage]({{ '/' | absolute_url }}): {{ site.first_name }} {{ site.last_name }}.
+- [ORCID](https://orcid.org/{{ site.orcid_id }}): Persistent researcher identifier.
+- [Google Scholar](https://scholar.google.com/citations?user={{ site.scholar_userid }}): Scholarly profile.
+- [Semantic Scholar](https://www.semanticscholar.org/author/{{ site.semanticscholar_id }}): Scholarly profile.
+- [GitHub](https://github.com/{{ site.github_username }}): Research software and resources.

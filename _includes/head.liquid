@@ -65,7 +65,20 @@
   <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | relative_url | bust_file_cache}}">
 {% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
-<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+{% assign canonical_path = page.url | replace: '/index.html', '/' %}
+{% assign canonical_url = page.canonical_url | default: canonical_path | absolute_url %}
+<link rel="canonical" href="{{ canonical_url | escape }}">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="{{ site.blog_name | default: site.title | escape }}"
+  href="{{ site.feed.path | default: '/feed.xml' | absolute_url | escape }}"
+>
+<link rel="help" type="text/plain" title="Machine-readable research guide" href="{{ '/llms.txt' | absolute_url | escape }}">
+{% if canonical_path == '/publications/' %}
+  <link rel="alternate" type="application/json" title="Publication metadata (JSON)" href="{{ '/publications.json' | absolute_url | escape }}">
+  <link rel="alternate" type="application/x-bibtex" title="Publication citations (BibTeX)" href="{{ '/publications.bib' | absolute_url | escape }}">
+{% endif %}
 
 <!-- Dark Mode -->
 <script src="{{ '/assets/js/theme.js' | relative_url | bust_file_cache }}"></script>

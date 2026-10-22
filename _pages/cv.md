@@ -1,11 +1,12 @@
 ---
-layout: cv
-permalink: /assets/pdf/CV.pdf
+layout: page
+permalink: /cv/
 title: cv
 nav: true
 nav_order: 5
-cv_pdf: CV.pdf
-description:
-toc:
-  sidebar: left
+description: Curriculum vitae of Bishnu Bhusal, with links to publications and research software.
 ---
+
+[Download my curriculum vitae (PDF)](/assets/pdf/CV.pdf).
+
+For individual papers, citation downloads, and open-source implementations, see my [publications](/publications/) and [research guide](/research/).

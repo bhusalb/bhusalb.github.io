@@ -4,54 +4,99 @@ layout: default
 {% assign paper = page.paper %}
 <div class="post publications">
   <header class="post-header">
-    <h1 class="post-title">{{ paper.title }}</h1>
+    <h1 class="post-title">{{ paper.title | escape }}</h1>
     <p class="post-description">
       {% for author in paper.authors %}
         {%- if author contains site.last_name and author contains site.first_name -%}
-          <em>{{ author }}</em>
+          <em>{{ author | escape }}</em>
         {%- else -%}
-          {{ author }}
+          {{ author | escape }}
         {%- endif -%}
         {%- unless forloop.last %}, {% endunless -%}
       {% endfor %}
     </p>
     <p class="periodical">
-      {% if paper.venue %}<em>{{ paper.venue }}</em>, {% endif %}{{ paper.year }}
+      {% if paper.venue -%}
+        <em>{{ paper.venue | escape }}</em>,
+      {% endif -%}
+      {{- paper.year }}
+    </p>
+    <p>
+      {{ paper.type_label | escape -}}
+      {%- if paper.award_name %} · {{ paper.award_name | escape }}{% endif %}
     </p>
   </header>
 
   <article>
     <div class="links">
-      {% if paper.award_name %}
-        <a class="award btn btn-sm z-depth-0" role="button">{{ paper.award_name }}</a>
-      {% endif %}
       {% if paper.pdf %}
-        <a href="{{ paper.pdf }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
+        <a href="{{ paper.pdf | escape }}" class="btn btn-sm z-depth-0">Read PDF</a>
       {% endif %}
       {% if paper.doi %}
-        <a href="https://doi.org/{{ paper.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
+        <a href="https://doi.org/{{ paper.doi | escape }}" class="btn btn-sm z-depth-0">DOI</a>
       {% endif %}
       {% if paper.arxiv %}
-        <a href="https://arxiv.org/abs/{{ paper.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
+        <a href="https://arxiv.org/abs/{{ paper.arxiv | escape }}" class="btn btn-sm z-depth-0">arXiv</a>
       {% endif %}
       {% if paper.html %}
-        <a href="{{ paper.html }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
+        <a href="{{ paper.html | escape }}" class="btn btn-sm z-depth-0">Paper online</a>
+      {% elsif paper.source_url and paper.doi == null and paper.arxiv == null %}
+        <a href="{{ paper.source_url | escape }}" class="btn btn-sm z-depth-0">Paper online</a>
       {% endif %}
       {% if paper.code %}
-        <a href="{{ paper.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
+        <a href="{{ paper.code | escape }}" class="btn btn-sm z-depth-0">Code and resources</a>
       {% endif %}
+      <a href="#cite" class="btn btn-sm z-depth-0">Cite this work</a>
     </div>
+
+    {% if paper.summary %}
+      <h2>What this work contributes</h2>
+      <p>{{ paper.summary | escape }}</p>
+    {% endif %}
+
+    {% if paper.when_to_read %}
+      <h2>When to read this work</h2>
+      <p>{{ paper.when_to_read | escape }}</p>
+    {% endif %}
+
+    {% if paper.topics.size > 0 %}
+      <p><strong>Topics:</strong> {{ paper.topics | join: ' · ' | escape }}</p>
+    {% endif %}
 
     {% if paper.abstract %}
       <h2>Abstract</h2>
-      <p>{{ paper.abstract }}</p>
+      <p>{{ paper.abstract | escape }}</p>
     {% endif %}
 
-    <h2>Cite</h2>
+    {% assign has_related_tutorials = false %}
+    {% for post in site.posts %}
+      {% if post.related_papers contains paper.key %}
+        {% unless has_related_tutorials %}
+          <h2>Tutorials and reading guides</h2>
+          <ul>
+            {% assign has_related_tutorials = true %}
+        {% endunless %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          {%- if post.description %} — {{ post.description | escape }}{% endif %}
+        </li>
+      {% endif %}
+    {% endfor %}
+    {% if has_related_tutorials %}</ul>{% endif %}
+
+    <h2 id="cite">Cite this work</h2>
+    <p>
+      <a href="{{ paper.bibtex_url }}" download="{{ paper.key }}.bib">Download BibTeX</a>
+      · <a href="{{ paper.ris_url }}" download="{{ paper.key }}.ris">Download RIS</a>
+      {% if paper.publication_status == 'preprint' %} · This record describes a preprint.{% endif %}
+    </p>
     {% highlight bibtex %}
-{{ paper.bibtex }}
+    {{ paper.bibtex }}
     {% endhighlight %}
 
-    <p><a href="{{ '/publications/' | relative_url }}">&larr; All publications</a></p>
+    <p>
+      <a href="{{ '/publications/' | relative_url }}">&larr; All publications</a> ·
+      <a href="{{ '/research/' | relative_url }}">Explore research topics</a>
+    </p>
   </article>
 </div>

@@ -1,0 +1,120 @@
+# Editorial summaries are grounded in each paper's abstract. The HCII abstract
+# below is transcribed from the author-hosted PDF, where the bibliography has none.
+topics:
+  - id: differential-privacy-verification
+    title: Differential privacy and formal verification
+    description: Decision procedures and numerical tools for checking privacy guarantees of randomized programs.
+    papers:
+      - chadha2023ccs
+      - bhusal2025ccs
+      - rivera2025oopsla
+      - bhusal2023dipaut
+  - id: private-language-models
+    title: Privacy-preserving language models
+    description: Differentially private text generation, in-context learning, and optimization for language models.
+    papers:
+      - bhusal2026aaai
+      - bhusal2026dpmuon
+  - id: security-and-privacy
+    title: Security and privacy in practice
+    description: Strategic cyber defense, privacy communication, and verification of security-sensitive systems.
+    papers:
+      - neupane2024gamesec
+      - bhusal2025hcii
+      - neupane2024noms
+
+papers:
+  bhusal2023dipaut:
+    summary: >-
+      Provides the DiPAut software artifact for checking differential privacy of online randomized
+      algorithms, with a versioned Zenodo record and a public implementation repository.
+    when_to_read: >-
+      Use this artifact alongside the CCS 2023 paper when looking for the implementation of
+      automata-based privacy checking or a versioned software citation.
+    topics: [Differential privacy, Formal verification, Online algorithms, Research software]
+  neupane2024noms:
+    summary: >-
+      Models blockchain-based insurance claims processing and checks the underlying chaincodes
+      using linear temporal logic and model checking. The modeled stages include issuing claims,
+      approving or denying them, and flagging claims for fraud investigation.
+    when_to_read: >-
+      Read this when studying formal verification of blockchain workflows that coordinate multiple
+      participants, particularly insurance claims and their transaction-processing logic.
+    topics: [Formal verification, Blockchain, Model checking, Insurance claims]
+  chadha2023ccs:
+    summary: >-
+      Extends DiP automata to online randomized algorithms with multiple real-valued storage variables.
+      The paper characterizes when an automaton is Dε-differentially private for some D and every ε > 0,
+      proves that deciding this property is PSPACE-complete, and implements an algorithm that also computes a suitable D.
+    when_to_read: >-
+      Read this when studying automated privacy verification for algorithms that process a stream of inputs,
+      or when comparing the expressiveness and complexity of automata-based privacy analyses.
+    topics: [Differential privacy, Formal verification, Online algorithms, DiP automata, Decision procedures]
+  bhusal2025ccs:
+    summary: >-
+      Introduces DipApprox for verifying differential privacy of loop-free probabilistic programs that use
+      Gaussian and other discrete or continuous distributions. It combines numerical integration and tail
+      bounds to approximate probabilities to arbitrary precision, with an almost-decidability result for
+      (ε, δ)-privacy: all but a finite set of δ values are decidable under the paper's assumptions.
+    when_to_read: >-
+      Read this when a privacy mechanism uses Gaussian noise or requires reasoning about both discrete
+      and continuous random choices. The Sparse Vector and Noisy Max evaluations provide concrete verification examples.
+    topics: [Differential privacy, Formal verification, Gaussian mechanisms, Numerical integration, DipApprox]
+  rivera2025oopsla:
+    summary: >-
+      Extends δ-decision procedures over the reals to constraints containing integrals of user-specified
+      functions. The ∫dReal implementation builds on dReal and is evaluated on fairness, privacy, utility,
+      and parameter-synthesis problems.
+    when_to_read: >-
+      Read this when a verification or synthesis task reduces to real-valued constraints involving
+      probability integrals, including privacy-mechanism utility and algorithmic fairness.
+    topics: [Formal verification, δ-satisfiability, Numerical integration, Synthesis, ∫dReal]
+  bhusal2026aaai:
+    summary: >-
+      Presents a differentially private prediction framework that generates synthetic text by aggregating
+      clipped per-token logits from inference over private records, without fine-tuning the underlying
+      language model. A blending operation combines private and public inference to improve utility in
+      the evaluated in-context-learning tasks.
+    when_to_read: >-
+      Read this when exploring how to use sensitive examples for language-model predictions or synthetic
+      demonstrations with differential privacy, particularly when updating model weights is undesirable.
+    topics: [Differential privacy, Large language models, In-context learning, Private text generation]
+  bhusal2026dpmuon:
+    summary: >-
+      Studies how unequal per-example clipping factors can distort the singular-vector geometry used by
+      Muon. The proposed inner-momentum method averages each sampled example's gradients across the current
+      and recent models before clipping. The preprint gives a distortion analysis and reports improved BLEU
+      and ROUGE-L over DP-Muon in seed-matched private GPT-2 fine-tuning on E2E and DART at ε ∈ {1, 2, 4, 8}.
+    when_to_read: >-
+      Read this when studying differentially private optimizers, gradient-clipping geometry, or the interaction
+      between Muon's orthogonalization and private language-model fine-tuning.
+    topics: [Differential privacy, Private optimization, Muon, Gradient clipping, Language-model fine-tuning]
+  neupane2024gamesec:
+    summary: >-
+      Models ransomware defense as a multistage game with honeytokens, honeypots, honeyfiles, and network
+      honeypots. The paper uses backward induction to analyze subgame-perfect Nash equilibria and evaluates
+      the defender's choices through a numerical healthcare case study informed by real-world data and statistics.
+    when_to_read: >-
+      Read this when analyzing how deception resources can change an attacker's incentives across ransomware
+      stages, or when building game-theoretic models of cyber defense.
+    topics: [Cybersecurity, Ransomware, Strategic deception, Game theory]
+  bhusal2025hcii:
+    summary: >-
+      Reviews privacy nutrition label research from 2009 to 2024 using qualitative coding of 78 papers.
+      The study maps the communities, goals, and methods represented in the literature, identifies gaps,
+      and provides a dataset with qualitative codes for further analysis.
+    when_to_read: >-
+      Read this when designing a study of privacy labels, reviewing how privacy practices are communicated,
+      or looking for a starting dataset and research gaps in usable privacy.
+    topics: [Privacy nutrition labels, Usable privacy, Human-computer interaction, Literature review]
+    abstract: >-
+      Privacy nutrition labels have emerged as a compelling alternative to lengthy, complex privacy policies
+      for effectively communicating privacy information. In recent years, research on privacy nutrition labels
+      has expanded significantly. However, a literature review of privacy nutrition labels is still lacking.
+      To address this gap, we created and analyzed a dataset of privacy nutrition label papers from 2009 to 2024.
+      We qualitatively coded the papers published in the past 15 years, and revealed characteristics of existing
+      privacy labels research. Our findings highlight areas that have received more attention and those that
+      remain underserved. Our analysis also shed light on common methodologies in existing studies and the
+      different communities of stakeholders. We conclude by reflecting on the gaps in existing research and
+      discussing where future work can focus on.
+    abstract_source: /assets/pdf/hcii.pdf

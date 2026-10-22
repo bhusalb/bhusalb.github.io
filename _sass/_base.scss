@@ -530,6 +530,13 @@ footer.sticky-bottom {
   }
 }
 
+// Long equations scroll within the article on narrow screens.
+.post-content mjx-container[display="true"] {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
 .post-list {
   margin: 0;
   margin-bottom: 40px;

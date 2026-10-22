@@ -4,15 +4,16 @@
 
 title: Bishnu Bhusal # the website title (if blank, full name will be used instead)
 first_name: Bishnu
-middle_name: 
+middle_name:
 last_name: Bhusal
 email: bhusalb@missouri.edu
 description: >- # the ">" symbol means to ignore newlines until "footer_text:"
- Bishnu Bhusal is a computer science researcher working on differential privacy, formal verification, and privacy-preserving machine learning and LLMs. Publications at ACM CCS, AAAI, and OOPSLA.
+  Bishnu Bhusal is a computer science researcher working on differential privacy, formal verification, and privacy-preserving machine learning and LLMs. Publications at ACM CCS, AAAI, and OOPSLA.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 keywords: Bishnu Bhusal, differential privacy, formal verification, privacy verification, LLM privacy, private in-context learning, DP optimization, Muon, decision procedures, program verification, security and privacy, machine learning # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
+timezone: America/Denver
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://bishnubhusal.com.np # the base hostname & protocol for your site
@@ -38,14 +39,14 @@ repo_trophies:
 # will use title and url fields
 # Take a look to https://github.com/jekyll/jekyll-feed for more customization
 
-rss_icon: false
+rss_icon: true
 
 # -----------------------------------------------------------------------------
 # Layout
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: true
+footer_fixed: false
 
 # Dimensions
 max_width: 800px
@@ -75,7 +76,7 @@ flickr_id: # your flickr id
 github_username: bhusalb
 gitlab_username: bhusalb
 ieee_id: # your ieeexplore.ieee.org/author/id
-instagram_id: 
+instagram_id:
 kaggle_id: # your kaggle id
 keybase_username: # your keybase user name
 lastfm_id: # your lastfm id
@@ -108,11 +109,11 @@ zotero_username: # your zotero username
 # Used for schema.org Person structured data on the homepage
 job_title: Ph.D. Candidate in Computer Science
 affiliation: University of Missouri
-knows_about: [Differential Privacy, Formal Verification, Privacy-Preserving Machine Learning, Large Language Models, Program Verification, Security and Privacy]
+knows_about:
+  [Differential Privacy, Formal Verification, Privacy-Preserving Machine Learning, Large Language Models, Program Verification, Security and Privacy]
 
 contact_note: >
   You can reach me best through email (bhusalb@missouri.edu) or LinkedIn.
-
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -131,13 +132,13 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_name: Research notes and tutorials
+blog_description: Differential privacy, formal verification, and private language models, explained with examples and links to the papers.
 permalink: /blog/:year/:title/
 
 # Pagination
 pagination:
-  enabled: true
+  enabled: false
 
 related_blog_posts:
   enabled: true
@@ -159,7 +160,7 @@ giscus:
   lang: en
 
 # Disqus comments (DEPRECATED)
-disqus_shortname: al-folio # put your disqus shortname
+disqus_shortname:
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # External sources.
@@ -167,7 +168,7 @@ disqus_shortname: al-folio # put your disqus shortname
 # you can display them in your blog by adding a link to the RSS feed.
 # external_sources:
 #   - name:
-#     rss_url: 
+#     rss_url:
 
 # -----------------------------------------------------------------------------
 # Collections
@@ -177,10 +178,10 @@ collections:
   news:
     defaults:
       layout: post
-    output: true
+    output: false
     permalink: /news/:path/
   projects:
-    output: true
+    output: false
     permalink: /projects/:path/
 
 announcements:
@@ -189,7 +190,7 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: false
+  enabled: true
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 
@@ -213,6 +214,18 @@ kramdown:
 # Includes & excludes
 include: ["_pages"]
 exclude:
+  - _examples/
+  - RESEARCH-PUBLISHING.md
+  - assets/json/resume.json
+  - assets/json/table_data.json
+  - assets/html/
+  - assets/plotly/
+  - assets/jupyter/
+  - _pages/teaching.md
+  - _pages/projects.md
+  - _pages/repositories.md
+  - _pages/dropdown.md
+  - _pages/news.md
   - bin/
   - CONTRIBUTING.md
   - CUSTOMIZE.md
@@ -259,11 +272,11 @@ defaults:
       path: "assets"
     values:
       sitemap: false
-  # Keep the al-folio sample content out of the sitemap so search engines focus on research pages
+  # Research posts are public; theme examples are kept in _examples/.
   - scope:
       type: "posts"
     values:
-      sitemap: false
+      sitemap: true
   - scope:
       type: "news"
     values:
@@ -281,16 +294,14 @@ sass:
 # -----------------------------------------------------------------------------
 
 jekyll-minifier:
-  exclude: ["robots.txt", "llms.txt"]
-  uglifier_args:
-    harmony: true
+  exclude: ["robots.txt", "llms.txt", "llms-full.txt", "publications.json", "publications.bib", "**/cite.bib", "**/cite.ris"]
 
 # -----------------------------------------------------------------------------
 # Jekyll Archives
 # -----------------------------------------------------------------------------
 
 jekyll-archives:
-  enabled: [] # enables year, tag and category archives (remove if you need to disable one of them).
+  enabled: [year, tags, categories]
   layouts:
     year: archive-year
     tag: archive-tag
@@ -300,8 +311,8 @@ jekyll-archives:
     tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 
-display_tags: ["formatting", "images", "links", "math", "code"] # these tags will be displayed on the front page of your blog
-display_categories: ["blockquotes"] # these categories will be displayed on the front page of your blog
+display_tags: ["differential-privacy", "formal-verification", "language-models"]
+display_categories: ["research"]
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
@@ -363,7 +374,7 @@ filtered_bibtex_keywords:
   ]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
-max_author_limit:  # leave blank to always show all authors
+max_author_limit: # leave blank to always show all authors
 more_authors_animation_delay: 10 # more authors are revealed on click using animation; smaller delay means faster animation
 
 # Enables publication thumbnails. If disabled, none of the publications will display thumbnails, even if specified in the bib entry.
@@ -376,7 +387,7 @@ enable_publication_thumbnails: true
 # These are the defaults
 external_links:
   enabled: true
-  rel: external nofollow noopener
+  rel: external noopener
   target: _blank
   exclude:
 
@@ -596,7 +607,6 @@ third_party_libraries:
       js: "https://cdn.jsdelivr.net/npm/vega-lite@{{version}}/build/vega-lite.min.js"
       js_map: "https://cdn.jsdelivr.net/npm/vega-lite@{{version}}/build/vega-lite.min.js.map"
     version: "5.16.3"
-
 # -----------------------------------------------------------------------------
 # Get external JSON data
 # -----------------------------------------------------------------------------

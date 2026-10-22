@@ -1,0 +1,57 @@
+---
+permalink: /llms-full.txt
+layout: null
+sitemap: false
+---
+# {{ site.first_name }} {{ site.last_name }}: research and publications
+
+{{ site.description }}
+
+Homepage: {{ '/' | absolute_url }}
+ORCID: https://orcid.org/{{ site.orcid_id }}
+Publication index: {{ '/publications/' | absolute_url }}
+Structured catalog: {{ '/publications.json' | absolute_url }}
+Bibliography: {{ '/publications.bib' | absolute_url }}
+
+The records below include the complete author lists and available abstracts of the linked works.
+Reading guides summarize their scope. Publication types distinguish preprints, proceedings papers,
+journal articles, chapters, and software releases; an arXiv version of a published paper is linked
+within that paper's record. Bibliographic details come from the site bibliography, with the HCII
+abstract transcribed from the linked author-hosted PDF.
+
+{% for paper in site.data.publications %}
+## {{ paper.title }}
+
+Authors: {{ paper.authors | join: '; ' }}
+Year: {{ paper.year }}
+Type: {{ paper.type_label }}
+Publication status: {{ paper.publication_status }}
+{% if paper.venue %}Venue or repository: {{ paper.venue }}
+{% endif %}Paper page: {{ paper.url }}
+Scholarly identifier: {{ paper.identifier }}
+{% if paper.doi %}DOI: {{ paper.doi }}
+{% endif %}{% if paper.arxiv %}arXiv: https://arxiv.org/abs/{{ paper.arxiv }}
+{% endif %}{% if paper.pdf %}PDF: {{ paper.pdf }}
+{% endif %}{% if paper.source_url %}Source: {{ paper.source_url }}
+{% endif %}{% if paper.code %}Code and resources: {{ paper.code }}
+{% endif %}BibTeX: {{ paper.bibtex_url }}
+RIS: {{ paper.ris_url }}
+{% if paper.topics.size > 0 %}Topics: {{ paper.topics | join: '; ' }}
+{% endif %}{% if paper.award_name %}Award: {{ paper.award_name }}
+{% endif %}
+{% if paper.summary %}### Contribution summary
+
+{{ paper.summary }}
+
+{% endif %}{% if paper.when_to_read %}### When to read this work
+
+{{ paper.when_to_read }}
+
+{% endif %}{% if paper.abstract %}### Abstract
+
+{{ paper.abstract }}
+{% if paper.abstract_source %}
+Abstract source: {{ paper.abstract_source }}
+{% endif %}{% endif %}
+{% for post in site.posts %}{% if post.related_papers contains paper.key %}Related tutorial: [{{ post.title }}]({{ post.url | absolute_url }})
+{% endif %}{% endfor %}{% endfor %}
