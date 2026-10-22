@@ -55,7 +55,9 @@ paths.uniq.each do |path|
     topics = YAML.load_file('_data/research.yml').fetch('topics')
     topics.each do |topic|
       section = doc.at_css("section##{topic.fetch('id')}")
-      check.call(section && section.css('h3 a').size == topic.fetch('papers').size, "Missing research summaries: #{topic.fetch('id')}")
+      expected_links = topic.fetch('papers').map { |key| "#{config.fetch('baseurl', '')}/publications/#{key}/" }
+      actual_links = section ? section.css('a[href]').map { |link| link['href'] } : []
+      check.call((expected_links - actual_links).empty?, "Missing research paper links: #{topic.fetch('id')}")
     end
   end
   # Check local navigation, downloads, images, and script/style dependencies.
