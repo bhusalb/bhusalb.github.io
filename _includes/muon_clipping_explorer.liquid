@@ -1,0 +1,38 @@
+<div class="muon-explorer" data-muon-explorer hidden>
+  <h3>Try a clipping threshold</h3>
+  <label for="muon-clipping-threshold">Threshold C: <output data-muon-threshold aria-live="off">1.00</output></label>
+  <input id="muon-clipping-threshold" type="range" min="0.25" max="4.5" step="0.05" value="1" aria-describedby="muon-threshold-help">
+  <p id="muon-threshold-help">Move the slider to change how strongly each example is clipped.</p>
+  <div class="muon-explorer-presets">
+    <button type="button" data-muon-preset="1">Example: C = 1</button>
+    <button type="button" data-muon-preset="4">No clipping: C = 4</button>
+  </div>
+  <div class="muon-explorer-values">
+    <div>
+      <p>Mean after clipping</p>
+      <table class="muon-explorer-matrix" aria-label="Mean matrix after clipping">
+        <tbody>
+          <tr>
+            <td data-muon-a>0.5000</td>
+            <td data-muon-b>0.3536</td>
+          </tr>
+          <tr>
+            <td>0.0000</td>
+            <td data-muon-d>0.3536</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <p>Polar rotation</p>
+      <output data-muon-angle aria-live="off">−22.50°</output>
+    </div>
+    <div>
+      <p>Change from original</p>
+      <output data-muon-change aria-live="off">11.19°</output>
+    </div>
+  </div>
+  <p class="muon-explorer-note">Rounded values for the same two example matrices. No privacy noise is added.</p>
+  <span class="sr-only" data-muon-status role="status"></span>
+</div>
+<script defer src="{{ '/assets/js/muon_clipping_explorer.js' | relative_url | bust_file_cache }}"></script>

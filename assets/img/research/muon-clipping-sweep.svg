@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg role="img" aria-labelledby="muon-clipping-sweep-title muon-clipping-sweep-desc" xmlns:xlink="http://www.w3.org/1999/xlink" width="640" height="550" viewBox="0 0 640 550" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title id="muon-clipping-sweep-title">Polar rotation as the clipping threshold varies</title>
+ <desc id="muon-clipping-sweep-desc">A deterministic threshold sweep for the tutorial's two gradient matrices, with C from 0.25 to 4.5. The clipped mean has polar angle minus 22.5 degrees when C is at most square root of 2. For square root of 2 less than C less than 4, the angle is minus arctangent of 1/(C + 1), in degrees. At C equal to 4 and above, neither example is clipped and the angle equals the original mean's minus 11.309932 degrees. A marker highlights C equal to 1. Vertical guides mark square root of 2 and 4, the two gradient norms. The dashed horizontal line is the original mean's angle. This plot contains no measured training results.</desc>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>bin/generate-muon-figures.py</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 550
+L 640 550
+L 640 0
+L 0 0
+z
+" style="fill: #fcfdfd"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 131.2 404.25
+L 601.6 404.25
+L 601.6 129.25
+L 131.2 129.25
+z
+" style="fill: #fcfdfd"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="fill: #53677a; font: 18px 'DejaVu Sans', Arial, sans-serif; text-anchor: middle" x="131.2" y="426.927188" transform="rotate(-0 131.2 426.927188)">0.25</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="fill: #53677a; font: 18px 'DejaVu Sans', Arial, sans-serif; text-anchor: middle" x="260.057896" y="426.927188" transform="rotate(-0 260.057896 426.927188)">√2</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="fill: #53677a; font: 18px 'DejaVu Sans', Arial, sans-serif; text-anchor: middle" x="380.235294" y="426.927188" transform="rotate(-0 380.235294 426.927188)">2.5</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="fill: #53677a; font: 18px 'DejaVu Sans', Arial, sans-serif; text-anchor: middle" x="546.258824" y="426.927188" transform="rotate(-0 546.258824 426.927188)">4</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5"/>
+     <g id="text_5">
+      <text style="fill: #53677a; font: 18px 'DejaVu Sans', Arial, sans-serif; text-anchor: middle" x="601.6" y="426.927188" transform="rotate(-0 601.6 426.927188)">4.5</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="fill: #17334a; font: 20px 'DejaVu Sans', Arial, sans-serif; text-anchor: middle" x="366.4" y="459.8675" transform="rotate(-0 366.4 459.8675)">Clipping threshold C</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <path d="M 131.2 375.200704
+L 601.6 375.200704
+" clip-path="url(#p212763a5e1)" style="fill: none; stroke: #dce5e9; stroke-width: 0.9; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_7"/>
+     <g id="text_7">
+      <text style="fill: #53677a; font: 18px 'DejaVu Sans', Arial, sans-serif; text-anchor: end" x="122.2" y="382.039298" transform="rotate(-0 122.2 382.039298)">−22.50</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8">
+      <path d="M 131.2 268.68662
+L 601.6 268.68662
+" clip-path="url(#p212763a5e1)" style="fill: none; stroke: #dce5e9; stroke-width: 0.9; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_9"/>
+     <g id="text_8">
+      <text style="fill: #53677a; font: 18px 'DejaVu Sans', Arial, sans-serif; text-anchor: end" x="122.2" y="275.525213" transform="rotate(-0 122.2 275.525213)">−17</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_10">
+      <path d="M 131.2 158.49165
+L 601.6 158.49165
+" clip-path="url(#p212763a5e1)" style="fill: none; stroke: #dce5e9; stroke-width: 0.9; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_11"/>
+     <g id="text_9">
+      <text style="fill: #53677a; font: 18px 'DejaVu Sans', Arial, sans-serif; text-anchor: end" x="122.2" y="165.330244" transform="rotate(-0 122.2 165.330244)">−11.31</text>
+     </g>
+    </g>
+    <g id="text_10">
+     <text style="fill: #17334a; font: 19px 'DejaVu Sans', Arial, sans-serif; text-anchor: middle" x="41.634531" y="266.75" transform="rotate(-90 41.634531 266.75)">Polar rotation (degrees)</text>
+    </g>
+   </g>
+   <g id="line2d_12">
+    <path d="M 260.057896 404.25
+L 260.057896 129.25
+" clip-path="url(#p212763a5e1)" style="fill: none; stroke-dasharray: 3.3,4.4; stroke-dashoffset: 0; stroke: #53677a; stroke-opacity: 0.65; stroke-width: 1.1"/>
+   </g>
+   <g id="line2d_13">
+    <path d="M 546.258824 404.25
+L 546.258824 129.25
+" clip-path="url(#p212763a5e1)" style="fill: none; stroke-dasharray: 3.3,4.4; stroke-dashoffset: 0; stroke: #53677a; stroke-opacity: 0.65; stroke-width: 1.1"/>
+   </g>
+   <g id="line2d_14">
+    <path d="M 131.2 158.49165
+L 601.6 158.49165
+" clip-path="url(#p212763a5e1)" style="fill: none; stroke-dasharray: 10,8; stroke-dashoffset: 0; stroke: #087f7b; stroke-width: 2"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 131.2 404.25
+L 601.6 404.25
+" style="fill: none; stroke: #dce5e9; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_15">
+    <path d="M 131.2 375.200704
+L 260.057896 375.200704
+L 266.832 365.466256
+L 273.888 355.7572
+L 280.944 346.461208
+L 288 337.553693
+L 295.056 329.011881
+L 302.112 320.814658
+L 309.168 312.942427
+L 316.224 305.376983
+L 324.064 297.310199
+L 331.904 289.579767
+L 339.744 282.165786
+L 347.584 275.049837
+L 355.424 268.214856
+L 364.048 261.002035
+L 372.672 254.090559
+L 381.296 247.462434
+L 389.92 241.101029
+L 399.328 234.447459
+L 408.736 228.074568
+L 418.144 221.965358
+L 428.336 215.626442
+L 438.528 209.56023
+L 448.72 203.749833
+L 459.696 197.760766
+L 470.672 192.032517
+L 481.648 186.548698
+L 493.408 180.927328
+L 505.168 175.552258
+L 517.712 170.07277
+L 530.256 164.838431
+L 543.584 159.527826
+L 546.258824 158.49165
+L 601.6 158.49165
+L 601.6 158.49165
+" clip-path="url(#p212763a5e1)" style="fill: none; stroke: #a65b0a; stroke-width: 3.4; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 224.541219 325.009026
+Q 219.577924 349.126091 214.614629 373.243155
+" style="fill: none; stroke: #a65b0a; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="text_11">
+    <text style="fill: #a65b0a; font: 19px 'DejaVu Sans', Arial, sans-serif; text-anchor: start" x="154.443294" y="317.102113" transform="rotate(-0 154.443294 317.102113)">C = 1: −22.50°</text>
+   </g>
+   <g id="line2d_16">
+    <defs>
+     <path id="m7355fb113a" d="M 0 4
+C 1.060812 4 2.078319 3.578535 2.828427 2.828427
+C 3.578535 2.078319 4 1.060812 4 0
+C 4 -1.060812 3.578535 -2.078319 2.828427 -2.828427
+C 2.078319 -3.578535 1.060812 -4 0 -4
+C -1.060812 -4 -2.078319 -3.578535 -2.828427 -2.828427
+C -3.578535 -2.078319 -4 -1.060812 -4 0
+C -4 1.060812 -3.578535 2.078319 -2.828427 2.828427
+C -2.078319 3.578535 -1.060812 4 0 4
+z
+" style="stroke: #fcfdfd; stroke-width: 1.5"/>
+    </defs>
+    <g clip-path="url(#p212763a5e1)">
+     <use xlink:href="#m7355fb113a" x="214.211765" y="375.200704" style="fill: #a65b0a; stroke: #fcfdfd; stroke-width: 1.5"/>
+    </g>
+   </g>
+  </g>
+  <g id="text_12">
+   <text style="fill: #17334a; font: 700 25px 'DejaVu Sans', Arial, sans-serif; text-anchor: start" x="40" y="51.996094" transform="rotate(-0 40 51.996094)">What happens as clipping gets looser?</text>
+  </g>
+  <g id="text_13">
+   <text style="fill: #53677a; font: 18px 'DejaVu Sans', Arial, sans-serif; text-anchor: start" x="40" y="82.427188" transform="rotate(-0 40 82.427188)">The same two gradients, with threshold C varied</text>
+  </g>
+  <g id="text_14">
+   <text style="fill: #53677a; font: 18px 'DejaVu Sans', Arial, sans-serif; text-anchor: middle" x="320" y="503.25" transform="rotate(-0 320 503.25)">0 &lt; C ≤ √2: −22.5°  ·  C ≥ 4: original angle</text>
+  </g>
+  <g id="text_15">
+   <text style="fill: #53677a; font: 17px 'DejaVu Sans', Arial, sans-serif; text-anchor: middle" x="320" y="530.75" transform="rotate(-0 320 530.75)">A deterministic example, not measured training performance.</text>
+  </g>
+  <g id="legend_1">
+   <g id="line2d_17">
+    <path d="M 143.050625 114.327187
+L 163.750625 114.327187
+L 184.450625 114.327187
+" style="fill: none; stroke: #a65b0a; stroke-width: 3.4; stroke-linecap: square"/>
+   </g>
+   <g id="text_16">
+    <text style="fill: #17334a; font: 18px 'DejaVu Sans', Arial, sans-serif; text-anchor: start" x="198.850625" y="120.627187" transform="rotate(-0 198.850625 120.627187)">Clipped mean</text>
+   </g>
+   <g id="line2d_18">
+    <path d="M 352.345625 114.327187
+L 373.045625 114.327187
+L 393.745625 114.327187
+" style="fill: none; stroke-dasharray: 10,8; stroke-dashoffset: 0; stroke: #087f7b; stroke-width: 2"/>
+   </g>
+   <g id="text_17">
+    <text style="fill: #17334a; font: 18px 'DejaVu Sans', Arial, sans-serif; text-anchor: start" x="408.145625" y="120.627187" transform="rotate(-0 408.145625 120.627187)">Original mean</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p212763a5e1">
+   <rect x="131.2" y="129.25" width="470.4" height="275"/>
+  </clipPath>
+ </defs>
+</svg>

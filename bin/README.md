@@ -38,3 +38,11 @@ python3 bin/generate-dipapprox-figures.py --preview-dir /tmp/dipapprox-figure-pr
 ```
 
 Only the optimization figure contains experimental measurements, transcribed from Table 2 of the paper. The Gaussian and interval figures are teaching examples. Preserve that distinction, the single-pair scope, and the timeout label when editing the plots. The SVGs include accessible descriptions and selectable text; the article provides captions and alt text.
+
+The three Muon figures use the numerical functions in `assets/code/clipping_polar_geometry.py`. Regenerate them with Matplotlib:
+
+```sh
+python3 bin/generate-muon-figures.py --preview-dir /tmp/muon-figure-previews
+```
+
+These figures illustrate the same two matrices, without privacy noise or training measurements. The threshold slider in `assets/js/muon_clipping_explorer.js` computes their clipped mean and polar rotation for positive thresholds from 0.25 to 4.5. Keep its values consistent with the Python example when editing either implementation.

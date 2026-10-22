@@ -33,15 +33,15 @@ The missing distinction is the order of operations. Private training clips indiv
 Consider two illustrative per-example matrix gradients:
 
 $$
-G_1=\begin{pmatrix}4&0\\0&0\end{pmatrix},\qquad
-G_2=\begin{pmatrix}0&1\\0&1\end{pmatrix}.
+G_1 = \begin{pmatrix} 4 & 0 \\ 0 & 0 \end{pmatrix}, \qquad
+G_2 = \begin{pmatrix} 0 & 1 \\ 0 & 1 \end{pmatrix}.
 $$
 
 Their arithmetic mean is
 
 $$
-A=\frac{G_1+G_2}{2}
-=\begin{pmatrix}2&0.5\\0&0.5\end{pmatrix}.
+A = \frac{G_1 + G_2}{2}
+= \begin{pmatrix} 2 & 0.5 \\ 0 & 0.5 \end{pmatrix}.
 $$
 
 Clip each matrix to Frobenius norm at most 1. The Frobenius norm is the square root of the sum of squared entries. The clipping operation multiplies G by min(1, 1 / norm(G)), leaving a zero matrix unchanged.
@@ -49,18 +49,23 @@ Clip each matrix to Frobenius norm at most 1. The Frobenius norm is the square r
 The two norms are 4 and square-root-of-2, so the clipping multipliers are 0.25 and approximately 0.707107. After clipping each example and then averaging, the result is
 
 $$
-B=\begin{pmatrix}0.5&0.353553\ldots\\0&0.353553\ldots\end{pmatrix}.
+B = \begin{pmatrix} 0.5 & 0.353553\ldots \\ 0 & 0.353553\ldots \end{pmatrix}.
 $$
 
 B is not a common rescaling of A. Its first column shrank more than its second because the examples contributing to those columns had different norms. This reweighting occurs before we add any noise or run any approximate orthogonalization routine.
+
+<figure>
+  <img src="{{ '/assets/img/research/muon-clipping-matrices.svg' | relative_url }}" width="640" height="650" class="img-fluid" loading="lazy" data-zoomable alt="Two example gradients receive different clipping multipliers: 0.25 and about 0.7071. Their original mean is [[2, 0.5], [0, 0.5]], while the mean after clipping is about [[0.5, 0.3536], [0, 0.3536]].">
+  <figcaption><strong>Figure 1.</strong> Clipping each example changes its contribution to the mean. The first example is reduced more strongly, so the two columns do not shrink by a common factor. Values come from the illustrative matrices above.</figcaption>
+</figure>
 
 ## Compute the polar-factor rotation
 
 For a real 2-by-2 matrix with entries a, b, c, d and positive determinant, its polar factor has a convenient closed form:
 
 $$
-Q=\frac{1}{\sqrt{(a+d)^2+(c-b)^2}}
-\begin{pmatrix}a+d&b-c\\c-b&a+d\end{pmatrix}.
+Q = \frac{1}{\sqrt{(a + d)^2 + (c - b)^2}}
+\begin{pmatrix} a + d & b - c \\ c - b & a + d \end{pmatrix}.
 $$
 
 Its rotation angle is atan2(c − b, a + d). Both means in this example have positive determinants, so the formula applies even though the individual example matrices are rank deficient.
@@ -73,6 +78,11 @@ Its rotation angle is atan2(c − b, a + d). Both means in this example have pos
 
 The unequal clipping changes the polar rotation by about 11.19 degrees. Common positive rescaling leaves it unchanged. The Frobenius distance between the two polar factors is approximately 0.275762. These are deterministic properties of the chosen matrices, not measured training improvements.
 
+<figure>
+  <img src="{{ '/assets/img/research/muon-polar-rotation.svg' | relative_url }}" width="640" height="500" class="img-fluid" loading="lazy" data-zoomable alt="The original polar factor rotates the first unit vector by minus 11.31 degrees; after per-example clipping, the rotation is minus 22.50 degrees, a difference of 11.19 degrees. Common positive rescaling preserves the original rotation.">
+  <figcaption><strong>Figure 2.</strong> Each arrow shows where a polar factor sends the first unit vector. These are unit directions after orthogonalization; their lengths do not represent gradient magnitudes.</figcaption>
+</figure>
+
 Download [clipping_polar_geometry.py]({{ '/assets/code/clipping_polar_geometry.py' | relative_url }}) and run it with Python's standard library:
 
 ```sh
@@ -81,6 +91,17 @@ python3 clipping_polar_geometry.py
 
 The script prints the clipping multipliers, both means, their rotations, and the common-rescaling control. It intentionally handles only the positive-determinant 2-by-2 case needed here. It is not a general SVD implementation or a private optimizer.
 
+## Explore the clipping threshold
+
+Let $$C>0$$ be the clipping threshold. For these two matrices, thresholds at or below $$\sqrt{2}$$ give both clipped examples norm $$C$$ and produce the same polar rotation of −22.5°. Between $$\sqrt{2}$$ and 4, only the first example is clipped, so the angle moves toward the original −11.31°. At $$C\geq4$$, neither example is changed.
+
+<figure>
+  <img src="{{ '/assets/img/research/muon-clipping-sweep.svg' | relative_url }}" width="640" height="550" class="img-fluid" loading="lazy" data-zoomable alt="Polar rotation versus clipping threshold C: minus 22.5 degrees up to square root of two, then approaching the original minus 11.31 degrees at C equal to four, where clipping stops. The worked example uses C equal to one.">
+  <figcaption><strong>Figure 3.</strong> Changing the threshold changes the geometry of the same two example matrices. The curve is calculated directly from their polar factors.</figcaption>
+</figure>
+
+{% include muon_clipping_explorer.liquid %}
+
 ## The connection to inner momentum
 
 The preprint proposes averaging each sampled example's Muon gradient over the current model and a short history of recent models before clipping. This places the temporal averaging inside the per-example computation. It differs from simply smoothing a batch update after clipping has already reweighted its contributors.
@@ -88,9 +109,9 @@ The preprint proposes averaging each sampled example's Muon gradient over the cu
 A useful algebraic view separates common scaling from the part that changes geometry. Write a clipped mean as the average of alpha-i times G-i, where alpha-i is an example's clipping multiplier. If alpha-bar and G-bar are their respective averages, then
 
 $$
-\frac1n\sum_i\alpha_iG_i
-=\bar\alpha\bar G+
-\frac1n\sum_i(\alpha_i-\bar\alpha)(G_i-\bar G).
+\frac1n \sum_i \alpha_i G_i
+= \bar\alpha \bar G +
+\frac1n \sum_i (\alpha_i - \bar\alpha)(G_i - \bar G).
 $$
 
 The first term is a common rescaling. The second is a covariance-like residual that captures the association between gradient structure and clipping multipliers. The abstract describes a distortion bound using such a residual. The identity alone does not prove that any particular temporal averaging scheme reduces it.

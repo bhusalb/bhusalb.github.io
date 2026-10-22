@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg role="img" aria-labelledby="muon-polar-rotation-title muon-polar-rotation-desc" xmlns:xlink="http://www.w3.org/1999/xlink" width="640" height="500" viewBox="0 0 640 500" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title id="muon-polar-rotation-title">Polar-factor rotation caused by unequal clipping</title>
+ <desc id="muon-polar-rotation-desc">Unit directions obtained by applying the orthogonal polar factors to e1, the first coordinate unit vector. Q(A)e1 makes an angle of minus 11.309932 degrees with e1. Q(B)e1 makes an angle of minus 22.5 degrees, a clockwise change of 11.190068 degrees. Multiplying A by any positive scalar leaves its polar factor Q(A) unchanged. These arrows depict columns of the polar factors, not columns of the mean matrices. This is a deterministic teaching example, not a training result.</desc>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>bin/generate-muon-figures.py</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 500
+L 640 500
+L 640 0
+L 0 0
+z
+" style="fill: #fcfdfd"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 94.142938 155.357143
+Q 333.917936 155.357143 572.351293 155.357143
+" clip-path="url(#p3df55ad47a)" style="fill: none; stroke-dasharray: 4.8,3.6; stroke-dashoffset: 0; stroke: #53677a; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 566.751293 152.557143
+L 572.351293 155.357143
+L 566.751293 158.157143
+z
+" clip-path="url(#p3df55ad47a)" style="fill: #53677a; stroke-dasharray: 4.8,3.6; stroke-dashoffset: 0; stroke: #53677a; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 469.75327 364.671773
+C 488.657021 330.568504 502.854009 294.061008 511.956537 256.146252
+C 521.059065 218.231496 524.983511 179.257782 523.622706 140.289424
+" clip-path="url(#p3df55ad47a)" style="fill: none; stroke: #dce5e9; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 94.100289 155.749264
+Q 303.821915 197.693589 510.254574 238.980121
+" clip-path="url(#p3df55ad47a)" style="fill: none; stroke: #087f7b; stroke-width: 3; stroke-linecap: round"/>
+    <path d="M 503.194393 233.488869
+L 510.254574 238.980121
+L 501.625464 241.333515
+z
+" clip-path="url(#p3df55ad47a)" style="fill: #087f7b; stroke: #087f7b; stroke-width: 3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 93.986919 156.122293
+Q 291.581592 237.968687 486.077478 318.531521
+" clip-path="url(#p3df55ad47a)" style="fill: none; stroke: #a65b0a; stroke-width: 3; stroke-linecap: round"/>
+    <path d="M 480.217176 311.774535
+L 486.077478 318.531521
+L 477.155708 319.165571
+z
+" clip-path="url(#p3df55ad47a)" style="fill: #a65b0a; stroke: #a65b0a; stroke-width: 3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 323.490849 251.185934
+C 326.610752 243.653822 329.36096 235.973839 331.731643 228.173431
+C 334.102327 220.373023 336.09066 212.461493 337.689536 204.467113
+" clip-path="url(#p3df55ad47a)" style="fill: none; stroke: #17334a; stroke-width: 2.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="fill: #53677a; font: 21px 'DejaVu Sans', Arial, sans-serif; text-anchor: middle" x="588.647619" y="155.107386" transform="rotate(-0 588.647619 155.107386)">e₁</text>
+   </g>
+   <g id="text_2">
+    <text style="fill: #087f7b; font: 700 20px 'DejaVu Sans', Arial, sans-serif; text-anchor: middle" x="390.044444" y="190.156498" transform="rotate(-0 390.044444 190.156498)">Original  -11.31°</text>
+   </g>
+   <g id="text_3">
+    <text style="fill: #a65b0a; font: 700 20px 'DejaVu Sans', Arial, sans-serif; text-anchor: middle" x="402.996825" y="353.002877" transform="rotate(-0 402.996825 353.002877)">Clipped  -22.50°</text>
+   </g>
+   <g id="patch_7">
+    <path d="M 309.089068 323.738095
+L 326.731643 323.738095
+Q 331.731643 323.738095 331.731643 318.738095
+L 331.731643 230.171669
+" style="fill: none; stroke: #53677a; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="text_4">
+    <text style="fill: #17334a; font: 19px 'DejaVu Sans', Arial, sans-serif; text-anchor: start" x="143.949206" y="328.980908" transform="rotate(-0 143.949206 328.980908)">11.19° clockwise</text>
+   </g>
+   <g id="line2d_1">
+    <defs>
+     <path id="m90604e04ea" d="M 0 2.5
+C 0.663008 2.5 1.29895 2.236584 1.767767 1.767767
+C 2.236584 1.29895 2.5 0.663008 2.5 0
+C 2.5 -0.663008 2.236584 -1.29895 1.767767 -1.767767
+C 1.29895 -2.236584 0.663008 -2.5 0 -2.5
+C -0.663008 -2.5 -1.29895 -2.236584 -1.767767 -1.767767
+C -2.236584 -1.29895 -2.5 -0.663008 -2.5 0
+C -2.5 0.663008 -2.236584 1.29895 -1.767767 1.767767
+C -1.29895 2.236584 -0.663008 2.5 0 2.5
+z
+" style="stroke: #17334a"/>
+    </defs>
+    <g clip-path="url(#p3df55ad47a)">
+     <use xlink:href="#m90604e04ea" x="92.139683" y="155.357143" style="fill: #17334a; stroke: #17334a"/>
+    </g>
+   </g>
+  </g>
+  <g id="text_5">
+   <text style="fill: #17334a; font: 700 25px 'DejaVu Sans', Arial, sans-serif; text-anchor: start" x="40" y="48.996094" transform="rotate(-0 40 48.996094)">Clipping rotates this polar factor</text>
+  </g>
+  <g id="text_6">
+   <text style="fill: #53677a; font: 18px 'DejaVu Sans', Arial, sans-serif; text-anchor: start" x="40" y="76.177188" transform="rotate(-0 40 76.177188)">Compare unit directions: Q(A)e₁ and Q(B)e₁</text>
+  </g>
+  <g id="text_7">
+   <text style="fill: #53677a; font: 19px 'DejaVu Sans', Arial, sans-serif; text-anchor: middle" x="320" y="427.5" transform="rotate(-0 320 427.5)">Common positive scaling keeps the direction:</text>
+  </g>
+  <g id="text_8">
+   <text style="fill: #087f7b; font: 700 22px 'DejaVu Sans', Arial, sans-serif; text-anchor: middle" x="320" y="462.5" transform="rotate(-0 320 462.5)">Q(αA) = Q(A), for every α &gt; 0</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p3df55ad47a">
+   <rect x="57.6" y="125.134921" width="544" height="254.730159"/>
+  </clipPath>
+ </defs>
+</svg>
