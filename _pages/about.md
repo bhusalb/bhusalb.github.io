@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Ph.D. Candidate, University of Missouri | Incoming Assistant Professor, EECS, Florida Tech
+subtitle: Security & Privacy Researcher
 
 profile:
   align: left
@@ -18,10 +18,10 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am a Ph.D. candidate in Computer Science at the University of Missouri, advised by [Rohit Chadha](https://chadhar.mufaculty.umsystem.edu/). I expect to graduate in December 2026 and will join [Florida Tech](https://www.fit.edu/) as an **Assistant Professor in EECS**.
+I am a Ph.D. candidate in Computer Science at the University of Missouri, advised by [Prof. Rohit Chadha](https://chadhar.mufaculty.umsystem.edu/), graduating Dec 2026. After graduating, I will join the Department of Electrical Engineering and Computer Science (EECS) at the [Florida Institute of Technology](https://www.fit.edu/) as an **Assistant Professor**. My research asks a deceptively hard question: can we _prove_, not just hope, that an algorithm preserves privacy? I build automated verifiers and decision procedures that answer this with mathematical rigor.
 
-My research focuses on **differential privacy**, **formal verification**, and **privacy-preserving language models**.
+My work spans **differential privacy**, **LLM safety**, and **formal verification**. I have been fortunate to explore these problems across some wonderful places: [Los Alamos National Laboratory](https://www.lanl.gov/), [SRI International](https://www.sri.com/), and [Amazon Web Services](https://aws.amazon.com/). Along the way, my work has appeared at **AAAI**, **ACM CCS**, and **OOPSLA**, and earned a **Best Paper Award at GameSec 2024**.
 
-I have worked at [Los Alamos National Laboratory](https://www.lanl.gov/), [SRI International](https://www.sri.com/), and [Amazon Web Services](https://aws.amazon.com/). Before my Ph.D., I spent five years as a software engineer. Outside work, I enjoy hiking and camping.
+Before academia, I spent five years as a software engineer, scaling systems to billions of daily requests and building platforms used by millions. That grounding still shapes how I think: I care about ideas that actually work, not just ideas that look good on paper.
 
-[Email](mailto:bhusalb@missouri.edu) · [Research](/research/) · [Publications](/publications/) · [CV](/cv/)
+Outside the lab, I chase trails, camp under open skies, and try hard to find places without Wi-Fi. Feel free to reach me at [bhusalb@missouri.edu](mailto:bhusalb@missouri.edu). I am always happy to chat, collaborate, or just exchange ideas.
