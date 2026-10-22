@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "DipApprox: verifying differential privacy with Gaussian noise"
-date: 2026-10-22 10:00:00 -0600
+date: 2026-08-22 10:00:00 -0600
 display_order: 3
 author: Bishnu Bhusal
 description: "Inside our CCS 2025 paper: how DipApprox uses certified integration, Gaussian tail bounds, and probability intervals to prove or refute differential privacy."
