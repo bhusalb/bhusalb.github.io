@@ -176,6 +176,7 @@ module Jekyll
         'url' => url,
         'pdf' => pdf,
         'code' => field(entry, :code),
+        'poster' => field(entry, :poster),
         'html' => field(entry, :html),
         'html_full_text' => absolute_url(site, research['html_full_text']),
         'source_url' => field(entry, :url),

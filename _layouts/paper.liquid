@@ -49,6 +49,13 @@ layout: default
       {% if paper.code %}
         <a href="{{ paper.code | escape }}" class="btn btn-sm z-depth-0">Code and resources</a>
       {% endif %}
+      {% if paper.poster %}
+        {% if paper.poster contains '://' %}
+          <a href="{{ paper.poster | escape }}" class="btn btn-sm z-depth-0">Poster</a>
+        {% else %}
+          <a href="{{ paper.poster | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0">Poster</a>
+        {% endif %}
+      {% endif %}
       <a href="#cite" class="btn btn-sm z-depth-0">Cite this work</a>
       <a href="{{ paper.markdown_url | escape }}" class="btn btn-sm z-depth-0" download="{{ paper.key }}-summary.md">Summary (Markdown)</a>
     </div>
