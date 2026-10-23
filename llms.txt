@@ -19,7 +19,8 @@ sitemap: false
 {% endif %}{% endfor %}{% endfor %}
 ## Publication data
 
-- [Full research text]({{ '/llms-full.txt' | absolute_url }}): Complete available abstracts, author attribution, summaries, and source links.
+- [Publication summaries and abstracts]({{ '/llms-full.txt' | absolute_url }}): Complete available abstracts, author attribution, sourced answers, and full-paper links.
+- Each publication page offers a Markdown summary with its citation and source links; the catalog includes these as `markdown_url`.
 - [Publication catalog (JSON)]({{ '/publications.json' | absolute_url }}): Structured records generated from the site bibliography.
 - [Complete bibliography (BibTeX)]({{ '/publications.bib' | absolute_url }}): Downloadable citations; individual paper pages also offer BibTeX and RIS.
 - [Sitemap]({{ '/sitemap.xml' | absolute_url }}): Public page index.

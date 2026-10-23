@@ -1,5 +1,11 @@
 # Research website maintenance
 
+Publication pages, citation downloads, the JSON catalog, and per-paper `summary.md` files are generated from `_bibliography/papers.bib` and `_data/research.yml` by `_plugins/paper-pages.rb`. Markdown files are publication summaries and citation records, not full-paper reproductions. They include the available abstract, source links, related tutorials, and exact BibTeX.
+
+Keep full-text links in `html_full_text` only after verifying that they open the actual paper. Each `questions` entry needs a concise `question`, a source-supported `answer`, and a `source_url` with a descriptive `source_label`. These entries appear on the paper page, in its Markdown summary, in the JSON catalog, and in `llms-full.txt`. Check source sections and publication status when updating them.
+
+Run `bundle exec ruby bin/validate_research_site.rb` after a production build to check publication metadata, local links, citations, and consistency across the generated summaries.
+
 `generate-social-cards.cjs` contains the editable HTML, CSS, and SVG source for the 1200 × 630 tutorial sharing images in `assets/img/research/`. The images are committed so normal Jekyll builds do not need Node or a browser.
 
 To regenerate them with Node 20 or newer, install Playwright outside the repository and run the script with an installed Chrome executable:

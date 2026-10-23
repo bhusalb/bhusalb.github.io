@@ -1,5 +1,6 @@
 # Editorial summaries are grounded in each paper's abstract. The HCII abstract
 # below is transcribed from the author-hosted PDF, where the bibliography has none.
+# Questions cite the full-text sections supporting each answer.
 topics:
   - id: differential-privacy-verification
     title: Differential privacy and formal verification
@@ -51,6 +52,30 @@ papers:
       or when comparing the expressiveness and complexity of automata-based privacy analyses.
     topics: [Differential privacy, Formal verification, Online algorithms, DiP automata, Decision procedures]
   bhusal2025ccs:
+    html_full_text: https://arxiv.org/html/2509.08804
+    questions:
+      - question: Which programs can DipApprox verify?
+        answer: >-
+          DipApprox targets loop-free DiPGauss programs with finite input and output domains,
+          including mechanisms that sample from Gaussian and Laplace distributions. The paper's
+          implementation currently supports comparisons among sampled values.
+        source_url: https://arxiv.org/html/2509.08804#S7
+        source_label: Section 7 — Implementation and Evaluation, footnote 8
+      - question: What does almost decidable mean for differential privacy?
+        answer: >-
+          For a fixed program, positive rational program parameter and privacy budget, and adjacency relation, privacy
+          verification is decidable for every δ in [0, 1] except a finite set of critical values.
+          The result does not promise a terminating decision at those exceptional values.
+        source_url: https://arxiv.org/html/2509.08804#S6.SS1
+        source_label: Section 6.1 — Theorem 4
+      - question: Does passing one adjacent input pair prove the whole program private?
+        answer: >-
+          A successful pair check establishes the privacy inequality for that pair. The full
+          verification algorithm must confirm every pair in the specified adjacency relation.
+          A violating pair refutes privacy; an Unknown result means the current probability
+          bounds are insufficient to decide.
+        source_url: https://arxiv.org/html/2509.08804#S5
+        source_label: Section 5 — Verifying Differential Privacy
     summary: >-
       Introduces DipApprox for verifying differential privacy of loop-free probabilistic programs that use
       Gaussian and other discrete or continuous distributions. It combines numerical integration and tail
@@ -70,6 +95,31 @@ papers:
       probability integrals, including privacy-mechanism utility and algorithmic fairness.
     topics: [Formal verification, δ-satisfiability, Numerical integration, Synthesis, ∫dReal]
   bhusal2026aaai:
+    html_full_text: https://arxiv.org/html/2509.13625
+    questions:
+      - question: Can private in-context learning work without fine-tuning?
+        answer: >-
+          This method generates differentially private synthetic demonstrations while leaving
+          the underlying language model's weights unchanged. It clips and aggregates private
+          next-token logits and blends private and public inference. The released synthetic
+          demonstrations can then be reused for in-context learning through DP post-processing.
+        source_url: https://arxiv.org/html/2509.13625#Sx5
+        source_label: Approach — Private prediction and synthetic demonstrations
+      - question: What access to the language model does the method require?
+        answer: >-
+          The method requires access to the full token-level logit distribution at each decoding
+          step. The experiments use the instruction-tuned Gemma 1.1 2B model. An interface that
+          returns only generated text does not provide the inputs required by this algorithm.
+        source_url: https://arxiv.org/html/2509.13625#Sx6
+        source_label: Experiments — Model access and setup
+      - question: How does generating longer text affect the privacy budget?
+        answer: >-
+          Private synthetic generation incurs privacy cost for each generated token, so the
+          accounting must cover the complete generation. Reusing already released DP synthetic
+          text is post-processing. The paper identifies the per-token privacy cost as a
+          limitation compared with private fine-tuning, which accounts for privacy during training.
+        source_url: https://arxiv.org/html/2509.13625#Sx11
+        source_label: Limitations
     summary: >-
       Presents a differentially private prediction framework that generates synthetic text by aggregating
       clipped per-token logits from inference over private records, without fine-tuning the underlying
@@ -80,6 +130,31 @@ papers:
       demonstrations with differential privacy, particularly when updating model weights is undesirable.
     topics: [Differential privacy, Large language models, In-context learning, Private text generation]
   bhusal2026dpmuon:
+    html_full_text: https://arxiv.org/html/2610.02738
+    questions:
+      - question: Does inner momentum require an additional privacy budget?
+        answer: >-
+          Under the paper's conditions, history averaging adds no private releases. The baseline
+          per-run privacy accounting applies when the sampling rule, clipping radius, noise
+          calibration, release denominator, and number of releases are unchanged. Theorem 4
+          uses add/remove adjacency and a valid Poisson-sampled Gaussian accountant, with a
+          fixed public history length and decay.
+        source_url: https://arxiv.org/html/2610.02738#S4.SS3
+        source_label: Section 4.3 — Training procedure and Theorem 4
+      - question: Where was DP-Muon-IM evaluated?
+        answer: >-
+          The preprint evaluates private GPT-2-small fine-tuning on E2E and DART at ε values
+          1, 2, 4, and 8. It reports higher BLEU and ROUGE-L than DP-Muon in all 24 seed-matched
+          comparisons: two datasets, four privacy budgets, and three seeds.
+        source_url: https://arxiv.org/html/2610.02738#S5.SS2
+        source_label: Section 5.2 — Utility across privacy budgets
+      - question: What is the computational cost of inner momentum?
+        answer: >-
+          The method stores recent pre-update model states and evaluates each sampled example's
+          gradient at the current and selected past states. Per-step computation grows linearly
+          with the maximum history length, and storing those model states adds memory cost.
+        source_url: https://arxiv.org/html/2610.02738#S4.SS3
+        source_label: Section 4.3 — Cost
     summary: >-
       Studies how unequal per-example clipping factors can distort the singular-vector geometry used by
       Muon. The proposed inner-momentum method averages each sampled example's gradients across the current

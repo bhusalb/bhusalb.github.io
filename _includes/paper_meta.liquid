@@ -31,6 +31,7 @@
 <meta name="dc.identifier" content="{{ paper.identifier | escape }}">
 <link rel="alternate" type="application/x-bibtex" href="{{ paper.bibtex_url }}" title="BibTeX citation">
 <link rel="alternate" type="application/x-research-info-systems" href="{{ paper.ris_url }}" title="RIS citation">
+<link rel="alternate" type="text/markdown" href="{{ paper.markdown_url }}" title="Publication summary and citation (Markdown)">
 
 <script type="application/ld+json">
   {{ paper.schema | jsonify | replace: '</', '<\/' }}

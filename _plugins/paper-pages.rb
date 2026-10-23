@@ -64,6 +64,7 @@ module Jekyll
         site.pages << page
         add_export(site, "#{directory}/cite.bib", paper['bibtex'])
         add_export(site, "#{directory}/cite.ris", paper['ris'])
+        add_export(site, "#{directory}/summary.md", markdown_record(paper))
       end
 
       add_export(site, 'publications.bib', papers.map { |paper| paper['bibtex'] }.join("\n"))
@@ -176,9 +177,11 @@ module Jekyll
         'pdf' => pdf,
         'code' => field(entry, :code),
         'html' => field(entry, :html),
+        'html_full_text' => absolute_url(site, research['html_full_text']),
         'source_url' => field(entry, :url),
         'bibtex_url' => "#{url}cite.bib",
         'ris_url' => "#{url}cite.ris",
+        'markdown_url' => "#{url}summary.md",
         'abbr' => field(entry, :abbr),
         'award_name' => field(entry, :award_name),
         'keywords' => field(entry, :keywords),
@@ -187,12 +190,92 @@ module Jekyll
         'when_to_read' => research['when_to_read'],
         'abstract' => abstract,
         'abstract_source' => abstract_source,
+        'questions' => research.fetch('questions', []),
+        'tutorials' => related_tutorials(site, key),
         'description' => description,
         'bibtex' => citation.to_s.strip + "\n"
       }
       paper['ris'] = ris_record(paper, entry)
       paper['schema'] = scholarly_schema(site, paper)
       paper
+    end
+
+    def related_tutorials(site, key)
+      site.posts.docs.select { |post| Array(post.data['related_papers']).include?(key) }
+          .sort_by(&:date).reverse.map do |post|
+        {
+          'title' => post.data['title'],
+          'url' => absolute_url(site, post.url),
+          'description' => post.data['description']
+        }
+      end
+    end
+
+    def markdown_link(label, url)
+      # Angle-bracket destinations preserve URLs containing parentheses.
+      label = label.to_s.gsub(/[\\\[\]]/) { |character| "\\#{character}" }
+      "[#{label}](<#{url}>)"
+    end
+
+    def markdown_record(paper)
+      sections = [
+        "# #{paper['title']}",
+        'Publication summary and citation record; follow the source links for the original work.'
+      ]
+      metadata = [
+        "Authors: #{paper['authors'].join('; ')}",
+        "Year: #{paper['year']}",
+        "Type: #{paper['type_label']}",
+        "Publication status: #{paper['publication_status']}",
+        "Paper page: #{paper['url']}",
+        "Scholarly identifier: #{paper['identifier']}"
+      ]
+      metadata << "Venue or repository: #{paper['venue']}" if paper['venue']
+      metadata << "DOI: #{paper['doi']}" if paper['doi']
+      metadata << "arXiv: https://arxiv.org/abs/#{paper['arxiv']}" if paper['arxiv']
+      metadata << "Award: #{paper['award_name']}" if paper['award_name']
+      metadata << "Topics: #{paper['topics'].join('; ')}" unless paper['topics'].empty?
+      sections << metadata.map { |line| "- #{line}" }.join("\n")
+
+      links = [
+        ['Full paper (HTML)', paper['html_full_text']],
+        ['Read PDF', paper['pdf']],
+        ['Paper online', paper['html']],
+        ['Publication source', paper['source_url']],
+        ['Code and resources', paper['code']]
+      ].reject { |_, url| url.to_s.empty? }
+      unless links.empty?
+        sections << "## Source links\n\n" + links.map { |label, url| "- #{markdown_link(label, url)}" }.join("\n")
+      end
+
+      sections << "## Contribution summary\n\n#{paper['summary']}" if paper['summary']
+      sections << "## When to read this work\n\n#{paper['when_to_read']}" if paper['when_to_read']
+      if paper['abstract']
+        abstract = "## Abstract\n\n#{paper['abstract']}"
+        abstract += "\n\nAbstract source: #{paper['abstract_source']}" if paper['abstract_source']
+        sections << abstract
+      end
+
+      unless paper['questions'].empty?
+        questions = paper['questions'].map do |question|
+          source = markdown_link(question.fetch('source_label'), question.fetch('source_url'))
+          "### #{question.fetch('question')}\n\n#{question.fetch('answer')}\n\nSource: #{source}"
+        end
+        sections << ['## Questions about this work', *questions].join("\n\n")
+      end
+
+      unless paper['tutorials'].empty?
+        tutorials = paper['tutorials'].map do |tutorial|
+          link = "- #{markdown_link(tutorial['title'], tutorial['url'])}"
+          link += " — #{tutorial['description']}" unless tutorial['description'].to_s.empty?
+          link
+        end
+        sections << "## Tutorials and reading guides\n\n" + tutorials.join("\n")
+      end
+
+      citation_links = [markdown_link('Download BibTeX', paper['bibtex_url']), markdown_link('Download RIS', paper['ris_url'])]
+      sections << "## Cite this work\n\n#{citation_links.join(' · ')}\n\n```bibtex\n#{paper['bibtex']}```"
+      sections.join("\n\n") + "\n"
     end
 
     def scholarly_schema(site, paper)
@@ -221,7 +304,7 @@ module Jekyll
       schema['keywords'] = (paper['topics'] + paper['keywords'].to_s.split(/,\s*/)).uniq.reject(&:empty?)
       schema.delete('keywords') if schema['keywords'].empty?
       schema['identifier'] = { '@type' => 'PropertyValue', 'propertyID' => 'DOI', 'value' => paper['doi'] } if paper['doi']
-      same_as = [paper['source_url'], paper['html']]
+      same_as = [paper['source_url'], paper['html'], paper['html_full_text']]
       same_as << "https://doi.org/#{paper['doi']}" if paper['doi']
       same_as << "https://arxiv.org/abs/#{paper['arxiv']}" if paper['arxiv']
       schema['sameAs'] = same_as.compact.uniq unless same_as.compact.empty?
@@ -246,7 +329,7 @@ module Jekyll
     def add_export(site, path, content)
       site.static_files << PublicationExport.new(site, path, content)
 
-      # Minifiers must never reinterpret BibTeX, RIS, or JSON as HTML.
+      # Minifiers must never reinterpret BibTeX, RIS, JSON, or Markdown as HTML.
       minifier = site.config['jekyll-minifier'] ||= {}
       minifier['exclude'] = (Array(minifier['exclude']) + [path]).uniq
     end

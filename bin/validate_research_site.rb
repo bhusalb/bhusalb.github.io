@@ -13,6 +13,7 @@ errors = []
 check = ->(condition, message) { errors << message unless condition }
 catalog = JSON.parse(File.read(File.join(root, 'publications.json')))
 papers = catalog.fetch('publications')
+reading_guide = File.read(File.join(root, 'llms-full.txt'))
 check.call(papers.any?, 'Publication catalog must not be empty')
 check.call(papers.map { |p| p.fetch('key') }.uniq.size == papers.size, 'Duplicate publication keys')
 
@@ -87,6 +88,54 @@ papers.each do |paper|
   check.call(bib.entries.size == 1 && bib[key], "Invalid BibTeX download: #{key}")
   ris = File.read(File.join(root, path, 'cite.ris'))
   check.call(ris.start_with?('TY  - ') && ris.include?('ER  -'), "Invalid RIS download: #{key}")
+
+  markdown_path = File.join(root, path, 'summary.md')
+  unless File.file?(markdown_path)
+    errors << "Missing Markdown summary: #{key}"
+    next
+  end
+  markdown = File.read(markdown_path, encoding: 'UTF-8')
+  expected_markdown_url = "#{origin}/#{path}/summary.md"
+  check.call(paper['markdown_url'] == expected_markdown_url, "Invalid Markdown URL: #{key}")
+  check.call(doc.at_css('link[rel="alternate"][type="text/markdown"]')&.[]('href') == expected_markdown_url,
+             "Missing Markdown alternate link: #{key}")
+  check.call(doc.css('a[download]').any? { |link| link['href'] == expected_markdown_url }, "Missing Markdown download link: #{key}")
+  check.call(markdown.valid_encoding? && markdown.start_with?("# #{paper.fetch('title')}\n"), "Invalid Markdown title or encoding: #{key}")
+  check.call(markdown.include?('Publication summary and citation record'), "Markdown is not labeled as a summary: #{key}")
+  check.call(!markdown.match?(/<!doctype|<html\b|\{%/i), "HTML or unrendered Liquid in Markdown: #{key}")
+  ["Authors: #{paper.fetch('authors').join('; ')}", "Publication status: #{paper.fetch('publication_status')}",
+   "Scholarly identifier: #{paper.fetch('identifier')}", "Paper page: #{paper.fetch('url')}",
+   paper['abstract'], paper['abstract_source'], paper['summary'], paper['when_to_read']].compact.each do |value|
+    check.call(markdown.include?(value), "Markdown record differs from catalog: #{key}: #{value[0,60]}")
+  end
+  citation_blocks = markdown.scan(/^```bibtex\n(.*?)^```$/m).flatten
+  check.call(citation_blocks == [File.read(File.join(root, path, 'cite.bib'))], "Markdown citation differs from BibTeX download: #{key}")
+  check.call(reading_guide.include?(expected_markdown_url), "Markdown summary missing from reading guide: #{key}")
+  if paper['html_full_text']
+    full_text_url = paper.fetch('html_full_text')
+    check.call(doc.css('a').any? { |link| link['href'] == full_text_url && link.text.include?('full text') }, "Missing full-text link: #{key}")
+    check.call(markdown.include?(full_text_url) && reading_guide.include?(full_text_url), "Full-text link missing from exports: #{key}")
+  end
+  questions = paper.fetch('questions')
+  section = doc.at_css('section[aria-labelledby="paper-questions"]')
+  check.call((section ? section.css('h3').map(&:text) : []) == questions.map { |item| item.fetch('question') },
+             "Paper question headings differ from catalog: #{key}")
+  questions.each do |item|
+    answer = item.fetch('answer')
+    source_url = item.fetch('source_url')
+    source = URI.parse(source_url)
+    check.call(%w[http https].include?(source.scheme) && source.host, "Invalid answer source URL: #{key}")
+    check.call(section && section.css('p').any? { |paragraph| paragraph.text == answer }, "Missing answer on paper page: #{key}")
+    check.call(section && section.css('a').any? { |link| link['href'] == source_url && link.text == item.fetch('source_label') },
+               "Missing answer source on paper page: #{key}")
+    [item.fetch('question'), answer, source_url].each do |value|
+      check.call(markdown.include?(value) && reading_guide.include?(value), "Question or source missing from exports: #{key}")
+    end
+  end
+  paper.fetch('tutorials').each do |tutorial|
+    check.call(markdown.include?(tutorial.fetch('url')) && reading_guide.include?(tutorial.fetch('url')), "Tutorial missing from exports: #{key}")
+    check.call(doc.css('a').any? { |link| link['href'] == tutorial.fetch('url') }, "Tutorial missing from paper page: #{key}")
+  end
 end
 all_bib = BibTeX.parse(File.read(File.join(root, 'publications.bib')))
 check.call(all_bib.entries.size == papers.size, 'Combined BibTeX does not match publication catalog')
@@ -95,7 +144,7 @@ locations = sitemap.xpath('//*[local-name()="loc"]').map(&:text)
 paths.uniq.each do |path|
   check.call(locations.include?(origin + '/' + path.delete_suffix('index.html')), "Missing from sitemap: #{path}")
 end
-check.call(locations.none? { |u| u.match?(%r{/404\.html|/assets/|/projects/|/news/|/blog/20(15|18|20|21|22|23|24)/|\.(bib|ris|json|txt)\z}) }, 'Sitemap contains examples or non-content exports')
+check.call(locations.none? { |u| u.match?(%r{/404\.html|/assets/|/projects/|/news/|/blog/20(15|18|20|21|22|23|24)/|\.(bib|ris|json|txt|md)\z}) }, 'Sitemap contains examples or non-content exports')
 feed = Nokogiri::XML(File.read(File.join(root, 'feed.xml')))
 check.call(feed.errors.none?, 'Invalid RSS/Atom feed')
 entries = feed.xpath('//*[local-name()="entry"]')

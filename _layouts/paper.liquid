@@ -28,7 +28,10 @@ layout: default
   </header>
 
   <article>
-    <div class="links">
+    <div class="links paper-actions">
+      {% if paper.html_full_text %}
+        <a href="{{ paper.html_full_text | escape }}" class="btn btn-sm z-depth-0">Read full text (HTML)</a>
+      {% endif %}
       {% if paper.pdf %}
         <a href="{{ paper.pdf | escape }}" class="btn btn-sm z-depth-0">Read PDF</a>
       {% endif %}
@@ -47,6 +50,7 @@ layout: default
         <a href="{{ paper.code | escape }}" class="btn btn-sm z-depth-0">Code and resources</a>
       {% endif %}
       <a href="#cite" class="btn btn-sm z-depth-0">Cite this work</a>
+      <a href="{{ paper.markdown_url | escape }}" class="btn btn-sm z-depth-0" download="{{ paper.key }}-summary.md">Summary (Markdown)</a>
     </div>
 
     {% if paper.summary %}
@@ -66,23 +70,35 @@ layout: default
     {% if paper.abstract %}
       <h2>Abstract</h2>
       <p>{{ paper.abstract | escape }}</p>
+      {% if paper.abstract_source %}
+        <p class="small">Abstract source: <a href="{{ paper.abstract_source | escape }}">Author-hosted paper</a>.</p>
+      {% endif %}
     {% endif %}
 
-    {% assign has_related_tutorials = false %}
-    {% for post in site.posts %}
-      {% if post.related_papers contains paper.key %}
-        {% unless has_related_tutorials %}
-          <h2>Tutorials and reading guides</h2>
-          <ul>
-            {% assign has_related_tutorials = true %}
-        {% endunless %}
-        <li>
-          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-          {%- if post.description %} — {{ post.description | escape }}{% endif %}
-        </li>
-      {% endif %}
-    {% endfor %}
-    {% if has_related_tutorials %}</ul>{% endif %}
+    {% if paper.questions.size > 0 %}
+      <section aria-labelledby="paper-questions">
+        <h2 id="paper-questions">Questions about this paper</h2>
+        {% for item in paper.questions %}
+          <h3 id="question-{{ forloop.index }}">{{ item.question | escape }}</h3>
+          <p>{{ item.answer | escape }}</p>
+          <p class="small">
+            Source: <a href="{{ item.source_url | escape }}">{{ item.source_label | escape }}</a>.
+          </p>
+        {% endfor %}
+      </section>
+    {% endif %}
+
+    {% if paper.tutorials.size > 0 %}
+      <h2>Tutorials and reading guides</h2>
+      <ul>
+        {% for tutorial in paper.tutorials %}
+          <li>
+            <a href="{{ tutorial.url | escape }}">{{ tutorial.title | escape }}</a>
+            {%- if tutorial.description %} — {{ tutorial.description | escape }}{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
 
     <h2 id="cite">Cite this work</h2>
     <p>
