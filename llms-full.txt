@@ -1,4 +1,4 @@
-# Bishnu Bhusal: research and publications
+# Bishnu Bhusal: publication summaries and abstracts
 
 Bishnu Bhusal is a computer science researcher working on differential privacy, formal verification, and privacy-preserving machine learning and LLMs. Publications at ACM CCS, AAAI, and OOPSLA.
 
@@ -8,8 +8,10 @@ Publication index: https://bishnubhusal.com.np/publications/
 Structured catalog: https://bishnubhusal.com.np/publications.json
 Bibliography: https://bishnubhusal.com.np/publications.bib
 
-The records below include the complete author lists and available abstracts of the linked works.
-Reading guides summarize their scope. Publication types distinguish preprints, proceedings papers,
+The records below are publication summaries and citation records, not full papers.
+They include complete author lists and available abstracts of the linked works.
+Editorial summaries and sourced answers explain their scope; full-paper links lead to the original text.
+Publication types distinguish preprints, proceedings papers,
 journal articles, chapters, and software releases; an arXiv version of a published paper is linked
 within that paper's record. Bibliographic details come from the site bibliography, with the HCII
 abstract transcribed from the linked author-hosted PDF.
@@ -23,8 +25,10 @@ Type: Preprint
 Publication status: preprint
 Venue or repository: arXiv preprint arXiv:2610.02738
 Paper page: https://bishnubhusal.com.np/publications/bhusal2026dpmuon/
+Markdown summary: https://bishnubhusal.com.np/publications/bhusal2026dpmuon/summary.md
 Scholarly identifier: https://arxiv.org/abs/2610.02738
 arXiv: https://arxiv.org/abs/2610.02738
+Full text (HTML): https://arxiv.org/html/2610.02738
 Source: https://arxiv.org/abs/2610.02738
 BibTeX: https://bishnubhusal.com.np/publications/bhusal2026dpmuon/cite.bib
 RIS: https://bishnubhusal.com.np/publications/bhusal2026dpmuon/cite.ris
@@ -42,6 +46,26 @@ Read this when studying differentially private optimizers, gradient-clipping geo
 
 Differentially private training clips each per-example gradient before adding noise. This clipping is radial for each example, yet unequal clipping factors can distort the relative singular-vector geometry of their average. Muon is particularly exposed to this effect, since its update is an approximate polar factor UV^T that depends only on the singular vectors that clipping can shift. To curb this degradation, we propose averaging each sampled example’s Muon gradient over the current model and a short history of recent models before clipping. The clipped batch matrix then separates into a common rescaling and a covariance residual R between sampled gradients and clipping values, bounding the clipping-induced distortion directly. We further show that a finite Newton-Schulz iteration preserves the polar factor of its input under these spectral conditions, confirming that our correction survives orthogonalization. In private GPT-2 fine-tuning on E2E and DART at epsilon in 1, 2, 4, 8, DP-Muon-IM improves BLEU and ROUGE-L over DP-Muon in every seed-matched comparison, and non-private diagnostics show 2-4% lower pre-noise polar error.
 
+### Questions about this paper
+
+#### Does inner momentum require an additional privacy budget?
+
+Under the paper's conditions, history averaging adds no private releases. The baseline per-run privacy accounting applies when the sampling rule, clipping radius, noise calibration, release denominator, and number of releases are unchanged. Theorem 4 uses add/remove adjacency and a valid Poisson-sampled Gaussian accountant, with a fixed public history length and decay.
+
+Source: [Section 4.3 — Training procedure and Theorem 4](https://arxiv.org/html/2610.02738#S4.SS3)
+
+#### Where was DP-Muon-IM evaluated?
+
+The preprint evaluates private GPT-2-small fine-tuning on E2E and DART at ε values 1, 2, 4, and 8. It reports higher BLEU and ROUGE-L than DP-Muon in all 24 seed-matched comparisons: two datasets, four privacy budgets, and three seeds.
+
+Source: [Section 5.2 — Utility across privacy budgets](https://arxiv.org/html/2610.02738#S5.SS2)
+
+#### What is the computational cost of inner momentum?
+
+The method stores recent pre-update model states and evaluates each sampled example's gradient at the current and selected past states. Per-step computation grows linearly with the maximum history length, and storing those model states adds memory cost.
+
+Source: [Section 4.3 — Cost](https://arxiv.org/html/2610.02738#S4.SS3)
+
 Related tutorial: [Why gradient clipping changes Muon's geometry: a two-dimensional example](https://bishnubhusal.com.np/blog/2026/clipping-geometry-private-muon/)
 
 ## Learning Shared Residue Backgrounds and Modification-Specific Offsets for PTM Site Prediction
@@ -52,6 +76,7 @@ Type: Preprint
 Publication status: preprint
 Venue or repository: bioRxiv
 Paper page: https://bishnubhusal.com.np/publications/pokharel2026ptm/
+Markdown summary: https://bishnubhusal.com.np/publications/pokharel2026ptm/summary.md
 Scholarly identifier: https://doi.org/10.64898/2026.08.05.743079
 DOI: 10.64898/2026.08.05.743079
 Source: https://doi.org/10.64898/2026.08.05.743079
@@ -71,6 +96,7 @@ Type: Conference paper
 Publication status: published
 Venue or repository: 2026 IEEE International Conference on Edge Computing and Communications (EDGE)
 Paper page: https://bishnubhusal.com.np/publications/kshetri2026uavchain/
+Markdown summary: https://bishnubhusal.com.np/publications/kshetri2026uavchain/summary.md
 Scholarly identifier: https://doi.org/10.1109/EDGE72783.2026.00021
 DOI: 10.1109/EDGE72783.2026.00021
 Source: https://doi.org/10.1109/EDGE72783.2026.00021
@@ -87,10 +113,12 @@ Type: Conference paper
 Publication status: published
 Venue or repository: Proceedings of the AAAI Conference on Artificial Intelligence
 Paper page: https://bishnubhusal.com.np/publications/bhusal2026aaai/
+Markdown summary: https://bishnubhusal.com.np/publications/bhusal2026aaai/summary.md
 Scholarly identifier: https://doi.org/10.1609/aaai.v40i42.40838
 DOI: 10.1609/aaai.v40i42.40838
 arXiv: https://arxiv.org/abs/2509.13625
 PDF: https://bishnubhusal.com.np/assets/pdf/aaai26.pdf
+Full text (HTML): https://arxiv.org/html/2509.13625
 Source: https://doi.org/10.1609/aaai.v40i42.40838
 Code and resources: https://github.com/bhusalb/privacy-preserving-icl
 BibTeX: https://bishnubhusal.com.np/publications/bhusal2026aaai/cite.bib
@@ -109,6 +137,26 @@ Read this when exploring how to use sensitive examples for language-model predic
 
 Large language models (LLMs) have significantly transformed natural language understanding and generation, but they raise privacy concerns due to potential exposure of sensitive information. Studies have highlighted the risk of information leakage, where adversaries can extract sensitive information embedded in the prompts. In this work, we introduce a novel private prediction framework for generating high-quality synthetic text with strong privacy guarantees. Our approach leverages the Differential Privacy (DP) framework to ensure worst-case theoretical bounds on information leakage without requiring any fine-tuning of the underlying models. The proposed method performs inference on private records and aggregates the resulting per-token output distributions. This enables the generation of longer and coherent synthetic text while maintaining privacy guarantees. Additionally, we propose a simple blending operation that combines private and public inference to further enhance utility. Empirical evaluations demonstrate that our approach outperforms previous state-of-the-art methods on in-context-learning (ICL) tasks, making it a promising direction for privacy-preserving text generation while maintaining high utility.
 
+### Questions about this paper
+
+#### Can private in-context learning work without fine-tuning?
+
+This method generates differentially private synthetic demonstrations while leaving the underlying language model's weights unchanged. It clips and aggregates private next-token logits and blends private and public inference. The released synthetic demonstrations can then be reused for in-context learning through DP post-processing.
+
+Source: [Approach — Private prediction and synthetic demonstrations](https://arxiv.org/html/2509.13625#Sx5)
+
+#### What access to the language model does the method require?
+
+The method requires access to the full token-level logit distribution at each decoding step. The experiments use the instruction-tuned Gemma 1.1 2B model. An interface that returns only generated text does not provide the inputs required by this algorithm.
+
+Source: [Experiments — Model access and setup](https://arxiv.org/html/2509.13625#Sx6)
+
+#### How does generating longer text affect the privacy budget?
+
+Private synthetic generation incurs privacy cost for each generated token, so the accounting must cover the complete generation. Reusing already released DP synthetic text is post-processing. The paper identifies the per-token privacy cost as a limitation compared with private fine-tuning, which accounts for privacy during training.
+
+Source: [Limitations](https://arxiv.org/html/2509.13625#Sx11)
+
 Related tutorial: [Privacy-preserving in-context learning: synthetic demonstrations and privacy budgets](https://bishnubhusal.com.np/blog/2026/privacy-preserving-in-context-learning/)
 
 ## UAVchain: A Survey of Blockchain Technology Applications for Unmanned Aerial Vehicles: Safety, Security, Directions, and Challenges
@@ -119,6 +167,7 @@ Type: Preprint
 Publication status: preprint
 Venue or repository: TechRxiv
 Paper page: https://bishnubhusal.com.np/publications/kshetri2025uavchainsurvey/
+Markdown summary: https://bishnubhusal.com.np/publications/kshetri2025uavchainsurvey/summary.md
 Scholarly identifier: https://doi.org/10.36227/techrxiv.176469369.98290190/v1
 DOI: 10.36227/techrxiv.176469369.98290190/v1
 Source: https://doi.org/10.36227/techrxiv.176469369.98290190/v1
@@ -138,6 +187,7 @@ Type: Preprint
 Publication status: preprint
 Venue or repository: arXiv preprint arXiv:2511.00481
 Paper page: https://bishnubhusal.com.np/publications/mishra2025anomaly/
+Markdown summary: https://bishnubhusal.com.np/publications/mishra2025anomaly/summary.md
 Scholarly identifier: https://arxiv.org/abs/2511.00481
 arXiv: https://arxiv.org/abs/2511.00481
 Source: https://arxiv.org/abs/2511.00481
@@ -157,10 +207,12 @@ Type: Conference paper
 Publication status: published
 Venue or repository: Proceedings of the 2025 ACM SIGSAC Conference on Computer and Communications Security
 Paper page: https://bishnubhusal.com.np/publications/bhusal2025ccs/
+Markdown summary: https://bishnubhusal.com.np/publications/bhusal2025ccs/summary.md
 Scholarly identifier: https://doi.org/10.1145/3719027.3765043
 DOI: 10.1145/3719027.3765043
 arXiv: https://arxiv.org/abs/2509.08804
 PDF: https://bishnubhusal.com.np/assets/pdf/ccs25.pdf
+Full text (HTML): https://arxiv.org/html/2509.08804
 Source: https://doi.org/10.1145/3719027.3765043
 Code and resources: https://github.com/bhusalb/approximate-dp
 BibTeX: https://bishnubhusal.com.np/publications/bhusal2025ccs/cite.bib
@@ -179,6 +231,26 @@ Read this when a privacy mechanism uses Gaussian noise or requires reasoning abo
 
 The verification of differential privacy algorithms that employ Gaussian distributions is little understood. This paper tackles the challenge of verifying such programs by introducing a novel approach to approximating probability distributions of loop-free programs that sample from both discrete and continuous distributions with computable probability density functions, including Gaussian and Laplace. We establish that verifying (epsilon, delta)-differential privacy for these programs is almost decidable, meaning the problem is decidable for all values of delta except those in a finite set. Our verification algorithm is based on computing probabilities to any desired precision by combining integral approximations, and tail probability bounds. The proposed methods are implemented in the tool, DipApprox, using the FLINT library for high-precision integral computations, and incorporate optimizations to enhance scalability. We validate DipApprox on fundamental privacy-preserving algorithms, such as Gaussian variants of the Sparse Vector Technique and Noisy Max, demonstrating its effectiveness in both confirming privacy guarantees and detecting violations.
 
+### Questions about this paper
+
+#### Which programs can DipApprox verify?
+
+DipApprox targets loop-free DiPGauss programs with finite input and output domains, including mechanisms that sample from Gaussian and Laplace distributions. The paper's implementation currently supports comparisons among sampled values.
+
+Source: [Section 7 — Implementation and Evaluation, footnote 8](https://arxiv.org/html/2509.08804#S7)
+
+#### What does almost decidable mean for differential privacy?
+
+For a fixed program, positive rational program parameter and privacy budget, and adjacency relation, privacy verification is decidable for every δ in [0, 1] except a finite set of critical values. The result does not promise a terminating decision at those exceptional values.
+
+Source: [Section 6.1 — Theorem 4](https://arxiv.org/html/2509.08804#S6.SS1)
+
+#### Does passing one adjacent input pair prove the whole program private?
+
+A successful pair check establishes the privacy inequality for that pair. The full verification algorithm must confirm every pair in the specified adjacency relation. A violating pair refutes privacy; an Unknown result means the current probability bounds are insufficient to decide.
+
+Source: [Section 5 — Verifying Differential Privacy](https://arxiv.org/html/2509.08804#S5)
+
 Related tutorial: [DipApprox: verifying differential privacy with Gaussian noise](https://bishnubhusal.com.np/blog/2026/dipapprox-gaussian-differential-privacy/)
 
 ## Checking δ-Satisfiability of Reals with Integrals
@@ -189,6 +261,7 @@ Type: Journal article
 Publication status: published
 Venue or repository: Proc. ACM Program. Lang.
 Paper page: https://bishnubhusal.com.np/publications/rivera2025oopsla/
+Markdown summary: https://bishnubhusal.com.np/publications/rivera2025oopsla/summary.md
 Scholarly identifier: https://doi.org/10.1145/3720446
 DOI: 10.1145/3720446
 Source: https://doi.org/10.1145/3720446
@@ -217,6 +290,7 @@ Type: Book chapter
 Publication status: published
 Venue or repository: Combating Cyberbullying With Generative AI
 Paper page: https://bishnubhusal.com.np/publications/rahman2025cyberai/
+Markdown summary: https://bishnubhusal.com.np/publications/rahman2025cyberai/summary.md
 Scholarly identifier: https://doi.org/10.4018/979-8-3373-0543-1.ch010
 DOI: 10.4018/979-8-3373-0543-1.ch010
 PDF: https://bishnubhusal.com.np/assets/pdf/chapter10.pdf
@@ -237,6 +311,7 @@ Type: Conference paper
 Publication status: published
 Venue or repository: HCI International 2025 Posters
 Paper page: https://bishnubhusal.com.np/publications/bhusal2025hcii/
+Markdown summary: https://bishnubhusal.com.np/publications/bhusal2025hcii/summary.md
 Scholarly identifier: https://doi.org/10.1007/978-3-031-94159-7_3
 DOI: 10.1007/978-3-031-94159-7_3
 PDF: https://bishnubhusal.com.np/assets/pdf/hcii.pdf
@@ -269,6 +344,7 @@ Type: Conference paper
 Publication status: published
 Venue or repository: Proceedings of the 26th Annual Conference on Information Technology Education
 Paper page: https://bishnubhusal.com.np/publications/chapagain2025realphish/
+Markdown summary: https://bishnubhusal.com.np/publications/chapagain2025realphish/summary.md
 Scholarly identifier: https://bishnubhusal.com.np/publications/chapagain2025realphish/
 Source: https://doi.org/10.20944/preprints202511.0218.v1
 BibTeX: https://bishnubhusal.com.np/publications/chapagain2025realphish/cite.bib
@@ -287,6 +363,7 @@ Type: Journal article
 Publication status: published
 Venue or repository: International Journal of Advanced Computer Science and Applications
 Paper page: https://bishnubhusal.com.np/publications/mishra2025nodewsnsec/
+Markdown summary: https://bishnubhusal.com.np/publications/mishra2025nodewsnsec/summary.md
 Scholarly identifier: https://doi.org/10.14569/IJACSA.2025.0160814
 DOI: 10.14569/IJACSA.2025.0160814
 arXiv: https://arxiv.org/abs/2508.16619
@@ -307,6 +384,7 @@ Type: Book chapter
 Publication status: published
 Venue or repository: Blockchain Technology for Cyber Defense, Cybersecurity, and Countermeasures: Techniques, Solutions, and Applications
 Paper page: https://bishnubhusal.com.np/publications/osama2024blockdads/
+Markdown summary: https://bishnubhusal.com.np/publications/osama2024blockdads/summary.md
 Scholarly identifier: https://doi.org/10.1201/9781003449515-14
 DOI: 10.1201/9781003449515-14
 Source: https://doi.org/10.1201/9781003449515-14
@@ -323,6 +401,7 @@ Type: Conference paper
 Publication status: published
 Venue or repository: Decision and Game Theory for Security (GameSec 2024)
 Paper page: https://bishnubhusal.com.np/publications/neupane2024gamesec/
+Markdown summary: https://bishnubhusal.com.np/publications/neupane2024gamesec/summary.md
 Scholarly identifier: https://doi.org/10.1007/978-3-031-74835-6_8
 DOI: 10.1007/978-3-031-74835-6_8
 PDF: https://bishnubhusal.com.np/assets/pdf/gamesec.pdf
@@ -354,6 +433,7 @@ Type: Conference paper
 Publication status: published
 Venue or repository: NOMS 2024 - 2024 IEEE Network Operations and Management Symposium
 Paper page: https://bishnubhusal.com.np/publications/neupane2024noms/
+Markdown summary: https://bishnubhusal.com.np/publications/neupane2024noms/summary.md
 Scholarly identifier: https://doi.org/10.1109/NOMS59830.2024.10575641
 DOI: 10.1109/NOMS59830.2024.10575641
 arXiv: https://arxiv.org/abs/2402.13169
@@ -383,6 +463,7 @@ Type: Conference paper
 Publication status: published
 Venue or repository: Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security
 Paper page: https://bishnubhusal.com.np/publications/chadha2023ccs/
+Markdown summary: https://bishnubhusal.com.np/publications/chadha2023ccs/summary.md
 Scholarly identifier: https://doi.org/10.1145/3576915.3623170
 DOI: 10.1145/3576915.3623170
 arXiv: https://arxiv.org/abs/2309.06615
@@ -413,6 +494,7 @@ Type: Preprint
 Publication status: preprint
 Venue or repository: arXiv preprint arXiv:2310.04558
 Paper page: https://bishnubhusal.com.np/publications/adhikari2023vtonit/
+Markdown summary: https://bishnubhusal.com.np/publications/adhikari2023vtonit/summary.md
 Scholarly identifier: https://arxiv.org/abs/2310.04558
 arXiv: https://arxiv.org/abs/2310.04558
 Source: https://arxiv.org/abs/2310.04558
@@ -432,6 +514,7 @@ Type: Software release
 Publication status: released
 Venue or repository: Zenodo
 Paper page: https://bishnubhusal.com.np/publications/bhusal2023dipaut/
+Markdown summary: https://bishnubhusal.com.np/publications/bhusal2023dipaut/summary.md
 Scholarly identifier: https://doi.org/10.5281/zenodo.8332275
 DOI: 10.5281/zenodo.8332275
 Source: https://doi.org/10.5281/zenodo.8332275

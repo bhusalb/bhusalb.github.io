@@ -28,7 +28,8 @@
 
 ## Publication data
 
-- [Full research text](https://bishnubhusal.com.np/llms-full.txt): Complete available abstracts, author attribution, summaries, and source links.
+- [Publication summaries and abstracts](https://bishnubhusal.com.np/llms-full.txt): Complete available abstracts, author attribution, sourced answers, and full-paper links.
+- Each publication page offers a Markdown summary with its citation and source links; the catalog includes these as `markdown_url`.
 - [Publication catalog (JSON)](https://bishnubhusal.com.np/publications.json): Structured records generated from the site bibliography.
 - [Complete bibliography (BibTeX)](https://bishnubhusal.com.np/publications.bib): Downloadable citations; individual paper pages also offer BibTeX and RIS.
 - [Sitemap](https://bishnubhusal.com.np/sitemap.xml): Public page index.

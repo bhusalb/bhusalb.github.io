@@ -43,9 +43,11 @@
       "pdf": null,
       "code": null,
       "html": null,
+      "html_full_text": "https://arxiv.org/html/2610.02738",
       "source_url": "https://arxiv.org/abs/2610.02738",
       "bibtex_url": "https://bishnubhusal.com.np/publications/bhusal2026dpmuon/cite.bib",
       "ris_url": "https://bishnubhusal.com.np/publications/bhusal2026dpmuon/cite.ris",
+      "markdown_url": "https://bishnubhusal.com.np/publications/bhusal2026dpmuon/summary.md",
       "abbr": "arXiv",
       "award_name": null,
       "keywords": null,
@@ -60,6 +62,33 @@
       "when_to_read": "Read this when studying differentially private optimizers, gradient-clipping geometry, or the interaction between Muon's orthogonalization and private language-model fine-tuning.",
       "abstract": "Differentially private training clips each per-example gradient before adding noise. This clipping is radial for each example, yet unequal clipping factors can distort the relative singular-vector geometry of their average. Muon is particularly exposed to this effect, since its update is an approximate polar factor UV^T that depends only on the singular vectors that clipping can shift. To curb this degradation, we propose averaging each sampled example’s Muon gradient over the current model and a short history of recent models before clipping. The clipped batch matrix then separates into a common rescaling and a covariance residual R between sampled gradients and clipping values, bounding the clipping-induced distortion directly. We further show that a finite Newton-Schulz iteration preserves the polar factor of its input under these spectral conditions, confirming that our correction survives orthogonalization. In private GPT-2 fine-tuning on E2E and DART at epsilon in 1, 2, 4, 8, DP-Muon-IM improves BLEU and ROUGE-L over DP-Muon in every seed-matched comparison, and non-private diagnostics show 2-4% lower pre-noise polar error.",
       "abstract_source": null,
+      "questions": [
+        {
+          "question": "Does inner momentum require an additional privacy budget?",
+          "answer": "Under the paper's conditions, history averaging adds no private releases. The baseline per-run privacy accounting applies when the sampling rule, clipping radius, noise calibration, release denominator, and number of releases are unchanged. Theorem 4 uses add/remove adjacency and a valid Poisson-sampled Gaussian accountant, with a fixed public history length and decay.",
+          "source_url": "https://arxiv.org/html/2610.02738#S4.SS3",
+          "source_label": "Section 4.3 — Training procedure and Theorem 4"
+        },
+        {
+          "question": "Where was DP-Muon-IM evaluated?",
+          "answer": "The preprint evaluates private GPT-2-small fine-tuning on E2E and DART at ε values 1, 2, 4, and 8. It reports higher BLEU and ROUGE-L than DP-Muon in all 24 seed-matched comparisons: two datasets, four privacy budgets, and three seeds.",
+          "source_url": "https://arxiv.org/html/2610.02738#S5.SS2",
+          "source_label": "Section 5.2 — Utility across privacy budgets"
+        },
+        {
+          "question": "What is the computational cost of inner momentum?",
+          "answer": "The method stores recent pre-update model states and evaluates each sampled example's gradient at the current and selected past states. Per-step computation grows linearly with the maximum history length, and storing those model states adds memory cost.",
+          "source_url": "https://arxiv.org/html/2610.02738#S4.SS3",
+          "source_label": "Section 4.3 — Cost"
+        }
+      ],
+      "tutorials": [
+        {
+          "title": "Why gradient clipping changes Muon's geometry: a two-dimensional example",
+          "url": "https://bishnubhusal.com.np/blog/2026/clipping-geometry-private-muon/",
+          "description": "A runnable Python example shows how unequal per-example clipping rotates a matrix's polar factor, motivating the DP-Muon-IM preprint."
+        }
+      ],
       "description": "Studies how unequal per-example clipping factors can distort the singular-vector geometry used by Muon. The proposed inner-momentum method averages each sampled example's gradients across the current and recent models before clipping. The preprint gives a distortion analysis and reports improved…"
     },
     {
@@ -92,9 +121,11 @@
       "pdf": null,
       "code": null,
       "html": null,
+      "html_full_text": null,
       "source_url": "https://doi.org/10.64898/2026.08.05.743079",
       "bibtex_url": "https://bishnubhusal.com.np/publications/pokharel2026ptm/cite.bib",
       "ris_url": "https://bishnubhusal.com.np/publications/pokharel2026ptm/cite.ris",
+      "markdown_url": "https://bishnubhusal.com.np/publications/pokharel2026ptm/summary.md",
       "abbr": "bioRxiv",
       "award_name": null,
       "keywords": null,
@@ -103,6 +134,8 @@
       "when_to_read": null,
       "abstract": "Post-translational modifications (PTMs) are chemical changes added to proteins after translation. These changes affect protein function and regulation, and their disruption is linked to disease-associated mechanisms. Because experimentally validating all possible modification sites is impractical, many computational predictors have been developed for PTM site prediction. In this work, we study whether a shared model can represent common residue-background patterns while learning modification-specific background-to-positive offsets. We propose an anchor-guided rectified flow matching framework for multi-type PTM site prediction from protein language model embeddings. For each PTM-residue pair, the model builds residue-background anchors from PTM-compatible unannotated residues and positive anchors from experimentally annotated modified residues, and uses a rectified flow module to estimate a modification-conditioned background-to-positive offset. We evaluate the framework on a dbPTM-derived benchmark covering six commonly studied PTMs.",
       "abstract_source": null,
+      "questions": [],
+      "tutorials": [],
       "description": "Post-translational modifications (PTMs) are chemical changes added to proteins after translation. These changes affect protein function and regulation, and their disruption is linked to disease-associated mechanisms. Because experimentally validating all possible modification sites is…"
     },
     {
@@ -139,9 +172,11 @@
       "pdf": null,
       "code": null,
       "html": null,
+      "html_full_text": null,
       "source_url": "https://doi.org/10.1109/EDGE72783.2026.00021",
       "bibtex_url": "https://bishnubhusal.com.np/publications/kshetri2026uavchain/cite.bib",
       "ris_url": "https://bishnubhusal.com.np/publications/kshetri2026uavchain/cite.ris",
+      "markdown_url": "https://bishnubhusal.com.np/publications/kshetri2026uavchain/summary.md",
       "abbr": "EDGE",
       "award_name": null,
       "keywords": null,
@@ -150,6 +185,8 @@
       "when_to_read": null,
       "abstract": null,
       "abstract_source": null,
+      "questions": [],
+      "tutorials": [],
       "description": "UAVchain: Blockchain Technology Applications for Unmanned Aerial Vehicles. Naresh Kshetri, Mir Mehedi Rahman, Bishwo Prakash Pokharel, Nafiz Eashrak, Bishnu Bhusal, Md Bahauddin Badhon."
     },
     {
@@ -188,9 +225,11 @@
       "pdf": "https://bishnubhusal.com.np/assets/pdf/aaai26.pdf",
       "code": "https://github.com/bhusalb/privacy-preserving-icl",
       "html": null,
+      "html_full_text": "https://arxiv.org/html/2509.13625",
       "source_url": "https://doi.org/10.1609/aaai.v40i42.40838",
       "bibtex_url": "https://bishnubhusal.com.np/publications/bhusal2026aaai/cite.bib",
       "ris_url": "https://bishnubhusal.com.np/publications/bhusal2026aaai/cite.ris",
+      "markdown_url": "https://bishnubhusal.com.np/publications/bhusal2026aaai/summary.md",
       "abbr": "AAAI",
       "award_name": null,
       "keywords": null,
@@ -204,6 +243,33 @@
       "when_to_read": "Read this when exploring how to use sensitive examples for language-model predictions or synthetic demonstrations with differential privacy, particularly when updating model weights is undesirable.",
       "abstract": "Large language models (LLMs) have significantly transformed natural language understanding and generation, but they raise privacy concerns due to potential exposure of sensitive information. Studies have highlighted the risk of information leakage, where adversaries can extract sensitive information embedded in the prompts. In this work, we introduce a novel private prediction framework for generating high-quality synthetic text with strong privacy guarantees. Our approach leverages the Differential Privacy (DP) framework to ensure worst-case theoretical bounds on information leakage without requiring any fine-tuning of the underlying models. The proposed method performs inference on private records and aggregates the resulting per-token output distributions. This enables the generation of longer and coherent synthetic text while maintaining privacy guarantees. Additionally, we propose a simple blending operation that combines private and public inference to further enhance utility. Empirical evaluations demonstrate that our approach outperforms previous state-of-the-art methods on in-context-learning (ICL) tasks, making it a promising direction for privacy-preserving text generation while maintaining high utility.",
       "abstract_source": null,
+      "questions": [
+        {
+          "question": "Can private in-context learning work without fine-tuning?",
+          "answer": "This method generates differentially private synthetic demonstrations while leaving the underlying language model's weights unchanged. It clips and aggregates private next-token logits and blends private and public inference. The released synthetic demonstrations can then be reused for in-context learning through DP post-processing.",
+          "source_url": "https://arxiv.org/html/2509.13625#Sx5",
+          "source_label": "Approach — Private prediction and synthetic demonstrations"
+        },
+        {
+          "question": "What access to the language model does the method require?",
+          "answer": "The method requires access to the full token-level logit distribution at each decoding step. The experiments use the instruction-tuned Gemma 1.1 2B model. An interface that returns only generated text does not provide the inputs required by this algorithm.",
+          "source_url": "https://arxiv.org/html/2509.13625#Sx6",
+          "source_label": "Experiments — Model access and setup"
+        },
+        {
+          "question": "How does generating longer text affect the privacy budget?",
+          "answer": "Private synthetic generation incurs privacy cost for each generated token, so the accounting must cover the complete generation. Reusing already released DP synthetic text is post-processing. The paper identifies the per-token privacy cost as a limitation compared with private fine-tuning, which accounts for privacy during training.",
+          "source_url": "https://arxiv.org/html/2509.13625#Sx11",
+          "source_label": "Limitations"
+        }
+      ],
+      "tutorials": [
+        {
+          "title": "Privacy-preserving in-context learning: synthetic demonstrations and privacy budgets",
+          "url": "https://bishnubhusal.com.np/blog/2026/privacy-preserving-in-context-learning/",
+          "description": "How clipped logits, public context, and private token sampling can produce reusable ICL demonstrations, with careful accounting for privacy boundaries."
+        }
+      ],
       "description": "Presents a differentially private prediction framework that generates synthetic text by aggregating clipped per-token logits from inference over private records, without fine-tuning the underlying language model. A blending operation combines private and public inference to improve utility in…"
     },
     {
@@ -242,9 +308,11 @@
       "pdf": null,
       "code": null,
       "html": null,
+      "html_full_text": null,
       "source_url": "https://doi.org/10.36227/techrxiv.176469369.98290190/v1",
       "bibtex_url": "https://bishnubhusal.com.np/publications/kshetri2025uavchainsurvey/cite.bib",
       "ris_url": "https://bishnubhusal.com.np/publications/kshetri2025uavchainsurvey/cite.ris",
+      "markdown_url": "https://bishnubhusal.com.np/publications/kshetri2025uavchainsurvey/summary.md",
       "abbr": "TechRxiv",
       "award_name": null,
       "keywords": null,
@@ -253,6 +321,8 @@
       "when_to_read": null,
       "abstract": "From civil infrastructure inspection and precision agriculture to security surveillance and real-time monitoring, the public utilization of unmanned aerial vehicles (UAVs) has grown exponentially. A strong foundation for cyber defense, data security, information security, and network security can be established through blockchain technology, leveraging its intrinsic features such as privacy, consensus mechanisms, immutability, and decentralization. This paper presents a comprehensive study of the future directions and key research challenges of UAVs with respect to blockchain technology, including implications for national defense and cyber warfare. Various cybersecurity tools, stochastic models, cyber frameworks, and war theories are analyzed, and key guidelines are provided integrating blockchain features for UAV applications.",
       "abstract_source": null,
+      "questions": [],
+      "tutorials": [],
       "description": "From civil infrastructure inspection and precision agriculture to security surveillance and real-time monitoring, the public utilization of unmanned aerial vehicles (UAVs) has grown exponentially. A strong foundation for cyber defense, data security, information security, and network security…"
     },
     {
@@ -289,9 +359,11 @@
       "pdf": null,
       "code": null,
       "html": null,
+      "html_full_text": null,
       "source_url": "https://arxiv.org/abs/2511.00481",
       "bibtex_url": "https://bishnubhusal.com.np/publications/mishra2025anomaly/cite.bib",
       "ris_url": "https://bishnubhusal.com.np/publications/mishra2025anomaly/cite.ris",
+      "markdown_url": "https://bishnubhusal.com.np/publications/mishra2025anomaly/summary.md",
       "abbr": "arXiv",
       "award_name": null,
       "keywords": null,
@@ -300,6 +372,8 @@
       "when_to_read": null,
       "abstract": "Wireless Sensor Networks form the backbone of modern cyber physical systems used in applications such as environmental monitoring, healthcare monitoring, industrial automation, and smart infrastructure. In this paper a lightweight and interpretable anomaly detection framework based on a first order Markov chain model is proposed. The method discretizes continuous sensor readings into finite states and models the temporal dynamics of sensor transitions through a transition probability matrix. Anomalies are detected when observed transitions occur with probabilities below a computed threshold, allowing for real time detection without labeled data or intensive computation. The framework is validated on the Intel Berkeley Research Lab dataset, and comparative analysis with Z score, Hidden Markov Model, and autoencoder based methods shows a balanced trade-off between accuracy, interpretability, and computational efficiency.",
       "abstract_source": null,
+      "questions": [],
+      "tutorials": [],
       "description": "Wireless Sensor Networks form the backbone of modern cyber physical systems used in applications such as environmental monitoring, healthcare monitoring, industrial automation, and smart infrastructure. In this paper a lightweight and interpretable anomaly detection framework based on a first…"
     },
     {
@@ -334,9 +408,11 @@
       "pdf": "https://bishnubhusal.com.np/assets/pdf/ccs25.pdf",
       "code": "https://github.com/bhusalb/approximate-dp",
       "html": null,
+      "html_full_text": "https://arxiv.org/html/2509.08804",
       "source_url": "https://doi.org/10.1145/3719027.3765043",
       "bibtex_url": "https://bishnubhusal.com.np/publications/bhusal2025ccs/cite.bib",
       "ris_url": "https://bishnubhusal.com.np/publications/bhusal2025ccs/cite.ris",
+      "markdown_url": "https://bishnubhusal.com.np/publications/bhusal2025ccs/summary.md",
       "abbr": "CCS",
       "award_name": null,
       "keywords": "Differential Privacy, Verification, Gaussian Distribution, Tail Bounds, Approximation Algorithms",
@@ -351,6 +427,33 @@
       "when_to_read": "Read this when a privacy mechanism uses Gaussian noise or requires reasoning about both discrete and continuous random choices. The Sparse Vector and Noisy Max evaluations provide concrete verification examples.",
       "abstract": "The verification of differential privacy algorithms that employ Gaussian distributions is little understood. This paper tackles the challenge of verifying such programs by introducing a novel approach to approximating probability distributions of loop-free programs that sample from both discrete and continuous distributions with computable probability density functions, including Gaussian and Laplace. We establish that verifying (epsilon, delta)-differential privacy for these programs is almost decidable, meaning the problem is decidable for all values of delta except those in a finite set. Our verification algorithm is based on computing probabilities to any desired precision by combining integral approximations, and tail probability bounds. The proposed methods are implemented in the tool, DipApprox, using the FLINT library for high-precision integral computations, and incorporate optimizations to enhance scalability. We validate DipApprox on fundamental privacy-preserving algorithms, such as Gaussian variants of the Sparse Vector Technique and Noisy Max, demonstrating its effectiveness in both confirming privacy guarantees and detecting violations.",
       "abstract_source": null,
+      "questions": [
+        {
+          "question": "Which programs can DipApprox verify?",
+          "answer": "DipApprox targets loop-free DiPGauss programs with finite input and output domains, including mechanisms that sample from Gaussian and Laplace distributions. The paper's implementation currently supports comparisons among sampled values.",
+          "source_url": "https://arxiv.org/html/2509.08804#S7",
+          "source_label": "Section 7 — Implementation and Evaluation, footnote 8"
+        },
+        {
+          "question": "What does almost decidable mean for differential privacy?",
+          "answer": "For a fixed program, positive rational program parameter and privacy budget, and adjacency relation, privacy verification is decidable for every δ in [0, 1] except a finite set of critical values. The result does not promise a terminating decision at those exceptional values.",
+          "source_url": "https://arxiv.org/html/2509.08804#S6.SS1",
+          "source_label": "Section 6.1 — Theorem 4"
+        },
+        {
+          "question": "Does passing one adjacent input pair prove the whole program private?",
+          "answer": "A successful pair check establishes the privacy inequality for that pair. The full verification algorithm must confirm every pair in the specified adjacency relation. A violating pair refutes privacy; an Unknown result means the current probability bounds are insufficient to decide.",
+          "source_url": "https://arxiv.org/html/2509.08804#S5",
+          "source_label": "Section 5 — Verifying Differential Privacy"
+        }
+      ],
+      "tutorials": [
+        {
+          "title": "DipApprox: verifying differential privacy with Gaussian noise",
+          "url": "https://bishnubhusal.com.np/blog/2026/dipapprox-gaussian-differential-privacy/",
+          "description": "Inside our CCS 2025 paper: how DipApprox uses certified integration, Gaussian tail bounds, and probability intervals to prove or refute differential privacy."
+        }
+      ],
       "description": "Introduces DipApprox for verifying differential privacy of loop-free probabilistic programs that use Gaussian and other discrete or continuous distributions. It combines numerical integration and tail bounds to approximate probabilities to arbitrary precision, with an almost-decidability result…"
     },
     {
@@ -386,9 +489,11 @@
       "pdf": null,
       "code": null,
       "html": null,
+      "html_full_text": null,
       "source_url": "https://doi.org/10.1145/3720446",
       "bibtex_url": "https://bishnubhusal.com.np/publications/rivera2025oopsla/cite.bib",
       "ris_url": "https://bishnubhusal.com.np/publications/rivera2025oopsla/cite.ris",
+      "markdown_url": "https://bishnubhusal.com.np/publications/rivera2025oopsla/summary.md",
       "abbr": "OOPSLA",
       "award_name": null,
       "keywords": "integrals, synthesis, theory of reals, verification, δ-satisfiability",
@@ -403,6 +508,8 @@
       "when_to_read": "Read this when a verification or synthesis task reduces to real-valued constraints involving probability integrals, including privacy-mechanism utility and algorithmic fairness.",
       "abstract": "Many synthesis and verification problems can be reduced to determining the truth of formulas over the real numbers. These formulas often involve constraints with integrals in them. To this end, we extend the framework of δ-decision procedures with techniques for handling integrals of user-specified real functions. We implement this decision procedure in the tool ∫dReal, which is built on top of dReal. We evaluate ∫dReal on a suite of problems that include formulas verifying the fairness of algorithms and the privacy and the utility of privacy mechanisms and formulas that synthesize parameters for the desired utility of privacy mechanisms. The performance of the tool in these experiments demonstrates the effectiveness of ∫dReal.",
       "abstract_source": null,
+      "questions": [],
+      "tutorials": [],
       "description": "Extends δ-decision procedures over the reals to constraints containing integrals of user-specified functions. The ∫dReal implementation builds on dReal and is evaluated on fairness, privacy, utility, and parameter-synthesis problems."
     },
     {
@@ -437,9 +544,11 @@
       "pdf": "https://bishnubhusal.com.np/assets/pdf/chapter10.pdf",
       "code": null,
       "html": null,
+      "html_full_text": null,
       "source_url": "https://doi.org/10.4018/979-8-3373-0543-1.ch010",
       "bibtex_url": "https://bishnubhusal.com.np/publications/rahman2025cyberai/cite.bib",
       "ris_url": "https://bishnubhusal.com.np/publications/rahman2025cyberai/cite.ris",
+      "markdown_url": "https://bishnubhusal.com.np/publications/rahman2025cyberai/summary.md",
       "abbr": "Chapter",
       "award_name": null,
       "keywords": null,
@@ -448,6 +557,8 @@
       "when_to_read": null,
       "abstract": "Generative Artificial Intelligence (AI) is opening new paths in the detection and prevention of cyberbullying. As we know, AI is shaping and improving the future of cyber, industry, automation, manufacturing, healthcare etc. with challenges of privacy concerns, job losses issues, and increased rules. This chapter explores future trends in AI-driven tools designed to reduce online bullying including various cybercrime across social media platforms, messaging apps, and other digital platforms. Ethical concerns like security and privacy, fairness, and avoiding bias are also discussed, aiming to ensure that AI tools are used responsibly and transparently. By combining technical advancements with an understanding of social impact, this chapter presents a vision for AI systems that create safer, more supportive online spaces.",
       "abstract_source": null,
+      "questions": [],
+      "tutorials": [],
       "description": "Generative Artificial Intelligence (AI) is opening new paths in the detection and prevention of cyberbullying. As we know, AI is shaping and improving the future of cyber, industry, automation, manufacturing, healthcare etc. with challenges of privacy concerns, job losses issues, and increased…"
     },
     {
@@ -481,9 +592,11 @@
       "pdf": "https://bishnubhusal.com.np/assets/pdf/hcii.pdf",
       "code": "https://github.com/bhusalb/privacy-label-review-paper",
       "html": null,
+      "html_full_text": null,
       "source_url": "https://doi.org/10.1007/978-3-031-94159-7_3",
       "bibtex_url": "https://bishnubhusal.com.np/publications/bhusal2025hcii/cite.bib",
       "ris_url": "https://bishnubhusal.com.np/publications/bhusal2025hcii/cite.ris",
+      "markdown_url": "https://bishnubhusal.com.np/publications/bhusal2025hcii/summary.md",
       "abbr": "HCII",
       "award_name": null,
       "keywords": null,
@@ -497,6 +610,8 @@
       "when_to_read": "Read this when designing a study of privacy labels, reviewing how privacy practices are communicated, or looking for a starting dataset and research gaps in usable privacy.",
       "abstract": "Privacy nutrition labels have emerged as a compelling alternative to lengthy, complex privacy policies for effectively communicating privacy information. In recent years, research on privacy nutrition labels has expanded significantly. However, a literature review of privacy nutrition labels is still lacking. To address this gap, we created and analyzed a dataset of privacy nutrition label papers from 2009 to 2024. We qualitatively coded the papers published in the past 15 years, and revealed characteristics of existing privacy labels research. Our findings highlight areas that have received more attention and those that remain underserved. Our analysis also shed light on common methodologies in existing studies and the different communities of stakeholders. We conclude by reflecting on the gaps in existing research and discussing where future work can focus on.",
       "abstract_source": "https://bishnubhusal.com.np/assets/pdf/hcii.pdf",
+      "questions": [],
+      "tutorials": [],
       "description": "Reviews privacy nutrition label research from 2009 to 2024 using qualitative coding of 78 papers. The study maps the communities, goals, and methods represented in the literature, identifies gaps, and provides a dataset with qualitative codes for further analysis."
     },
     {
@@ -531,9 +646,11 @@
       "pdf": null,
       "code": null,
       "html": "https://doi.org/10.20944/preprints202511.0218.v1",
+      "html_full_text": null,
       "source_url": "https://doi.org/10.20944/preprints202511.0218.v1",
       "bibtex_url": "https://bishnubhusal.com.np/publications/chapagain2025realphish/cite.bib",
       "ris_url": "https://bishnubhusal.com.np/publications/chapagain2025realphish/cite.ris",
+      "markdown_url": "https://bishnubhusal.com.np/publications/chapagain2025realphish/summary.md",
       "abbr": "SIGITE",
       "award_name": null,
       "keywords": null,
@@ -542,6 +659,8 @@
       "when_to_read": null,
       "abstract": "In this era of technology, phishing emails remain a critical cybersecurity threat, exploiting human vulnerabilities to compromise sensitive data and systems. Traditional detection methods, such as blacklists and static heuristics, often fail to keep pace with the evolving sophistication of phishing tactics. We propose RealPhish, a real-time phishing detection algorithm combining machine learning, Natural Language Processing (NLP), and rule-based heuristics to identify malicious emails with high precision. RealPhish analyzes both static email features and simulated user interaction data to enhance detection accuracy. Using a publicly available phishing email dataset and synthetically generated behavioral data, the algorithm achieves a detection accuracy of 95%, with a precision of 96% and recall of 89%, outperforming baseline models. The system also includes a rule-based override layer for known threats and provides interpretable outputs for transparency.",
       "abstract_source": null,
+      "questions": [],
+      "tutorials": [],
       "description": "In this era of technology, phishing emails remain a critical cybersecurity threat, exploiting human vulnerabilities to compromise sensitive data and systems. Traditional detection methods, such as blacklists and static heuristics, often fail to keep pace with the evolving sophistication of…"
     },
     {
@@ -581,9 +700,11 @@
       "pdf": null,
       "code": null,
       "html": null,
+      "html_full_text": null,
       "source_url": "https://doi.org/10.14569/IJACSA.2025.0160814",
       "bibtex_url": "https://bishnubhusal.com.np/publications/mishra2025nodewsnsec/cite.bib",
       "ris_url": "https://bishnubhusal.com.np/publications/mishra2025nodewsnsec/cite.ris",
+      "markdown_url": "https://bishnubhusal.com.np/publications/mishra2025nodewsnsec/summary.md",
       "abbr": "IJACSA",
       "award_name": null,
       "keywords": null,
@@ -592,6 +713,8 @@
       "when_to_read": null,
       "abstract": "Efficient and reliable node deployment in Wireless Sensor Networks is crucial for optimizing coverage of the area, connectivity among nodes, and energy efficiency. This paper proposes a hybrid metaheuristic approach combining a Genetic Algorithm (GA) and Particle Swarm Optimization (PSO) to address the challenges of energy efficient and reliable node deployment. Simulation results demonstrate that GA-PSO requires 15% to 25% fewer sensor nodes and maintains 95% or more area coverage while maintaining connectivity in comparison to standalone GA or PSO. The proposed algorithm also dominates the Competitive Multi Objective Marine Predators Algorithm (CMOMPA) for long sensing and communication ranges in terms of coverage, connectivity, and deployment time.",
       "abstract_source": null,
+      "questions": [],
+      "tutorials": [],
       "description": "Efficient and reliable node deployment in Wireless Sensor Networks is crucial for optimizing coverage of the area, connectivity among nodes, and energy efficiency. This paper proposes a hybrid metaheuristic approach combining a Genetic Algorithm (GA) and Particle Swarm Optimization (PSO) to…"
     },
     {
@@ -626,9 +749,11 @@
       "pdf": null,
       "code": null,
       "html": null,
+      "html_full_text": null,
       "source_url": "https://doi.org/10.1201/9781003449515-14",
       "bibtex_url": "https://bishnubhusal.com.np/publications/osama2024blockdads/cite.bib",
       "ris_url": "https://bishnubhusal.com.np/publications/osama2024blockdads/cite.ris",
+      "markdown_url": "https://bishnubhusal.com.np/publications/osama2024blockdads/summary.md",
       "abbr": "Chapter",
       "award_name": null,
       "keywords": null,
@@ -637,6 +762,8 @@
       "when_to_read": null,
       "abstract": null,
       "abstract_source": null,
+      "questions": [],
+      "tutorials": [],
       "description": "blockDADS: Blockchain Technology for Data Analytics and Data Security - Applications and Solutions. Omar Faruq Osama, Bishnu Bhusal, Naresh Kshetri, Bishwo Prakash Pokharel."
     },
     {
@@ -676,9 +803,11 @@
       "pdf": "https://bishnubhusal.com.np/assets/pdf/gamesec.pdf",
       "code": "https://github.com/bhusalb/gt-ransomware-simulation",
       "html": null,
+      "html_full_text": null,
       "source_url": "https://doi.org/10.1007/978-3-031-74835-6_8",
       "bibtex_url": "https://bishnubhusal.com.np/publications/neupane2024gamesec/cite.bib",
       "ris_url": "https://bishnubhusal.com.np/publications/neupane2024gamesec/cite.ris",
+      "markdown_url": "https://bishnubhusal.com.np/publications/neupane2024gamesec/summary.md",
       "abbr": "GameSec",
       "award_name": "Best Paper Award",
       "keywords": null,
@@ -692,6 +821,8 @@
       "when_to_read": "Read this when analyzing how deception resources can change an attacker's incentives across ransomware stages, or when building game-theoretic models of cyber defense.",
       "abstract": "Ransomware attacks continue to be a major concern for critical systems that are vital for society e.g., healthcare, finance, and transportation. Traditional cyber defense mechanisms fail to pose dynamic measures to stop ransomware attacks from progressing through various stages in the attack process. To this end, intelligent cyber deception strategies can be effective when they leverage information about attacker strategies and deploy deceptive assets to increase the cost or complexity of a successful exploit or discourage continued attacker efforts. In this paper, we present a novel game theoretic approach that uses deception-based defense strategies at each of the ransomware attack stages for optimization of the decision-making to outsmart attacker advances. Specifically, we propose a multistage ransomware game model that deploys a combination of deception assets i.e., honeytokens, honeypots, honeyfiles, and network honeypots in subgames. Using closed-form backward induction, we evaluated Subgame-Perfect Nash Equilibrium (SPNE). We perform a numerical analysis using real-world data and statistics pertaining to the impact of ransomware attacks in the healthcare sector. Our healthcare case study evaluation results show that the use of deception technologies is favorable to the defender. This work elucidates the profound implications of strategic deception in cybersecurity, demonstrating its capacity to complicate successful exploits and consequently bolster the defense of key societal infrastructures.",
       "abstract_source": null,
+      "questions": [],
+      "tutorials": [],
       "description": "Models ransomware defense as a multistage game with honeytokens, honeypots, honeyfiles, and network honeypots. The paper uses backward induction to analyze subgame-perfect Nash equilibria and evaluates the defender's choices through a numerical healthcare case study informed by real-world data…"
     },
     {
@@ -728,9 +859,11 @@
       "pdf": null,
       "code": null,
       "html": null,
+      "html_full_text": null,
       "source_url": "https://doi.org/10.1109/NOMS59830.2024.10575641",
       "bibtex_url": "https://bishnubhusal.com.np/publications/neupane2024noms/cite.bib",
       "ris_url": "https://bishnubhusal.com.np/publications/neupane2024noms/cite.ris",
+      "markdown_url": "https://bishnubhusal.com.np/publications/neupane2024noms/summary.md",
       "abbr": "NOMS",
       "award_name": null,
       "keywords": null,
@@ -744,6 +877,8 @@
       "when_to_read": "Read this when studying formal verification of blockchain workflows that coordinate multiple participants, particularly insurance claims and their transaction-processing logic.",
       "abstract": "Insurance claims processing involves multi-domain entities and multi-source data, along with a number of human-agent interactions. Use of Blockchain technology-based platform can significantly improve scalability and response time for processing of claims which are otherwise manually-intensive and time-consuming. However, the chaincodes involved within the processes that issue claims, approve or deny them as required, need to be formally verified to ensure secure and reliable processing of transactions in Blockchain. In this paper, we use a formal modeling approach to verify various processes and their underlying chaincodes relating to different stages in insurance claims processing viz., issuance, approval, denial, and flagging for fraud investigation by using linear temporal logic (LTL). We simulate the formalism on the chaincodes and analyze the breach of chaincodes via model checking.",
       "abstract_source": null,
+      "questions": [],
+      "tutorials": [],
       "description": "Models blockchain-based insurance claims processing and checks the underlying chaincodes using linear temporal logic and model checking. The modeled stages include issuing claims, approving or denying them, and flagging claims for fraud investigation."
     },
     {
@@ -778,9 +913,11 @@
       "pdf": null,
       "code": "https://github.com/bhusalb/DiPAut",
       "html": null,
+      "html_full_text": null,
       "source_url": "https://doi.org/10.1145/3576915.3623170",
       "bibtex_url": "https://bishnubhusal.com.np/publications/chadha2023ccs/cite.bib",
       "ris_url": "https://bishnubhusal.com.np/publications/chadha2023ccs/cite.ris",
+      "markdown_url": "https://bishnubhusal.com.np/publications/chadha2023ccs/summary.md",
       "abbr": "CCS",
       "award_name": null,
       "keywords": "automata, decision procedure, differential privacy, verification",
@@ -795,6 +932,8 @@
       "when_to_read": "Read this when studying automated privacy verification for algorithms that process a stream of inputs, or when comparing the expressiveness and complexity of automata-based privacy analyses.",
       "abstract": "We consider the problem of checking the differential privacy of online randomized algorithms that process a stream of inputs and produce outputs corresponding to each input. This paper generalizes an automaton model called DiP automata to describe such algorithms by allowing multiple real-valued storage variables. A DiP automaton is a parametric automaton whose behavior depends on the privacy budget ε. An automaton A will be said to be differentially private if, for some D, the automaton is Dε-differentially private for all values of ε > 0. We identify a precise characterization of the class of all differentially private DiP automata. We show that the problem of determining if a given DiP automaton belongs to this class is PSPACE-complete. Our PSPACE algorithm also computes a value for D when the given automaton is differentially private. The algorithm has been implemented, and experiments demonstrating its effectiveness are presented.",
       "abstract_source": null,
+      "questions": [],
+      "tutorials": [],
       "description": "Extends DiP automata to online randomized algorithms with multiple real-valued storage variables. The paper characterizes when an automaton is Dε-differentially private for some D and every ε > 0, proves that deciding this property is PSPACE-complete, and implements an algorithm that also…"
     },
     {
@@ -829,9 +968,11 @@
       "pdf": null,
       "code": null,
       "html": null,
+      "html_full_text": null,
       "source_url": "https://arxiv.org/abs/2310.04558",
       "bibtex_url": "https://bishnubhusal.com.np/publications/adhikari2023vtonit/cite.bib",
       "ris_url": "https://bishnubhusal.com.np/publications/adhikari2023vtonit/cite.ris",
+      "markdown_url": "https://bishnubhusal.com.np/publications/adhikari2023vtonit/summary.md",
       "abbr": "arXiv",
       "award_name": null,
       "keywords": null,
@@ -840,6 +981,8 @@
       "when_to_read": null,
       "abstract": "Virtual Try-On (trying clothes virtually) is a promising application of the Generative Adversarial Network (GAN). However, it is an arduous task to transfer the desired clothing item onto the corresponding regions of a human body because of varying body size, pose, and occlusions like hair and overlapped clothes. In this paper, we try to produce photo-realistic translated images through semantic segmentation and a generative adversarial architecture-based image translation network. We present a novel image-based Virtual Try-On application VTON-IT that takes an RGB image, segments desired body part, and overlays target cloth over the segmented body region. Most state-of-the-art GAN-based Virtual Try-On applications produce unaligned pixelated synthesis images on real-life test images. However, our approach generates high-resolution natural images with detailed textures on such variant images.",
       "abstract_source": null,
+      "questions": [],
+      "tutorials": [],
       "description": "Virtual Try-On (trying clothes virtually) is a promising application of the Generative Adversarial Network (GAN). However, it is an arduous task to transfer the desired clothing item onto the corresponding regions of a human body because of varying body size, pose, and occlusions like hair and…"
     },
     {
@@ -874,9 +1017,11 @@
       "pdf": null,
       "code": "https://github.com/bhusalb/DiPAut",
       "html": null,
+      "html_full_text": null,
       "source_url": "https://doi.org/10.5281/zenodo.8332275",
       "bibtex_url": "https://bishnubhusal.com.np/publications/bhusal2023dipaut/cite.bib",
       "ris_url": "https://bishnubhusal.com.np/publications/bhusal2023dipaut/cite.ris",
+      "markdown_url": "https://bishnubhusal.com.np/publications/bhusal2023dipaut/summary.md",
       "abbr": "Software",
       "award_name": null,
       "keywords": null,
@@ -890,6 +1035,8 @@
       "when_to_read": "Use this artifact alongside the CCS 2023 paper when looking for the implementation of automata-based privacy checking or a versioned software citation.",
       "abstract": null,
       "abstract_source": null,
+      "questions": [],
+      "tutorials": [],
       "description": "Provides the DiPAut software artifact for checking differential privacy of online randomized algorithms, with a versioned Zenodo record and a public implementation repository."
     }
   ]
