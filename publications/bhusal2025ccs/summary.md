@@ -11,7 +11,7 @@ Publication summary and citation record; follow the source links for the origina
 - Venue or repository: Proceedings of the 2025 ACM SIGSAC Conference on Computer and Communications Security
 - DOI: 10.1145/3719027.3765043
 - arXiv: https://arxiv.org/abs/2509.08804
-- Topics: Differential privacy; Formal verification; Gaussian mechanisms; Numerical integration; DipApprox
+- Topics: Differential privacy; Automated verification of differential privacy; Gaussian mechanisms; Numerical integration; DipApprox
 
 ## Source links
 
@@ -22,7 +22,7 @@ Publication summary and citation record; follow the source links for the origina
 
 ## Contribution summary
 
-Introduces DipApprox for verifying differential privacy of loop-free probabilistic programs that use Gaussian and other discrete or continuous distributions. It combines numerical integration and tail bounds to approximate probabilities to arbitrary precision, with an almost-decidability result for (ε, δ)-privacy: all but a finite set of δ values are decidable under the paper's assumptions.
+Introduces DipApprox, a tool for automated verification of differential privacy in loop-free probabilistic programs that use Gaussian and other discrete or continuous distributions. It combines numerical integration and tail bounds to approximate probabilities to arbitrary precision, with an almost-decidability result for (ε, δ)-privacy: all but a finite set of δ values are decidable under the paper's assumptions.
 
 ## When to read this work
 

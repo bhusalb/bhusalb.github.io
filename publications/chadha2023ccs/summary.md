@@ -11,7 +11,7 @@ Publication summary and citation record; follow the source links for the origina
 - Venue or repository: Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security
 - DOI: 10.1145/3576915.3623170
 - arXiv: https://arxiv.org/abs/2309.06615
-- Topics: Differential privacy; Formal verification; Online algorithms; DiP automata; Decision procedures
+- Topics: Differential privacy; Automated verification of differential privacy; Formal verification; Online algorithms; DiP automata; Decision procedures
 
 ## Source links
 
@@ -20,7 +20,7 @@ Publication summary and citation record; follow the source links for the origina
 
 ## Contribution summary
 
-Extends DiP automata to online randomized algorithms with multiple real-valued storage variables. The paper characterizes when an automaton is Dε-differentially private for some D and every ε > 0, proves that deciding this property is PSPACE-complete, and implements an algorithm that also computes a suitable D.
+Extends DiP automata, a model for automated verification of differential privacy, to online randomized algorithms with multiple real-valued storage variables. The paper characterizes when an automaton is Dε-differentially private for some D and every ε > 0, proves that deciding this property is PSPACE-complete, and implements an algorithm that also computes a suitable D.
 
 ## When to read this work
 

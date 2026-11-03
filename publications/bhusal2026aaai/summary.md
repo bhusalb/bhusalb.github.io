@@ -11,7 +11,7 @@ Publication summary and citation record; follow the source links for the origina
 - Venue or repository: Proceedings of the AAAI Conference on Artificial Intelligence
 - DOI: 10.1609/aaai.v40i42.40838
 - arXiv: https://arxiv.org/abs/2509.13625
-- Topics: Differential privacy; Large language models; In-context learning; Private text generation
+- Topics: Differential privacy; Differentially private in-context learning; Large language models; DP synthetic text for LLM prompts
 
 ## Source links
 
@@ -22,7 +22,7 @@ Publication summary and citation record; follow the source links for the origina
 
 ## Contribution summary
 
-Presents a differentially private prediction framework that generates synthetic text by aggregating clipped per-token logits from inference over private records, without fine-tuning the underlying language model. A blending operation combines private and public inference to improve utility in the evaluated in-context-learning tasks.
+Presents a differentially private in-context learning framework that generates DP synthetic text for LLM prompts by aggregating clipped per-token logits from inference over private records, without fine-tuning the underlying language model. A blending operation combines private and public inference to improve utility in the evaluated in-context-learning tasks.
 
 ## When to read this work
 
