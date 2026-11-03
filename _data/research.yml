@@ -51,7 +51,15 @@ papers:
     when_to_read: >-
       Read this when studying automated privacy verification for algorithms that process a stream of inputs,
       or when comparing the expressiveness and complexity of automata-based privacy analyses.
-    topics: [Differential privacy, Automated verification of differential privacy, Formal verification, Online algorithms, DiP automata, Decision procedures]
+    topics:
+      [
+        Differential privacy,
+        Automated verification of differential privacy,
+        Formal verification,
+        Online algorithms,
+        DiP automata,
+        Decision procedures,
+      ]
   bhusal2025ccs:
     html_full_text: https://arxiv.org/html/2509.08804
     questions:
