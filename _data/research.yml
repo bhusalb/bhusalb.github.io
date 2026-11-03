@@ -44,13 +44,14 @@ papers:
     topics: [Formal verification, Blockchain, Model checking, Insurance claims]
   chadha2023ccs:
     summary: >-
-      Extends DiP automata to online randomized algorithms with multiple real-valued storage variables.
+      Extends DiP automata, a model for automated verification of differential privacy, to online randomized
+      algorithms with multiple real-valued storage variables.
       The paper characterizes when an automaton is Dε-differentially private for some D and every ε > 0,
       proves that deciding this property is PSPACE-complete, and implements an algorithm that also computes a suitable D.
     when_to_read: >-
       Read this when studying automated privacy verification for algorithms that process a stream of inputs,
       or when comparing the expressiveness and complexity of automata-based privacy analyses.
-    topics: [Differential privacy, Formal verification, Online algorithms, DiP automata, Decision procedures]
+    topics: [Differential privacy, Automated verification of differential privacy, Formal verification, Online algorithms, DiP automata, Decision procedures]
   bhusal2025ccs:
     html_full_text: https://arxiv.org/html/2509.08804
     questions:
@@ -77,14 +78,15 @@ papers:
         source_url: https://arxiv.org/html/2509.08804#S5
         source_label: Section 5 — Verifying Differential Privacy
     summary: >-
-      Introduces DipApprox for verifying differential privacy of loop-free probabilistic programs that use
+      Introduces DipApprox, a tool for automated verification of differential privacy in loop-free probabilistic
+      programs that use
       Gaussian and other discrete or continuous distributions. It combines numerical integration and tail
       bounds to approximate probabilities to arbitrary precision, with an almost-decidability result for
       (ε, δ)-privacy: all but a finite set of δ values are decidable under the paper's assumptions.
     when_to_read: >-
       Read this when a privacy mechanism uses Gaussian noise or requires reasoning about both discrete
       and continuous random choices. The Sparse Vector and Noisy Max evaluations provide concrete verification examples.
-    topics: [Differential privacy, Formal verification, Gaussian mechanisms, Numerical integration, DipApprox]
+    topics: [Differential privacy, Automated verification of differential privacy, Gaussian mechanisms, Numerical integration, DipApprox]
   rivera2025oopsla:
     summary: >-
       Extends δ-decision procedures over the reals to constraints containing integrals of user-specified
@@ -121,14 +123,15 @@ papers:
         source_url: https://arxiv.org/html/2509.13625#Sx11
         source_label: Limitations
     summary: >-
-      Presents a differentially private prediction framework that generates synthetic text by aggregating
+      Presents a differentially private in-context learning framework that generates DP synthetic text for
+      LLM prompts by aggregating
       clipped per-token logits from inference over private records, without fine-tuning the underlying
       language model. A blending operation combines private and public inference to improve utility in
       the evaluated in-context-learning tasks.
     when_to_read: >-
       Read this when exploring how to use sensitive examples for language-model predictions or synthetic
       demonstrations with differential privacy, particularly when updating model weights is undesirable.
-    topics: [Differential privacy, Large language models, In-context learning, Private text generation]
+    topics: [Differential privacy, Differentially private in-context learning, Large language models, DP synthetic text for LLM prompts]
   bhusal2026dpmuon:
     html_full_text: https://arxiv.org/html/2610.02738
     questions:
