@@ -13,9 +13,11 @@ profile:
     <p>411 S 6th St</p>
     <p>Columbia, MO 65201</p>
 
-news: false # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
+
+announcements:
+  enabled: false # includes a list of news items
 ---
 
 I am a Ph.D. candidate in Computer Science at the University of Missouri, advised by [Prof. Rohit Chadha](https://chadhar.mufaculty.umsystem.edu/), graduating Dec 2026. After graduating, I will join the Department of Electrical Engineering and Computer Science (EECS) at the [Florida Institute of Technology](https://www.fit.edu/) as an **Assistant Professor**. My research asks a deceptively hard question: can we _prove_, not just hope, that an algorithm preserves privacy? I build automated verifiers and decision procedures that answer this with mathematical rigor.

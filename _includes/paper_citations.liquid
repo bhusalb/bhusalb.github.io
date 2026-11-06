@@ -1,4 +1,17 @@
 {% if page.related_papers.size > 0 %}
+  <style>
+    .paper-citation pre {
+      padding: 3.4rem 1rem 1rem;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+    .paper-citation .copy {
+      opacity: 1;
+      min-height: 44px;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid var(--global-divider-color);
+    }
+  </style>
   <section class="paper-citations" aria-labelledby="paper-citations-heading">
     <h2 id="paper-citations-heading">
       {% if page.related_papers.size == 1 %}Cite this paper{% else %}Cite these papers{% endif %}
