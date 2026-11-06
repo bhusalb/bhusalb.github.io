@@ -329,3 +329,16 @@
 {% if page.paper %}
   {% include paper_meta.liquid %}
 {% endif %}
+
+<!-- Machine-readable discovery links for feeds, LLM guides and publication data -->
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="{{ site.blog_name | default: site.title | escape }}"
+  href="{{ site.feed.path | default: '/feed.xml' | absolute_url | escape }}"
+>
+<link rel="help" type="text/plain" title="Machine-readable research guide" href="{{ '/llms.txt' | absolute_url | escape }}">
+{% if canonical_path == '/publications/' %}
+  <link rel="alternate" type="application/json" title="Publication metadata (JSON)" href="{{ '/publications.json' | absolute_url | escape }}">
+  <link rel="alternate" type="application/x-bibtex" title="Publication citations (BibTeX)" href="{{ '/publications.bib' | absolute_url | escape }}">
+{% endif %}
