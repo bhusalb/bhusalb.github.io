@@ -48,7 +48,6 @@ We consider the problem of checking the differential privacy of online randomize
   isbn = {9798400700507},
   doi = {10.1145/3576915.3623170},
   url = {https://doi.org/10.1145/3576915.3623170},
-  eprint = {2309.06615},
   archiveprefix = {arXiv},
   keywords = {automata, decision procedure, differential privacy, verification}
 }

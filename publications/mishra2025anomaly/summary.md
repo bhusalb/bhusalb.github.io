@@ -30,7 +30,6 @@ Wireless Sensor Networks form the backbone of modern cyber physical systems used
   journal = {arXiv preprint arXiv:2511.00481},
   year = {2025},
   month = nov,
-  eprint = {2511.00481},
   archiveprefix = {arXiv},
   primaryclass = {cs.CR},
   url = {https://arxiv.org/abs/2511.00481}

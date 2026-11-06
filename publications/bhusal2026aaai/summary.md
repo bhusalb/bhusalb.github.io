@@ -72,7 +72,6 @@ Source: [Limitations](<https://arxiv.org/html/2509.13625#Sx11>)
   month = mar,
   doi = {10.1609/aaai.v40i42.40838},
   url = {https://doi.org/10.1609/aaai.v40i42.40838},
-  eprint = {2509.13625},
   archiveprefix = {arXiv}
 }
 ```

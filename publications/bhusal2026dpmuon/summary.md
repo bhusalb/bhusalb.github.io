@@ -64,7 +64,6 @@ Source: [Section 4.3 — Cost](<https://arxiv.org/html/2610.02738#S4.SS3>)
   journal = {arXiv preprint arXiv:2610.02738},
   year = {2026},
   month = oct,
-  eprint = {2610.02738},
   archiveprefix = {arXiv},
   primaryclass = {cs.LG},
   url = {https://arxiv.org/abs/2610.02738}

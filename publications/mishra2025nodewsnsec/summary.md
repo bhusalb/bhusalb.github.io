@@ -34,7 +34,6 @@ Efficient and reliable node deployment in Wireless Sensor Networks is crucial fo
   year = {2025},
   doi = {10.14569/IJACSA.2025.0160814},
   url = {https://doi.org/10.14569/IJACSA.2025.0160814},
-  eprint = {2508.16619},
   archiveprefix = {arXiv}
 }
 ```

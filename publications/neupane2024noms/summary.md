@@ -44,7 +44,6 @@ Insurance claims processing involves multi-domain entities and multi-source data
   publisher = {IEEE},
   doi = {10.1109/NOMS59830.2024.10575641},
   url = {https://doi.org/10.1109/NOMS59830.2024.10575641},
-  eprint = {2402.13169},
   archiveprefix = {arXiv}
 }
 ```

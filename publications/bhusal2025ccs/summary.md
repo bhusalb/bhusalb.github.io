@@ -72,7 +72,6 @@ Source: [Section 5 — Verifying Differential Privacy](<https://arxiv.org/html/2
   publisher = {Association for Computing Machinery},
   doi = {10.1145/3719027.3765043},
   url = {https://doi.org/10.1145/3719027.3765043},
-  eprint = {2509.08804},
   archiveprefix = {arXiv},
   keywords = {Differential Privacy, Verification, Gaussian Distribution, Tail Bounds, Approximation Algorithms}
 }
