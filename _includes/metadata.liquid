@@ -253,6 +253,7 @@
         "name": {{ author_name | jsonify }},
         "url": {{ home_url | jsonify }},
         {% if site.job_title %}"jobTitle": {{ site.job_title | jsonify }},{% endif %}
+        {% if site.honorific_suffix %}"honorificSuffix": {{ site.honorific_suffix | jsonify }},{% endif %}
         {% if site.affiliation %}"affiliation": {"@type": "Organization", "name": {{ site.affiliation | jsonify }}},{% endif %}
         {% if site.alumni_of %}"alumniOf": {"@type": "CollegeOrUniversity", "name": {{ site.alumni_of | jsonify }}},{% endif %}
         {% if site.knows_about %}"knowsAbout": {{ site.knows_about | jsonify }},{% endif %}

@@ -125,8 +125,10 @@ scholar_userid: Dkp-woMAAAAJ
 semanticscholar_id: 2231871095
 
 # Used for schema.org Person structured data on the homepage
-job_title: Ph.D. Candidate in Computer Science
+job_title: Incoming Assistant Professor, Florida Institute of Technology
+honorific_suffix: Ph.D.
 affiliation: University of Missouri
+alumni_of: University of Missouri
 knows_about:
   [Differential Privacy, Formal Verification, Privacy-Preserving Machine Learning, Large Language Models, Program Verification, Security and Privacy]
 
