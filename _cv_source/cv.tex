@@ -1,0 +1,186 @@
+% CV of Bishnu Bhusal.
+% Rebuilt in November 2026 from the July 2026 PDF (layout after Jake Gutierrez's resume template).
+% Build: pdflatex cv.tex  ->  copy cv.pdf to assets/pdf/CV.pdf
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[letterpaper,left=0.55in,right=0.55in,top=0.6in,bottom=0.5in]{geometry}
+\usepackage{titlesec}
+\usepackage{textcomp}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage[english]{babel}
+\usepackage[hidelinks]{hyperref}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\hypersetup{
+  pdftitle={Bishnu Bhusal - Curriculum Vitae},
+  pdfauthor={Bishnu Bhusal},
+  pdfsubject={CV of Bishnu Bhusal: differential privacy, formal verification, privacy-preserving machine learning},
+  pdfkeywords={Bishnu Bhusal, CV, Differential Privacy, Formal Verification, Machine Learning}
+}
+
+\pagestyle{empty}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\parindent}{0pt}
+
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+% ---------- resume commands ----------
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    {\small\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}}\vspace{-7pt}
+}
+
+% education entry; optional 5th argument adds an italic line (e.g. dissertation)
+\newcommand{\eduSubheading}[5]{
+  \vspace{-2pt}\item
+    {\small\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      #3 & \textit{#4} \\
+      \if\relax\detokenize{#5}\relax\else\textit{#5} & \\ \fi
+    \end{tabular*}}\vspace{-7pt}
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, topsep=4pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-0.5pt}}
+
+\newcommand{\plainListStart}{\begin{itemize}[leftmargin=0.15in, label={\small\textbullet}, itemsep=3pt, parsep=0pt, topsep=2pt]}
+\newcommand{\plainListEnd}{\end{itemize}\vspace{1pt}}
+\newcommand{\sep}{\ $\cdot$\ }
+
+\begin{document}
+
+% ---------- heading ----------
+{\centering
+  {\Huge\textbf{Bishnu Bhusal}} \\ \vspace{5pt}
+  \small
+  \faMapMarker*\ \ Columbia, MO \quad $|$\quad
+  \faPhone\ \ (573) 530-7595 \quad $|$\quad
+  \href{mailto:bhusalb@missouri.edu}{\faEnvelope\ \ bhusalb@missouri.edu} \quad $|$\quad
+  \href{https://bishnubhusal.com.np}{\faGlobe\ \ bishnubhusal.com.np} \\ \vspace{3pt}
+  \href{https://github.com/bhusalb}{\faGithub\ \ github.com/bhusalb} \quad $|$\quad
+  \href{https://linkedin.com/in/bhusalb}{\faLinkedinIn\ \ linkedin.com/in/bhusalb} \quad $|$\quad
+  \href{https://scholar.google.com/citations?user=Dkp-woMAAAAJ}{\faGraduationCap\ \ Google Scholar}\par}
+
+% ---------- summary ----------
+\section{Summary}
+\parbox{0.97\textwidth}{\small\raggedright
+PhD in Computer Science (2026) specializing in provable privacy, LLM safety, and formal verification, with a track record of
+building and shipping research systems validated at scale. Research internships at Los Alamos National Laboratory,
+Amazon, and SRI International. Published at top-tier venues including AAAI, ACM CCS, and OOPSLA. Brings 5+
+years of software engineering experience delivering scalable ML pipelines and production systems.}
+
+% ---------- experience ----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading{Los Alamos National Laboratory}{March 2026 -- Nov.\ 2026}{Research Intern}{Los Alamos, NM}
+  \resumeItemListStart
+    \resumeItem{Designed and evaluated a \textbf{private LLM fine-tuning pipeline} for sensitive data; enforced formal $(\varepsilon,\delta)$-DP guarantees while benchmarking privacy-utility trade-offs across multiple downstream tasks using standard NLP datasets and evaluation metrics.}
+  \resumeItemListEnd
+
+  \resumeSubheading{SRI International}{Fall 2024}{Research Intern}{Menlo Park, CA}
+  \resumeItemListStart
+    \resumeItem{Built and evaluated a \textbf{differentially private ICL pipeline} that generates DP-safe synthetic demonstrations for LLM inference without fine-tuning; outperformed prior baselines on \textbf{5 NLP benchmarks} (text classification, QA) with up to \textbf{23\% accuracy gains}; published as \textbf{first author at AAAI 2026}.}
+  \resumeItemListEnd
+
+  \resumeSubheading{Amazon Web Services (AWS)}{Summer 2024}{Applied Scientist Intern}{Santa Clara, CA}
+  \resumeItemListStart
+    \resumeItem{Led design and prototyping of a \textbf{copyright protection system for RAG pipelines}, introducing an inference-time mechanism with \textbf{provable safeguards} against copyrighted content reproduction without requiring model fine-tuning.}
+  \resumeItemListEnd
+
+  \resumeSubheading{University of Missouri}{Jan.\ 2022 -- Nov.\ 2026}{Graduate Research Assistant}{Columbia, MO}
+  \resumeItemListStart
+    \resumeItem{Built \textbf{DiPApprox}, the first automated system for verifying differential privacy in algorithms with continuous noise (Gaussian, Laplace) --- a previously unsolved class of problems --- enabling practical validation of real-world privacy mechanisms such as \textbf{Sparse Vector Technique} and \textbf{Noisy Max}.}
+    \resumeItem{Developed a \textbf{DiP automata}-based verification system for differential privacy in online randomized algorithms, achieving up to \textbf{100$\times$ speedup} over CheckDP and enabling scalable analysis of complex multi-variable mechanisms.}
+    \resumeItem{Extended dReal (\textbf{$\int$dReal}) in a cross-institution collaboration (UIUC, UIC, Univ.\ of Missouri), enabling \textbf{verification and synthesis} of privacy, fairness, and utility properties for probabilistic programs; achieved \textbf{2$\times$ speedup} over Mathematica on most benchmarks.}
+    \resumeItem{Proposed a game-theoretic ransomware defense using strategic deception; won \textbf{Best Paper at GameSec 2024}. Developed the Arculus UAV communication system, adopted for training use by the \textbf{U.S. Marines}.}
+  \resumeItemListEnd
+
+  \resumeSubheading{Geoedge}{2020 -- 2022}{Software Engineer}{Tel Aviv, Israel}
+  \resumeItemListStart
+    \resumeItem{Led migration of microservices handling \textbf{1.5B daily requests} to Kubernetes with custom auto-scaling, including a \textbf{multi-label advertisement image classifier}; cut cloud costs by \textbf{35\%} and downtime by \textbf{25\%} through improved CI/CD pipelines and deployment reliability.}
+  \resumeItemListEnd
+
+  \resumeSubheading{Hashunited / Furitech / STS}{2017 -- 2020}{Software Engineer}{Tel Aviv, Israel}
+  \resumeItemListStart
+    \resumeItem{Built cryptocurrency trading and mining platforms for \textbf{70+ coins} with 99.9\%+ uptime; developed exam management system (Java, Spring Boot) serving \textbf{1M+ students}, adopted by \textbf{20+ government agencies}.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\newpage
+% ---------- education ----------
+\section{Education}
+\vspace{3pt}
+\resumeSubHeadingListStart
+  \eduSubheading{University of Missouri}{Columbia, MO}{\textit{Ph.D.\ in Computer Science} --- GPA 4.0 --- Advisor: Prof.\ Rohit Chadha}{2026}{Dissertation: Automated Verification of Differentially Private Algorithms (defended Nov.\ 2026)}
+  \vspace{3pt}
+  \eduSubheading{University of Missouri}{Columbia, MO}{\textit{M.S.\ in Computer Science} --- GPA 4.0 --- Minor: Statistics --- Cert: Cybersecurity}{2024}{}
+  \vspace{2pt}
+  \eduSubheading{Tribhuvan University}{Kathmandu, Nepal}{\textit{B.Eng.\ in Computer Engineering}}{2017}{}
+\resumeSubHeadingListEnd
+
+% ---------- publications ----------
+\section{Selected Publications}
+\begin{enumerate}[label={\small\textbf{[\arabic*]}}, leftmargin=0.2in, itemsep=4pt, parsep=0pt, topsep=4pt]
+  \small
+  \item \textbf{Bhusal B.} et al. ``Privacy Preserving In-Context-Learning Framework for Large Language Models.'' \textit{AAAI 2026}
+  \item \textbf{Bhusal B.}, Chadha R., Sistla A.P., Viswanathan M. ``Approximate Algorithms for Verifying Differential Privacy with Gaussian Distributions.'' \textit{ACM CCS 2025}
+  \item Rivera C., \textbf{Bhusal B.}, Chadha R., Sistla A.P., Viswanathan M. ``Checking $\delta$-Satisfiability of Reals with Integrals.'' \textit{OOPSLA 2025}
+  \item \textbf{Bhusal B.}, Ma Y., Chadha R. ``Privacy Nutrition Labels: Promise, Practice, and Paradoxes in Communicating Privacy.'' \textit{HCI International 2025}
+  \item Neupane R.L., \textbf{Bhusal B.} et al. ``On Countering Ransomware Attacks Using Strategic Deception.'' \textit{GameSec 2024} --- \textbf{Best Paper Award}
+  \item Chadha R., Sistla A.P., Viswanathan M., \textbf{Bhusal B.} ``Deciding Differential Privacy of Online Algorithms with Multiple Variables.'' \textit{ACM CCS 2023}
+\end{enumerate}
+
+% ---------- skills ----------
+\section{Technical Skills}
+\plainListStart
+  \small
+  \item \textbf{Privacy \& Security}: Differential Privacy\sep Trustworthy AI\sep Formal Methods\sep Model Checking\sep SMT Solvers
+  \item \textbf{Machine Learning}: Transformers\sep PyTorch\sep JAX\sep HuggingFace\sep Fine-Tuning\sep LoRA\sep RAG\sep ICL
+  \item \textbf{Systems / Infra}: AWS (SAA-C03)\sep Azure\sep GCP\sep Kubernetes\sep Docker\sep Jenkins\sep CI/CD
+  \item \textbf{Programming}: Python\sep C++\sep RCoq\sep Lean\sep Java\sep JavaScript\sep SQL
+\plainListEnd
+
+% ---------- awards ----------
+\section{Awards \& Certifications}
+\plainListStart
+  \small
+  \item \textbf{Best Paper Award} --- GameSec 2024, Game-Theoretic Ransomware Defense
+  \item \textbf{Winner, GPC Interdisciplinary Case Competition} --- University of Missouri, 2024
+  \item \textbf{Research Fellowship (\$7,500)} --- Quantum Innovation Center, Univ.\ of Missouri, 2025
+  \item \textbf{Student Travel Grants} --- ACM CCS 2025\sep IEEE CSF 2024
+  \item \textbf{EECS Excellence Fellowship} --- University of Missouri, 2022
+  \item \textbf{AWS Certified Solutions Architect -- Associate (SAA-C03)}
+  \item \textbf{Graduate Certificate in Cybersecurity} --- University of Missouri
+  \item \textbf{Deep Learning Specialization} --- Coursera
+\plainListEnd
+
+% ---------- talks ----------
+\section{Selected Talks}
+\plainListStart
+  \small
+  \item \textbf{Private and Trustworthy AI with Provable Guarantees} --- Invited Talk, University of Hawaii at Manoa, 2026
+  \item \textbf{Automated Verification of Differentially Private Algorithms} --- Invited Talk, AIST (National Institute of Advanced Industrial Science and Technology), Tokyo, 2025
+  \item \textbf{Approximate Algorithms for Verifying Differential Privacy} --- Conference Talk, ACM CCS 2025, Taipei
+  \item \textbf{Deciding Differential Privacy of Online Algorithms} --- Conference Talk, ACM CCS 2023, Copenhagen
+\plainListEnd
+
+\end{document}
